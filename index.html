@@ -12,16 +12,35 @@
 
 <body>
     <header class="navbar">
+
+        <!-- LOGO -->
         <div class="logo">
-            <img src="./img/logo.jpeg" alt="Puri Logo" style="width: 150px; height: auto;">
+            <img src="./img/logo.jpeg" alt="Logo">
         </div>
 
-        <nav>
+        <!-- NAV MENU -->
+        <nav id="nav-menu">
             <a href="#">Home</a>
             <a href="#">About Us</a>
-            <a href="#">Projects</a>
+
+            <!-- DROPDOWN -->
+            <div class="dropdown">
+                <a href="#">Projects ▾</a>
+                <div class="dropdown-menu">
+                    <a href="#">Nature City</a>
+                    <a href="#">Sai Enclave</a>
+                    <a href="#">AVS City</a>
+                </div>
+            </div>
+
             <a href="#">Contact Us</a>
         </nav>
+
+        <!-- HAMBURGER (Desktop + Mobile) -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+
     </header>
 
     <section class="video-hero">
@@ -31,40 +50,166 @@
     </section>
 
     <section class="about-section">
-  <div class="about-container">
+        <div class="about-container">
 
-    <!-- Left Image -->
-    <div class="about-image">
-      <img src="./img/owner.jpeg" alt="Rajiv Gupta">
-    </div>
+            <!-- Left Image -->
+            <div class="about-image">
+                <img src="./img/owner.jpeg" alt="Rajiv Gupta">
+            </div>
 
-    <!-- Right Content -->
-    <div class="about-content">
-      <h5>ABOUT US</h5>
-      <h2>Leadership Driving Growth & Innovation</h2>
+            <!-- Right Content -->
+            <div class="about-content">
+                <h5>ABOUT US</h5>
+                <h2>Leadership Driving Growth & Innovation</h2>
 
-      <p>
-        Rajiv Gupta is the strategic mind behind the brand’s growth and innovation. 
-        Mr Gupta is an IIM(C) alumni and a seasoned real estate and banking professional 
-        with over 18 years of rich experience in business development, entrepreneurship 
-        and leadership.
-      </p>
+                <p>
+                    Rajiv Gupta is the strategic mind behind the brand’s growth and innovation.
+                    Mr Gupta is an IIM(C) alumni and a seasoned real estate and banking professional
+                    with over 18 years of rich experience in business development, entrepreneurship
+                    and leadership.
+                </p>
 
-      <p>
-        He leads corporate strategy, investor relations, and project scalability.
-      </p>
+                <p>
+                    He leads corporate strategy, investor relations, and project scalability.
+                </p>
 
-      <p>
-        His rich expertise, visionary thinking, and deep-rooted understanding of buyer 
-        psychology have been instrumental in shaping the company's growth.
-      </p>
+                <p>
+                    His rich expertise, visionary thinking, and deep-rooted understanding of buyer
+                    psychology have been instrumental in shaping the company's growth.
+                </p>
 
-      <button>READ MORE</button>
-    </div>
+                <button>READ MORE</button>
+            </div>
 
-  </div>
-</section>
+        </div>
+    </section>
 
+    <section class="projects-section">
+
+        <h5>ONGOING PROJECTS</h5>
+
+        <div class="projects-container">
+
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="./img/WhatsAppImage2026-03-02at3.43.26PM.jpeg.bv_resized_desktop.jpeg.bv.webp">
+
+                <div class="project-info">
+                    <h3>SAI ENCLAVE</h3>
+
+                    <div class="details">
+                        <div><strong>LOCATION</strong><br>Dankaur, Greater Noida</div>
+                        <div><strong>TYPE</strong><br>Freehold Plots</div>
+                        <div><strong>STATUS</strong><br>Ready for Registry</div>
+                    </div>
+
+                    <p>Future-ready investment near Yamuna Expressway.</p>
+
+                    <a href="https://jdinfratech.co.in/sai-enclave-freehold-plots/" target="_blank">
+                        KNOW MORE
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="./img/view-land-plot-real-estate-business-development3.jpg">
+
+                <div class="project-info">
+                    <h3>NATURE CITY</h3>
+
+                    <div class="details">
+                        <div><strong>LOCATION</strong><br>Greater Noida</div>
+                        <div><strong>TYPE</strong><br>Residential Plots</div>
+                        <div><strong>STATUS</strong><br>Under Development</div>
+                    </div>
+
+                    <p>Live close to nature with high growth potential.</p>
+
+                    <a href="https://jdinfratech.co.in/nature-city-plots-greater-noida/" target="_blank">
+                        KNOW MORE
+                    </a>
+                </div>
+            </div>
+            <div class="arrow-icon">
+                ↻
+            </div>
+
+        </div>
+
+        <button class="view-btn">VIEW ALL PROJECTS</button>
+
+    </section>
+
+    <section class="contact-section">
+
+        <div class="contact-container">
+
+            <!-- LEFT: FORM -->
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+
+                <input type="text" placeholder="Full Name*" required>
+                <input type="email" placeholder="Email*" required>
+                <input type="tel" placeholder="Mobile Number*" required>
+
+                <textarea placeholder="Your Message"></textarea>
+
+                <button>Send Message</button>
+            </div>
+
+            <!-- RIGHT: MAP -->
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps?q=Noida%20Sector%20153&output=embed" width="100%" height="100%"
+                    style="border:0;" loading="lazy">
+                </iframe>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- COLUMN 1 -->
+            <div class="footer-col">
+                <h3>Registered Office</h3>
+                <p>📍Bhutani Alphathum <br>Noida Sec-153, U.P<br>Office Number : 1225<br>Sector 90, Noida - 201305</p>
+                <p>📞 91 96257 75527</p>
+                <p>✉ info@swabhumidevelopers.com</p>
+            </div>
+
+            <!-- COLUMN 2 -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <a href="#">› About Project</a>
+                <a href="#">› Location</a>
+                <a href="#">› Amenities</a>
+                <a href="#">› Our Builders Website</a>
+            </div>
+
+            <!-- COLUMN 3 -->
+            <div class="footer-col">
+                <h3>Scan for Location</h3>
+                <img src="./img/Untitled QR code.png" alt="QR Code" class="qr">
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <p>© <span>AVS City</span>, All Right Reserved.</p>
+            <p>Designed By <span>AVS Homes Team</span></p>
+        </div>
+
+        <!-- SCROLL TOP BUTTON -->
+        <div class="scroll-top" onclick="scrollToTop()">↑</div>
+
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

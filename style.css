@@ -1,44 +1,58 @@
+/* BODY FIX */
+body {
+  margin: 0;
+  padding-top: 0; /* no gap (overlay mode) */
+  font-family: Arial;
+}
+
+/* NAVBAR DEFAULT (TRANSPARENT) */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #000;
-  padding: 15px 60px;
-  border-bottom: 2px solid #caa75e;
-}
-
-.logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 40px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  z-index: 1000;
+  background: transparent;   /* 👈 transparent start */
+  transition: 0.4s ease;
+  box-sizing: border-box;
 }
 
+/* SCROLL STATE (BLACK) */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.95);  /* 👈 black */
+  backdrop-filter: blur(6px);
+  padding: 12px 40px; /* shrink effect */
+}
+
+/* LOGO */
 .logo img {
-  height: 40px;
+  height: 45px;
+  transition: 0.3s;
 }
 
-.logo span {
-  color: #fff;
-  font-size: 35px;
-  font-weight: 600;
-  letter-spacing: 2px;
+/* NAV */
+nav {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
+/* LINKS */
 nav a {
   color: #fff;
-  margin-left: 30px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
+  white-space: nowrap;
   position: relative;
   transition: 0.3s;
 }
 
-/* Hover Gold Effect */
-nav a:hover {
-  color: #caa75e;
-}
-
-/* Underline Animation */
+/* HOVER UNDERLINE */
 nav a::after {
   content: "";
   position: absolute;
@@ -54,6 +68,72 @@ nav a:hover::after {
   width: 100%;
 }
 
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  border-top: 2px solid #caa75e;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  margin-left: 15px;
+}
+
+/* 🔥 MOBILE */
+@media(max-width:1024px){
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    display: none;
+    padding: 20px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    background: transparent;
+    border: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: flex;
+  }
+}
 .video-hero {
   position: relative;
   height: 100vh;
@@ -192,5 +272,357 @@ nav a:hover::after {
 
   .about-content h2 {
     font-size: 30px;
+  }
+}
+
+/* SECTION */
+.projects-section {
+  padding: 100px 60px;
+  text-align: center;
+  background: #f3f3f3;
+}
+
+.projects-section h5 {
+  letter-spacing: 4px;
+  font-size: 14px;
+  margin-bottom: 60px;
+  color: #444;
+}
+
+/* CONTAINER */
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.project-card {
+  width: 420px;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+/* IMAGE */
+.project-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* INFO BOX */
+.project-info {
+  background: #fff;
+  border: 1px solid #caa75e;
+  padding: 30px 25px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 2;
+  text-align: left;
+}
+
+/* GOLD TITLE BOX (OVERLAP) */
+.project-info h3 {
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  background: #caa75e;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* DETAILS ROW */
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.details div {
+  font-size: 12px;
+  color: #333;
+}
+
+.details strong {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 3px;
+}
+
+/* DESCRIPTION */
+.project-info p {
+  margin: 15px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+/* KNOW MORE */
+.project-info a {
+  font-size: 12px;
+  color: #caa75e;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* CARD HOVER */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* IMAGE ZOOM */
+.project-card img {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
+/* BUTTON */
+.view-btn {
+  margin-top: 60px;
+  padding: 12px 30px;
+  border: 1px solid #caa75e;
+  background: transparent;
+  color: #caa75e;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.view-btn:hover {
+  background: #caa75e;
+  color: #fff;
+}
+.arrow-icon {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #aaa;
+  text-align: center;
+  transition: 0.4s;
+}
+
+/* Hover Animation */
+.project-card:hover .arrow-icon {
+  color: #caa75e;
+  transform: rotate(180deg);
+}
+.project-info {
+  position: relative;
+  background: #fff;
+  border: 1px solid #caa75e;
+  padding: 30px 25px;
+  margin-top: -60px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* GOLD ANIMATION BORDER */
+.project-info::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  transition: 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.project-card:hover .project-info::before {
+  border-color: #caa75e;
+  transform: scale(1.02);
+}
+.project-card:hover .project-info {
+  box-shadow: 0 15px 35px rgba(202, 167, 94, 0.2);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+}
+
+/* SECTION */
+.contact-section {
+  padding: 80px 60px;
+  background: #f5f5f5;
+}
+
+/* CONTAINER */
+.contact-container {
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+}
+
+/* LEFT FORM */
+.contact-form {
+  width: 50%;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+/* BUTTON */
+.contact-form button {
+  padding: 12px 25px;
+  background: #caa75e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #000;
+}
+
+/* RIGHT MAP */
+.contact-map {
+  width: 50%;
+  height: 400px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-form,
+  .contact-map {
+    width: 100%;
+  }
+
+  .contact-map {
+    height: 300px;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background: #0f2a24;
+  color: #ccc;
+  padding: 60px 40px 20px;
+  position: relative;
+}
+
+/* CONTAINER */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* COLUMN */
+.footer-col {
+  width: 30%;
+}
+
+/* HEADINGS */
+.footer-col h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.footer-col p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* LINKS */
+.footer-col a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #caa75e;
+}
+
+/* QR */
+.qr {
+  width: 120px;
+  margin-top: 10px;
+}
+
+/* BOTTOM */
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 30px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.footer-bottom span {
+  color: #caa75e;
+}
+
+/* SCROLL BUTTON */
+.scroll-top {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: #caa75e;
+  color: #000;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
   }
 }
