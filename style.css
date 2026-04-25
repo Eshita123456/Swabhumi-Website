@@ -282,38 +282,41 @@ nav a:hover::after {
 
 /* SECTION */
 .projects-section {
-  padding: 100px 60px;
+  padding: 80px 60px;
+  background: #f5f5f5;
   text-align: center;
-  background: #f3f3f3;
 }
 
 .projects-section h5 {
-  letter-spacing: 4px;
+  letter-spacing: 3px;
+  color: #555;
   font-size: 14px;
-  margin-bottom: 60px;
-  color: #444;
+  margin-bottom: 40px;
 }
 
 /* CONTAINER */
 .projects-container {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* FIXED 3 CARDS */
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 /* CARD */
 .project-card {
-  width: 420px;
-  position: relative;
-  z-index: 1;
-  transition: 0.4s ease;
+  background: #fff;
+  border: 1px solid #d6b36a;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* IMAGE */
 .project-card img {
   width: 100%;
-  height: 260px;
+  height: 220px; /* SAME HEIGHT */
   object-fit: cover;
 }
 
@@ -321,7 +324,7 @@ nav a:hover::after {
 .project-info {
   background: #fff;
   border: 1px solid #caa75e;
-  padding: 30px 25px;
+   padding: 25px;
   margin-top: -60px;
   position: relative;
   z-index: 2;
