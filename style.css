@@ -1436,3 +1436,67 @@ button {
   background: #caa75e;
   color: #fff;
 }
+
+/* OVERLAY */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* BOX */
+.popup-box {
+  background: #fff;
+  padding: 30px;
+  width: 320px;
+  text-align: center;
+  border-radius: 8px;
+  position: relative;
+  animation: popupFade 0.5s ease;
+}
+
+/* LOGO */
+.popup-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+/* INPUTS */
+.popup-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+}
+
+/* BUTTON */
+.popup-box button {
+  width: 100%;
+  padding: 10px;
+  background: #caa75e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes popupFade {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}

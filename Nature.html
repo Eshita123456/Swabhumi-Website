@@ -213,6 +213,32 @@
 
     </footer>
 
+    <!-- POPUP -->
+<div class="popup-overlay" id="popup">
+
+  <div class="popup-box">
+
+    <span class="close-btn" onclick="closePopup()">×</span>
+
+    <!-- LOGO -->
+    <img src="./img/logo.jpeg" class="popup-logo">
+
+    <h2>Get Free Consultation</h2>
+
+    <form action="sendmail.php" method="POST">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Mobile Number" required>
+      <input type="email" name="email" placeholder="Email" required>
+
+      <button type="submit">Submit</button>
+
+    </form>
+
+  </div>
+
+</div>
+
     <script src="./script.js"></script>
 </body>
 
