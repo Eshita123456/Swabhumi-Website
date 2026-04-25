@@ -150,6 +150,11 @@ nav a:hover::after {
   object-fit: cover;
 }
 
+.video-hero,
+.hero-overlay {
+  pointer-events: none;
+}
+
 .overlay {
   position: relative;
   z-index: 2;
@@ -301,6 +306,7 @@ nav a:hover::after {
 .project-card {
   width: 420px;
   position: relative;
+  z-index: 1;
   transition: 0.4s ease;
 }
 
@@ -1415,8 +1421,11 @@ button {
 
 .read-btn {
   display: inline-block;
+  position: relative;
+  z-index: 999;
   padding: 10px 25px;
   border: 1px solid #caa75e;
+  pointer-events: auto;
   background: transparent;
   color: #caa75e;
   text-decoration: none;
