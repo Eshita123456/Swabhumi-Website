@@ -15,14 +15,21 @@ window.addEventListener("scroll", function () {
 
 
 // ===============================
-// 🔥 HAMBURGER MENU TOGGLE
+// 🔥 HAMBURGER MENU TOGGLE (FIXED)
 // ===============================
-function toggleMenu() {
-  const nav = document.getElementById("navMenu");
-  if (!nav) return;
+document.addEventListener("DOMContentLoaded", function () {
 
-  nav.classList.toggle("active");
-}
+  const menuToggle = document.getElementById("menu-toggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+      menuToggle.classList.toggle("open"); // optional animation
+    });
+  }
+
+});
 
 
 // ===============================
@@ -41,6 +48,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ===============================
+// 🔥 DROPDOWN CLICK (MOBILE FIX)
+// ===============================
+document.addEventListener("DOMContentLoaded", function () {
+
+  const dropBtn = document.querySelector(".drop-btn");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+
+  if (dropBtn && dropdownMenu) {
+    dropBtn.addEventListener("click", function (e) {
+
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        dropdownMenu.classList.toggle("show");
+      }
+
+    });
+  }
+
+});
+
+
+// ===============================
 // 🔥 POPUP AUTO OPEN (2 sec delay + once only)
 // ===============================
 window.addEventListener("load", function () {
@@ -48,12 +77,11 @@ window.addEventListener("load", function () {
   const popup = document.getElementById("popup");
   if (!popup) return;
 
-  // show only once
   if (!localStorage.getItem("popupShown")) {
 
     setTimeout(() => {
       popup.style.display = "flex";
-      document.body.style.overflow = "hidden"; // lock scroll
+      document.body.style.overflow = "hidden";
     }, 2000);
 
     localStorage.setItem("popupShown", "true");
@@ -69,7 +97,7 @@ function closePopup() {
   if (!popup) return;
 
   popup.style.display = "none";
-  document.body.style.overflow = "auto"; // unlock scroll
+  document.body.style.overflow = "auto";
 }
 
 
