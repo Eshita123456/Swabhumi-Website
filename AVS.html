@@ -43,58 +43,268 @@
 
     </header>
 
-    <section class="page-banner">
+    <section class="hero-section">
 
-        <div class="banner-overlay"></div>
+  <div class="hero-overlay"></div>
 
-        <div class="banner-content">
-        </div>
+  <div class="hero-content">
 
-    </section>
+    <!-- LEFT CONTENT -->
+    <div class="hero-left">
+      <h1>Premium Residential Plots</h1>
+      <h2>Starting ₹45,000/Sq.Yd</h2>
 
-    <section class="project-section">
+      <p class="location">📍 Sector 12, Greater Noida West — Opp. Google Data Center</p>
 
-        <div class="project-container">
+      <ul>
+        <li>✔ Gated Society with 24×7 Security & CCTV</li>
+        <li>✔ NPCL Power Supply</li>
+        <li>✔ Plots from 60 Gaj – 200 Sq.Yd</li>
+        <li>🔥 Pre-Launch Offer Available</li>
+      </ul>
 
-            <!-- LEFT CONTENT -->
-            <div class="project-content">
+      <div class="hero-buttons">
+        <a href="#" class="btn gold">Download Brochure</a>
+        <a href="#" class="btn outline">Get Price Details</a>
+      </div>
+    </div>
 
-                <h5>AVS CITY</h5>
+    <!-- RIGHT FORM -->
+    <div class="hero-form">
+      <h3>Get Exclusive Price Sheet</h3>
 
-                <h2 style="font-size: 30px; font-weight: bold;">Why Invest in AVS City</h2>
+      <form>
+        <input type="text" placeholder="Your Name *" required>
+        <input type="tel" placeholder="Phone Number *" required>
+        <input type="email" placeholder="Email">
 
-                <p>
-                    “AVS City offers a rare combination of prime location, strong future growth, and trusted development
-                    by renowned builders AVS Homes. A smart investment today that promises high returns tomorrow.”
-                </p>
+        <button type="submit">Get Price Sheet →</button>
+      </form>
+    </div>
 
-                <h2 style="font-size: 30px; font-weight: bold;">Planned Growth</h2>
+  </div>
 
-                <p>
-                    Part of a planned development by YEIDA, ensuring better infrastructure and organized layouts.
-                </p>
+</section>
 
-                <div class="highlights">
-                    <span>✔ Asia's Largest Airport Proximity</span>
-                    <span>✔ Planned Film City nearby</span>
-                    <span>✔ Transparent Land Titles</span>
-                    <span>✔ High ROI</span>
-                </div>
+<section class="amenities-section">
 
-                <a href="#" class="btn">Enquire Now</a>
+  <div class="amenities-container">
 
-            </div>
+    <div class="amenity-card">
+      <span>🏢</span>
+      <p>Limited Plots Available</p>
+    </div>
 
-            <!-- RIGHT IMAGE -->
-            <div class="project-image">
-                <img src="./img/avs.PNG" alt="AVS City">
-            </div>
+    <div class="amenity-card">
+      <span>🏘️</span>
+      <p>Gated Society</p>
+    </div>
 
-        </div>
+    <div class="amenity-card">
+      <span>🛡️</span>
+      <p>CCTV Surveillance</p>
+    </div>
 
-    </section>
+    <div class="amenity-card">
+      <span>⚡</span>
+      <p>NPCL Power</p>
+    </div>
 
-    <section class="contact-section">
+    <div class="amenity-card">
+      <span>📅</span>
+      <p>Pre-Launch Offer</p>
+    </div>
+
+    <div class="amenity-card">
+      <span>📍</span>
+      <p>Sector 12, Gr. Noida West</p>
+    </div>
+
+    <div class="amenity-card">
+      <span>🧱</span>
+      <p>Boundary Wall</p>
+    </div>
+
+    <div class="amenity-card">
+      <span>💧</span>
+      <p>Water Supply</p>
+    </div>
+
+    <div class="amenity-card">
+      <span>💡</span>
+      <p>Street Lighting</p>
+    </div>
+
+    <div class="amenity-card">
+      <span>🌳</span>
+      <p>Landscape Gardens</p>
+    </div>
+
+    <div class="amenity-card">
+      <span>🛣️</span>
+      <p>Wide Internal Roads</p>
+    </div>
+
+    <div class="amenity-card">
+      <span>👮</span>
+      <p>Guard Patrolling</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="video-section">
+
+  <h2>
+    See The <span>Actual Site Video</span>
+  </h2>
+  <p>Watch the real on-ground progress of the project</p>
+
+  <!-- VIDEO BOX -->
+  <div class="video-box">
+
+    <!-- VIDEO -->
+    <video id="siteVideo" poster="./img/video-thumb.jpg">
+      <source src="./videos/WhatsApp Video 2026-04-24 at 15.25.49.mp4" type="video/mp4">
+    </video>
+
+    <!-- PLAY BUTTON -->
+    <div class="play-btn" onclick="playVideo()">▶</div>
+
+    <!-- TEXT -->
+    <div class="video-text">
+      🎬 Click to Watch Actual Site Video
+    </div>
+
+  </div>
+
+</section>
+
+<section class="layout-section">
+
+  <h2>Site <span>Layout Plan</span></h2>
+  <p>Official project layout with all plot details</p>
+
+  <div class="layout-box">
+
+    <!-- BLUR IMAGE -->
+    <img src="./img/Untitled design (93).png" alt="Layout Plan">
+
+    <!-- OVERLAY -->
+    <div class="layout-overlay">
+      <button onclick="openPopup()">🔒 Unlock Full Layout Plan</button>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="features-section">
+
+  <h2>Project <span>Features</span></h2>
+  <p>Premium amenities for modern living</p>
+
+  <div class="features-grid">
+
+    <div class="feature-card">🛡️<span>Gated Community</span></div>
+    <div class="feature-card">📹<span>CCTV Surveillance</span></div>
+    <div class="feature-card">🛣️<span>20ft Wide Internal Roads</span></div>
+    <div class="feature-card">🌳<span>Landscape Gardens</span></div>
+
+    <div class="feature-card">💧<span>Water Supply</span></div>
+    <div class="feature-card">💡<span>Street Lighting</span></div>
+    <div class="feature-card">🧱<span>Boundary Wall</span></div>
+    <div class="feature-card">⚡<span>NPCL Power Supply</span></div>
+
+  </div>
+
+  <!-- BUTTON -->
+  <div class="feature-btn">
+    <button onclick="openPopup()">Request Full Feature List</button>
+  </div>
+
+</section>
+
+<section class="pricing-section">
+
+  <h2>Pricing & <span>Configuration</span></h2>
+  <p>Transparent pricing at ₹45,000/Sq.Yd</p>
+
+  <div class="pricing-table">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Unit Type</th>
+          <th>Price</th>
+          <th>Offer</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>60 Gaj Plot</td>
+          <td>₹27 Lakh*</td>
+          <td><span class="tag">Pre-Launch</span></td>
+          <td><button onclick="openPopup()">Get Price Breakup</button></td>
+        </tr>
+
+        <tr>
+          <td>72 Gaj Plot</td>
+          <td>On Request</td>
+          <td><span class="tag">Pre-Launch</span></td>
+          <td><button onclick="openPopup()">Get Price Breakup</button></td>
+        </tr>
+
+        <tr>
+          <td>100 Gaj Plot</td>
+          <td>On Request</td>
+          <td><span class="tag">Limited Units</span></td>
+          <td><button onclick="openPopup()">Get Price Breakup</button></td>
+        </tr>
+
+        <tr>
+          <td>135 Gaj Plot</td>
+          <td>On Request</td>
+          <td><span class="tag">Corner Plot</span></td>
+          <td><button onclick="openPopup()">Get Price Breakup</button></td>
+        </tr>
+
+        <tr>
+          <td>200 Gaj Plot</td>
+          <td>On Request</td>
+          <td><span class="tag">Premium</span></td>
+          <td><button onclick="openPopup()">Get Price Breakup</button></td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </div>
+
+</section>
+
+<section class="gallery-section">
+
+  <h2>Visual <span>Journey</span></h2>
+  <p>Explore the beauty of Radha Kunj</p>
+
+  <div class="gallery-grid">
+
+    <img src="./img/gallery1.jpg" alt="">
+    <img src="./img/gallery2.jpg" alt="">
+    <img src="./img/gallery3.jpg" alt="">
+    <img src="./img/gallery4.jpg" alt="">
+    <img src="./img/gallery5.jpg" alt="">
+    <img src="./img/gallery6.jpg" alt="">
+
+  </div>
+
+</section>
+
+<section class="contact-section">
 
         <div class="contact-container">
 
@@ -163,6 +373,7 @@
     </footer>
 
     <!-- POPUP -->
+
     <div class="popup-overlay" id="popup">
 
         <div class="popup-box">
@@ -188,7 +399,10 @@
 
     </div>
 
-    <script src="./script.js"></script>
-</body>
 
+
+
+<script src="./script.js"></script>
+
+</body>
 </html>
