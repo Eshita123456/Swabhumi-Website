@@ -8,46 +8,80 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header class="navbar">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">S</div>
+            <span>SWA<strong>BHUMI</strong></span>
+        </a>
 
-        <!-- LOGO -->
-        <div class="logo">
-            <img src="./img/logo.jpeg" alt="Logo">
+        <ul class="nav-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#">
+                    Projects ▼
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="./AVS.html">AVS CITY</a></li>
+                    <li><a href="./Nature.html">Natur City</a></li>
+                    <li><a href="./Sai.html">Sai Enclave</a></li>
+                </ul>
+            </li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
         </div>
 
-        <!-- NAV MENU -->
-        <nav id="navMenu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-
-            <!-- DROPDOWN -->
-            <div class="dropdown">
-                <a href="#" class="drop-btn">Projects ▾</a>
-                <div class="dropdown-menu">
-                    <a href="Nature.html">Nature City</a>
-                    <a href="Sai.html">Sai Enclave</a>
-                    <a href="AVS.html">AVS City</a>
-                </div>
-            </div>
-
-            <a href="contact.html">Contact Us</a>
-        </nav>
-
-        <!-- HAMBURGER -->
-        <div class="menu-toggle" id="menu-toggle">
-            ☰
+        <div class="call-section">
+            <i class="fas fa-phone"></i>
+            <span>Call Us</span>
         </div>
 
-    </header>
+        <a href="#" class="btn-start">Get Started</a>
 
-    <section class="video-hero">
-        <video autoplay muted loop playsinline>
-            <source src="./videos/WhatsApp Video 2026-04-24 at 11.43.32.mp4" type="video/mp4">
-        </video>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <!-- Vertical Lines -->
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
+
+        <div class="hero-content">
+
+            <span class="top-text">DREAM HOME BY</span>
+
+            <h1>Navbharat Niwas</h1>
+
+            <div class="gold-divider"></div>
+
+            <h4>WHERE DREAMS FIND THEIR ADDRESS</h4>
+
+            <span class="scroll-text">SCROLL</span>
+
+        </div>
+
+        <!-- Corner Design -->
+        <div class="corner-left"></div>
+        <div class="corner-right"></div>
+
     </section>
 
     <section class="about-section">
@@ -85,106 +119,565 @@
         </div>
     </section>
 
-    <section class="projects-section">
+    <section class="why-choose-us1">
+        <div class="container1">
+            <span class="badges">✦ Why Choose Us</span>
 
-        <h5 style="font-size: 30px; font-weight: bold;">ONGOING PROJECTS</h5>
+            <h2 class="section-title1">
+                What Sets Us <span>Apart</span>
+            </h2>
 
-        <div class="projects-container">
+            <p class="section-subtitle1">
+                Four pillars that define our commitment to excellence and your peace of mind
+            </p>
 
-            <!-- Project 1 -->
-            <div class="project-card">
-                <img src="./img/WhatsAppImage2026-03-02at3.43.29PM1-1.jpeg">
+            <div class="features-grid1">
+                <div class="feature-card1">
+                    <div class="icon green1">✦</div>
+                    <span class="number1">01</span>
 
-                <div class="project-info">
-                    <h3>SAI ENCLAVE</h3>
+                    <h3>Legal Transparency</h3>
+                    <p>
+                        Clear titles, due diligence, and clean documentation for complete peace
+                        of mind.
+                    </p>
+                </div>
 
-                    <div class="details">
-                        <div><strong>LOCATION</strong><br>Dankaur, Greater Noida</div>
-                        <div><strong>TYPE</strong><br>Freehold Plots</div>
-                        <div><strong>STATUS</strong><br>Ready for Registry</div>
-                    </div>
+                <div class="feature-card1">
+                    <div class="icon blue1">⌂</div>
+                    <span class="number1">02</span>
 
-                    <p>Future-ready investment near Yamuna Expressway.</p>
+                    <h3>Location Intelligence</h3>
+                    <p>
+                        Research-backed micro markets with strong growth potential and
+                        connectivity.
+                    </p>
+                </div>
 
-                    <a href="./Sai.html" class="read-btn">KNOW MORE</a>
+                <div class="feature-card1">
+                    <div class="icon orange1">↗</div>
+                    <span class="number1">03</span>
+
+                    <h3>Long-Term Appreciation</h3>
+                    <p>
+                        Value compounding through thoughtful development and strategic
+                        positioning.
+                    </p>
+                </div>
+
+                <div class="feature-card1">
+                    <div class="icon purple1">◎</div>
+                    <span class="number1">04</span>
+
+                    <h3>After-Sales Support</h3>
+                    <p>
+                        Registry, utilities, and dedicated post-handover assistance for life.
+                    </p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Project 2 -->
-            <div class="project-card">
-                <img src="./img/view-land-plot-real-estate-business-development3.jpg">
+    <section class="premium-projects">
+        <div class="container">
 
-                <div class="project-info">
-                    <h3>NATURE CITY</h3>
+            <div class="section-header">
+                <span class="section-badge">Our Portfolio</span>
 
-                    <div class="details">
-                        <div><strong>LOCATION</strong><br>Greater Noida</div>
-                        <div><strong>TYPE</strong><br>Residential Plots</div>
-                        <div><strong>STATUS</strong><br>Under Development</div>
-                    </div>
+                <h2 class="section-title">
+                    Premium <span>Projects</span>
+                </h2>
 
-                    <p>Live close to nature with high growth potential.</p>
-
-                    <a href="./Nature.html" class="read-btn">KNOW MORE</a>
-                </div>
+                <p class="section-subtitle">
+                    Discover our curated collection of premium plots, luxury villas,
+                    and serene farm retreats
+                </p>
             </div>
 
-            <!-- Project 3 -->
-            <div class="project-card">
-                <img src="./img/kisa_milta_jhulta_202604251133.jpeg" alt="AVS City">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
 
-                <div class="project-info">
-                    <h3>AVS CITY</h3>
+                <div class="filter-left">
+                    Filter by:
+                </div>
 
-                    <div class="details">
-                        <div><strong>LOCATION</strong><br>Noida Extension</div>
-                        <div><strong>TYPE</strong><br>Residential Apartments</div>
-                        <div><strong>STATUS</strong><br>Ready to Move</div>
+                <div class="filter-controls">
+                    <select>
+                        <option>All Projects</option>
+                    </select>
+
+                    <select>
+                        <option>All Types</option>
+                    </select>
+                </div>
+
+                <div class="project-count">
+                    <span>9</span> projects found
+                </div>
+
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid1">
+
+                <!-- Project Card 1 -->
+                <div class="project-card1">
+
+                    <div class="project-image1">
+                        <img src="./img/ChatGPT Image Jun 16, 2026, 03_40_09 PM.png" alt="Krishna Kunj">
+
+                        <span class="status-badge">
+                            Ongoing
+                        </span>
+
+                        <span class="type-badge">
+                            Plot
+                        </span>
                     </div>
 
-                    <p>Premium residential living with modern amenities and excellent connectivity.</p>
+                    <div class="project-content1">
 
-                    <a href="./AVS.html" class="read-btn">
-                        KNOW MORE
-                    </a>
+                        <h3 class="project-title1">
+                            KRISHNA KUNJ
+                        </h3>
+
+                        <p class="project-location1">
+                            📍 Jaipur Khatu Road, Khatu Shyam Ji
+                        </p>
+
+                        <div class="project-footer1">
+                            <a href="#">View Details</a>
+
+                            <button class="arrow-btn1">
+                                ↗
+                            </button>
+                        </div>
+
+                    </div>
                 </div>
-            </div>
-            <div class="arrow-icon">
-                ↻
+
+                <!-- Project Card 2 -->
+                <div class="project-card1">
+
+                    <div class="project-image1">
+                        <img src="./img/mussoorie elite.jpg" alt="Mussoorie Elite">
+
+                        <span class="status-badge1">
+                            Upcoming
+                        </span>
+
+                        <span class="type-badge1">
+                            Villa
+                        </span>
+                    </div>
+
+                    <div class="project-content1">
+
+                        <h3 class="project-title1">
+                            Mussoorie Elite - EOI Opened
+                        </h3>
+
+                        <p class="project-location1">
+                            📍 Uttarakhand
+                        </p>
+
+                        <div class="project-footer1">
+                            <a href="#">View Details</a>
+
+                            <button class="arrow-btn1">
+                                ↗
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card1">
+
+                    <div class="project-image1">
+                        <img src="./img/navbharat.jpeg" alt="Navbharat Shivani Residency">
+
+                        <span class="status-badge1">
+                            Ongoing
+                        </span>
+
+                        <span class="type-badge1">
+                            Plot
+                        </span>
+                    </div>
+
+                    <div class="project-content1">
+
+                        <h3 class="project-title1">
+                            Navbharat Shivani Residency
+                        </h3>
+
+                        <p class="project-location1">
+                            📍 Phulera, Jaipur
+                        </p>
+
+                        <div class="project-footer1">
+                            <a href="#">View Details</a>
+
+                            <button class="arrow-btn1">
+                                ↗
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
 
         </div>
+    </section>
 
-        <button class="view-btn">VIEW ALL PROJECTS</button>
+    <section class="stats-section">
+        <div class="container">
 
+            <div class="section-header">
+                <span class="badge">Our Track Record</span>
+
+                <h2 class="section-title">
+                    Numbers That <span>Speak</span>
+                </h2>
+
+                <p class="section-subtitle">
+                    A decade of trust, transparency, and exceptional returns for our valued clients
+                </p>
+            </div>
+
+            <div class="stats-grid">
+
+                <!-- Card 1 -->
+                <div class="stat-card">
+                    <div class="icon-box blue">
+                        🏢
+                    </div>
+
+                    <h3>12+</h3>
+                    <p>Years of Excellence</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="stat-card">
+                    <div class="icon-box orange">
+                        ⊞
+                    </div>
+
+                    <h3>250,000-500k</h3>
+                    <p>Sq. Yards Delivered</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="stat-card">
+                    <div class="icon-box pink">
+                        ♡
+                    </div>
+
+                    <h3>98%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="container">
+
+            <div class="blog-header">
+                <div>
+                    <span class="blog-badge">Knowledge Hub</span>
+
+                    <h2 class="blog-title">
+                        Our Blogs
+                    </h2>
+                </div>
+
+                <a href="#" class="view-all">
+                    View all articles →
+                </a>
+            </div>
+
+            <div class="blog-grid">
+
+                <!-- Blog Card 1 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./img/11.png" alt="">
+                        <span class="category">Real Estate</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            7 Jul 2025 • 8 Min Read
+                        </div>
+
+                        <h3>
+                            Land Investment vs Apartments: Which Offers Better Returns?
+                        </h3>
+
+                        <p>
+                            Discover whether land investment or apartments offer
+                            better returns in today's market.
+                        </p>
+
+                        <a href="#">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./img/12.png" alt="">
+                        <span class="category">Real Estate</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            15 Jul 2025 • 5 Min Read
+                        </div>
+
+                        <h3>
+                            Plots for Sale in Mussoorie: High Return Investment
+                        </h3>
+
+                        <p>
+                            Discover premium plots for sale in Mussoorie and explore
+                            long-term investment opportunities.
+                        </p>
+
+                        <a href="#">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./img/13.png" alt="">
+                        <span class="category">Real Estate</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            17 Jul 2025 • 6 Min Read
+                        </div>
+
+                        <h3>
+                            Benefits of Investing in Residential Plots Over Other Assets
+                        </h3>
+
+                        <p>
+                            Explore why residential plots offer higher security and
+                            long-term appreciation.
+                        </p>
+
+                        <a href="#">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 4 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./img/14.png" alt="">
+                        <span class="category">Real Estate</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            21 Jul 2025 • 4 Min Read
+                        </div>
+
+                        <h3>
+                            Why Investing in Jim Corbett Real Estate Is a Smart Choice
+                        </h3>
+
+                        <p>
+                            Discover why Jim Corbett has become one of India's most
+                            attractive investment destinations.
+                        </p>
+
+                        <a href="#">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 5 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./img/15.png" alt="">
+                        <span class="category">Real Estate</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            23 Jul 2025 • 7 Min Read
+                        </div>
+
+                        <h3>
+                            Why Investing in Plots Is Better Than Buying Flats
+                        </h3>
+
+                        <p>
+                            Learn why land investments can provide better long-term
+                            value than traditional apartments.
+                        </p>
+
+                        <a href="#">Read Article →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 6 -->
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./img/16.png" alt="">
+                        <span class="category">Real Estate</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            25 Jul 2025 • 5 Min Read
+                        </div>
+
+                        <h3>
+                            Buy Residential Plots Near Khatu Shyam Ji Temple
+                        </h3>
+
+                        <p>
+                            Explore residential plots in one of Rajasthan's fastest
+                            growing investment corridors.
+                        </p>
+
+                        <a href="#">Read Article →</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
     </section>
 
     <section class="contact-section">
+        <div class="container">
 
-        <div class="contact-container">
+            <!-- Left Content -->
+            <div class="contact-content">
 
-            <!-- LEFT: FORM -->
-            <div class="contact-form">
-                <h2>Contact Us</h2>
+                <span class="contact-badge">
+                    Get In Touch
+                </span>
 
-                <input type="text" placeholder="Full Name*" required>
-                <input type="email" placeholder="Email*" required>
-                <input type="tel" placeholder="Mobile Number*" required>
+                <h2 class="contact-title">
+                    Let's Find Your
+                    <span>Dream Property</span>
+                </h2>
 
-                <textarea placeholder="Your Message"></textarea>
+                <p class="contact-description">
+                    Share your requirements and our expert advisors will help you
+                    discover the perfect plots, villas, or farm retreats with
+                    complete legal clarity.
+                </p>
 
-                <button>Send Message</button>
+                <div class="contact-info-grid">
+
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <span>Call Us</span>
+                            <h4>9971488477</h4>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <span>Email Us</span>
+                            <h4>info@navbharatniwas.in</h4>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <span>Visit Us</span>
+                            <h4>
+                                B-92, Shyama Building,<br>
+                                Noida Sec-63, U.P.-201301
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">🕒</div>
+                        <div>
+                            <span>Working Hours</span>
+                            <h4>Mon-Sun: 10AM-7PM</h4>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
-            <!-- RIGHT: MAP -->
-            <div class="contact-map">
-                <iframe src="https://www.google.com/maps?q=Noida%20Sector%20153&output=embed" width="100%" height="100%"
-                    style="border:0;" loading="lazy">
-                </iframe>
+            <!-- Right Form -->
+            <div class="contact-form-wrapper">
+
+                <div class="form-badge">
+                    🛡 Free Consultation
+                </div>
+
+                <form class="consultation-form">
+
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+91 98765 43210">
+                    </div>
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+                            <label>Investment Budget</label>
+                            <select>
+                                <option>Select budget</option>
+                                <option>₹10L - ₹25L</option>
+                                <option>₹25L - ₹50L</option>
+                                <option>₹50L+</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Preferred Location</label>
+                            <select>
+                                <option>Choose location</option>
+                                <option>Jaipur</option>
+                                <option>Uttarakhand</option>
+                                <option>Noida</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Get Free Consultation →
+                    </button>
+
+                    <p class="privacy-text">
+                        By submitting, you agree to our privacy policy.
+                        We'll never share your data.
+                    </p>
+
+                </form>
+
             </div>
 
         </div>
-
     </section>
 
     <footer class="footer-dark">
