@@ -1041,6 +1041,145 @@ nav ul{
         font-size: 18px;
     }
 }
+.journey-section{
+    padding:80px 5%;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.heading h2{
+    font-size:72px;
+    color:#1f2937;
+    font-weight:400;
+    margin-bottom:15px;
+}
+
+.heading h2 span{
+    color:#0b3b91;
+}
+
+.heading p{
+    font-family:Arial, sans-serif;
+    color:#6b7280;
+    font-size:24px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.journey-wrapper{
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.step-item{
+    width:180px;
+    text-align:center;
+    position:relative;
+}
+
+.step-number{
+    width:48px;
+    height:48px;
+    background:#0b3b91;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 25px;
+    font-size:20px;
+    font-weight:600;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.step-card{
+    background:#faf8f1;
+    border-radius:20px;
+    padding:25px 20px;
+    min-height:240px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.08);
+}
+
+.icon-box{
+    width:55px;
+    height:55px;
+    background:#e5e7eb;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+}
+
+.icon-box i{
+    color:#0b3b91;
+    font-size:24px;
+}
+
+.step-card h3{
+    font-size:20px;
+    color:#1f2937;
+    margin-bottom:12px;
+    font-weight:500;
+}
+
+.step-card p{
+    font-family:Arial, sans-serif;
+    color:#6b7280;
+    font-size:15px;
+    line-height:1.7;
+}
+
+.arrow{
+    color:#94a3b8;
+    font-size:26px;
+    margin-top:15px;
+    font-weight:600;
+}
+
+/* Responsive */
+@media(max-width:1200px){
+
+    .journey-wrapper{
+        gap:25px;
+    }
+
+    .arrow{
+        display:none;
+    }
+
+    .step-item{
+        width:280px;
+    }
+}
+
+@media(max-width:768px){
+
+    .heading h2{
+        font-size:42px;
+    }
+
+    .heading p{
+        font-size:18px;
+    }
+
+    .step-item{
+        width:100%;
+        max-width:350px;
+    }
+}
 
 .blog-section{
     padding:100px 20px;
@@ -1361,95 +1500,199 @@ nav ul{
     }
 }
 
-.footer-dark {
-  background: #000;
-  color: #aaa;
-  padding: 60px 80px 20px;
+.nbn-footer-section{
+    background:linear-gradient(135deg,#18263d,#1e2f4b);
+    padding:70px 80px 30px;
+    color:#ffffff;
+    font-family:'Poppins',sans-serif;
 }
 
-/* GRID */
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+.nbn-footer-wrapper{
+    display:grid;
+    grid-template-columns:2.2fr 1fr 1fr 1fr 1.2fr;
+    gap:60px;
 }
 
-/* LOGO */
-.footer-logo {
-  width: 150px;
-  margin-bottom: 15px;
+.nbn-brand-header{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:25px;
 }
 
-/* HEADINGS */
-.footer-col h3 {
-  color: white;
-  margin-bottom: 15px;
+.nbn-brand-icon{
+    width:46px;
+    height:46px;
+    background:#0d3d9b;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:24px;
+    font-weight:700;
 }
 
-/* TEXT */
-.footer-col p {
-  font-size: 14px;
-  line-height: 1.6;
+.nbn-brand-header h2{
+    font-size:20px;
+    font-weight:500;
 }
 
-/* LINKS */
-.footer-col a {
-  display: block;
-  color: #aaa;
-  text-decoration: none;
-  margin: 8px 0;
-  transition: 0.3s;
+.nbn-brand-text{
+    color:#d8dce7;
+    line-height:1.8;
+    max-width:340px;
+    margin-bottom:30px;
 }
 
-.footer-col a:hover {
-  color: #caa75e;
+.nbn-contact-box{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    margin-bottom:14px;
 }
 
-/* SOCIAL */
-.social-icons {
-  margin: 15px 0;
+.nbn-contact-icon{
+    min-width:38px;
+    width:38px;
+    height:38px;
+    background:rgba(255,255,255,0.05);
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#0f63ff;
 }
 
-.social-icons a {
-  margin-right: 10px;
-  font-size: 18px;
-  color: #aaa;
-  transition: 0.3s;
+.nbn-contact-box span{
+    color:#f0f2f6;
+    line-height:1.5;
 }
 
-.social-icons a:hover {
-  color: #caa75e;
+.nbn-menu-column h4,
+.nbn-newsletter-column h4{
+    font-size:28px;
+    margin-bottom:28px;
+    font-weight:600;
 }
 
-/* BUTTON */
-.contact-btn {
-  display: inline-block;
-  background: #caa75e;
-  color: rgb(8, 1, 1);
-  padding: 10px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  margin-top: 10px;
+.nbn-menu-column ul{
+    list-style:none;
+    padding:0;
 }
 
-/* BOTTOM */
-.footer-bottom {
-  border-top: 1px solid #222;
-  margin-top: 40px;
-  padding-top: 15px;
-  text-align: center;
-  font-size: 13px;
+.nbn-menu-column ul li{
+    margin-bottom:18px;
+}
+
+.nbn-menu-column ul li a{
+    text-decoration:none;
+    color:#d9dce5;
+    transition:0.3s;
+}
+
+.nbn-menu-column ul li a:hover{
+    color:#ffffff;
+    padding-left:4px;
+}
+
+.nbn-newsletter-column p{
+    color:#d9dce5;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.nbn-newsletter-column input{
+    width:100%;
+    height:50px;
+    border:1px solid rgba(255,255,255,0.12);
+    background:rgba(255,255,255,0.04);
+    border-radius:14px;
+    padding:0 18px;
+    color:#ffffff;
+    outline:none;
+    margin-bottom:12px;
+}
+
+.nbn-newsletter-column input::placeholder{
+    color:#9ca8bd;
+}
+
+.nbn-newsletter-column button{
+    width:100%;
+    height:50px;
+    border:none;
+    border-radius:14px;
+    background:#0d3d9b;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.nbn-newsletter-column button:hover{
+    background:#144fbe;
+}
+
+.nbn-footer-bottom{
+    margin-top:70px;
+    padding-top:25px;
+    border-top:1px solid rgba(255,255,255,0.08);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.nbn-footer-bottom p{
+    color:#9da7ba;
+    margin:0;
+}
+
+.nbn-social-icons{
+    display:flex;
+    gap:12px;
+}
+
+.nbn-social-icons a{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.05);
+    color:#ffffff;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:0.3s;
+}
+
+.nbn-social-icons a:hover{
+    background:#0d3d9b;
+}
+
+@media(max-width:1200px){
+
+    .nbn-footer-wrapper{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
 @media(max-width:768px){
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
 
-  .footer-logo {
-    margin: auto;
-  }
+    .nbn-footer-section{
+        padding:50px 25px;
+    }
+
+    .nbn-footer-wrapper{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .nbn-footer-bottom{
+        flex-direction:column;
+        text-align:center;
+        gap:20px;
+    }
 }
 /* HERO */
 .hero {
