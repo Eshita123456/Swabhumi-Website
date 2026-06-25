@@ -1,188 +1,764 @@
-// ===============================
-// 🔥 DOM READY (ALL IN ONE)
-// ===============================
+// =========================================
+// PAGE LOADER START (NProgress)
+// =========================================
+if (typeof NProgress !== "undefined") {
+    NProgress.configure({
+        showSpinner: false,
+        minimum: 0.08,
+        easing: "ease",
+        speed: 500,
+        trickleSpeed: 120
+    });
+
+    NProgress.start();
+}
+
+
+// =========================================
+// DOM READY
+// =========================================
 document.addEventListener("DOMContentLoaded", function () {
 
-  const navbar = document.querySelector(".navbar");
-  const menuToggle = document.getElementById("menu-toggle");
-  const navMenu = document.getElementById("navMenu");
-  const links = document.querySelectorAll("#navMenu a");
-  const dropBtn = document.querySelector(".drop-btn");
-  const dropdownMenu = document.querySelector(".dropdown-menu");
+    // =====================================
+    // ELEMENTS
+    // =====================================
+
+    const navbar = document.querySelector(".navbar");
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("navMenu");
+    const links = document.querySelectorAll("#navMenu a");
+
+    const dropBtn = document.querySelector(".drop-btn");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
 
 
-  // ===============================
-  // 🔥 NAVBAR SCROLL EFFECT
-  // ===============================
-  window.addEventListener("scroll", () => {
-    if (navbar) {
-      navbar.classList.toggle("scrolled", window.scrollY > 50);
+
+    // =====================================
+    // NAVBAR SCROLL
+    // =====================================
+
+    window.addEventListener("scroll", function () {
+
+        if (navbar) {
+
+            if (window.scrollY > 50) {
+
+                navbar.classList.add("scrolled");
+
+            } else {
+
+                navbar.classList.remove("scrolled");
+
+            }
+
+        }
+
+    });
+
+
+
+    // =====================================
+    // MOBILE MENU
+    // =====================================
+
+    if (menuToggle && navMenu) {
+
+        menuToggle.addEventListener("click", function () {
+
+            navMenu.classList.toggle("active");
+            menuToggle.classList.toggle("open");
+
+        });
+
     }
-  });
 
 
-  // ===============================
-  // 🔥 HAMBURGER MENU
-  // ===============================
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-      menuToggle.classList.toggle("open");
+
+    // =====================================
+    // CLOSE MENU AFTER CLICK
+    // =====================================
+
+    links.forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            navMenu.classList.remove("active");
+
+            if (menuToggle) {
+
+                menuToggle.classList.remove("open");
+
+            }
+
+        });
+
     });
-  }
 
 
-  // ===============================
-  // 🔥 CLOSE MENU ON CLICK
-  // ===============================
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      if (navMenu) navMenu.classList.remove("active");
+
+    // =====================================
+    // MOBILE DROPDOWN
+    // =====================================
+
+    if (dropBtn && dropdownMenu) {
+
+        dropBtn.addEventListener("click", function (e) {
+
+            if (window.innerWidth <= 768) {
+
+                e.preventDefault();
+
+                dropdownMenu.classList.toggle("show");
+
+            }
+
+        });
+
+    }
+
+
+
+    // =====================================
+    // GALLERY LIGHTBOX
+    // =====================================
+
+    const images = document.querySelectorAll(".gallery-grid img");
+
+    images.forEach(function (img) {
+
+        img.addEventListener("click", function () {
+
+            const popup = document.createElement("div");
+
+            popup.className = "img-popup";
+
+            popup.innerHTML = `
+                <span class="close">&times;</span>
+                <img src="${img.src}" class="popup-img">
+            `;
+
+            document.body.appendChild(popup);
+
+            document.body.style.overflow = "hidden";
+
+            popup.addEventListener("click", function () {
+
+                popup.remove();
+
+                document.body.style.overflow = "auto";
+
+            });
+
+        });
+
     });
-  });
 
 
-  // ===============================
-  // 🔥 MOBILE DROPDOWN
-  // ===============================
-  if (dropBtn && dropdownMenu) {
-    dropBtn.addEventListener("click", function (e) {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        dropdownMenu.classList.toggle("show");
-      }
+
+    // =====================================
+    // COUNTER ANIMATION
+    // =====================================
+
+    const counters = document.querySelectorAll(".counter");
+
+    const observer = new IntersectionObserver(function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                const counter = entry.target;
+
+                const target = parseInt(counter.dataset.target);
+
+                let current = 0;
+
+                const increment = target / 120;
+
+                function updateCounter() {
+
+                    current += increment;
+
+                    if (current < target) {
+
+                        if (target === 100) {
+
+                            counter.innerHTML = Math.ceil(current) + "k+";
+
+                        }
+
+                        else {
+
+                            counter.innerHTML = Math.ceil(current) + "+";
+
+                        }
+
+                        requestAnimationFrame(updateCounter);
+
+                    }
+
+                    else {
+
+                        if (target === 100) {
+
+                            counter.innerHTML = "100k+";
+
+                        }
+
+                        else {
+
+                            counter.innerHTML = target + "+";
+
+                        }
+
+                    }
+
+                }
+
+                updateCounter();
+
+                observer.unobserve(counter);
+
+            }
+
+        });
+
+    }, {
+
+        threshold: 0.5
+
     });
-  }
 
 
-  // ===============================
-  // 🔥 GALLERY LIGHTBOX (NEW 🔥)
-  // ===============================
-  const images = document.querySelectorAll(".gallery-grid img");
 
-  images.forEach(img => {
-    img.addEventListener("click", () => {
-      const popup = document.createElement("div");
-      popup.classList.add("img-popup");
+    counters.forEach(function (counter) {
 
-      popup.innerHTML = `
-        <span class="close">&times;</span>
-        <img src="${img.src}" class="popup-img">
-      `;
+        observer.observe(counter);
 
-      document.body.appendChild(popup);
-      document.body.style.overflow = "hidden";
-
-      popup.addEventListener("click", () => {
-        popup.remove();
-        document.body.style.overflow = "auto";
-      });
     });
-  });
+
+
+
+    // =====================================
+    // AOS INITIALIZE
+    // =====================================
+
+    if (typeof AOS !== "undefined") {
+
+        AOS.init({
+
+            duration: 1000,
+            once: true,
+            offset: 120,
+            easing: "ease-in-out",
+            mirror: false
+
+        });
+
+    }
 
 });
 
 
-// ===============================
-// 🔥 VIDEO PLAY FUNCTION
-// ===============================
-function playVideo() {
-  const video = document.getElementById("siteVideo");
-  const btn = document.querySelector(".play-btn");
 
-  if (video) {
-    video.play();
-    video.controls = true;
-  }
+// =========================================
+// PAGE LOADER COMPLETE
+// =========================================
 
-  if (btn) btn.style.display = "none";
-}
-
-
-// ===============================
-// 🔥 WHATSAPP FORM FUNCTION
-// ===============================
-function sendWhatsApp() {
-
-  const name = document.getElementById("name")?.value || "";
-  const phone = document.getElementById("phone")?.value || "";
-  const email = document.getElementById("email")?.value || "";
-
-  const message = `Hello, I'm interested in your project.
-
-Name: ${name}
-Phone: ${phone}
-Email: ${email}`;
-
-  const url = "https://wa.me/917001667551?text=" + encodeURIComponent(message);
-
-  window.open(url, "_blank");
-}
-
-
-// ===============================
-// 🔥 LAYOUT UNLOCK
-// ===============================
-function openPopup() {
-  const popup = document.getElementById("popup");
-
-  if (popup) {
-    popup.style.display = "flex";
-    document.body.style.overflow = "hidden";
-  }
-}
-
-
-// ===============================
-// 🔥 POPUP AUTO OPEN
-// ===============================
 window.addEventListener("load", function () {
 
-  const popup = document.getElementById("popup");
-  if (!popup) return;
+    if (typeof NProgress !== "undefined") {
 
-  if (!localStorage.getItem("popupShown")) {
+        setTimeout(function () {
 
-    setTimeout(() => {
-      popup.style.display = "flex";
-      document.body.style.overflow = "hidden";
-    }, 2000);
+            NProgress.done();
 
-    localStorage.setItem("popupShown", "true");
-  }
+        }, 400);
+
+    }
+
 });
 
+// =========================================
+// WHATSAPP FORM
+// =========================================
 
-// ===============================
-// 🔥 POPUP CLOSE
-// ===============================
-function closePopup() {
-  const popup = document.getElementById("popup");
+function sendWhatsApp() {
 
-  if (!popup) return;
+    const name = document.getElementById("name")?.value.trim() || "";
+    const phone = document.getElementById("phone")?.value.trim() || "";
+    const email = document.getElementById("email")?.value.trim() || "";
 
-  popup.style.display = "none";
-  document.body.style.overflow = "auto";
+    if (name === "" || phone === "") {
+
+        alert("Please enter your Name and Phone Number.");
+
+        return;
+
+    }
+
+    const message =
+`Hello, I'm interested in your project.
+
+Name : ${name}
+
+Phone : ${phone}
+
+Email : ${email}
+
+Please share complete details.`;
+
+    const whatsappURL =
+        "https://wa.me/917001667551?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+
 }
 
 
-// ===============================
-// 🔥 CLICK OUTSIDE CLOSE
-// ===============================
+
+// =========================================
+// OPEN POPUP
+// =========================================
+
+function openPopup() {
+
+    const popup = document.getElementById("popup");
+
+    if (!popup) return;
+
+    popup.style.display = "flex";
+    document.body.style.overflow = "hidden";
+
+}
+
+
+
+// =========================================
+// CLOSE POPUP
+// =========================================
+
+function closePopup() {
+
+    const popup = document.getElementById("popup");
+
+    if (!popup) return;
+
+    popup.style.display = "none";
+    document.body.style.overflow = "auto";
+
+}
+
+
+
+// =========================================
+// AUTO POPUP
+// =========================================
+
+window.addEventListener("load", function () {
+
+    const popup = document.getElementById("popup");
+
+    if (!popup) return;
+
+    if (!localStorage.getItem("popupShown")) {
+
+        setTimeout(function () {
+
+            popup.style.display = "flex";
+            document.body.style.overflow = "hidden";
+
+        }, 2000);
+
+        localStorage.setItem("popupShown", "true");
+
+    }
+
+});
+
+
+
+// =========================================
+// CLICK OUTSIDE CLOSE
+// =========================================
+
 window.addEventListener("click", function (e) {
-  const popup = document.getElementById("popup");
 
-  if (popup && e.target === popup) {
-    closePopup();
-  }
+    const popup = document.getElementById("popup");
+
+    if (popup && e.target === popup) {
+
+        closePopup();
+
+    }
+
 });
 
 
-// ===============================
-// 🔥 ESC KEY CLOSE
-// ===============================
+
+// =========================================
+// ESC KEY CLOSE
+// =========================================
+
 document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    closePopup();
-  }
+
+    if (e.key === "Escape") {
+
+        closePopup();
+
+    }
+
 });
+
+
+
+// =========================================
+// CLOSE POPUP BUTTON
+// =========================================
+
+const closeBtn = document.querySelector(".popup-close");
+
+if (closeBtn) {
+
+    closeBtn.addEventListener("click", closePopup);
+
+}
+
+
+
+// =========================================
+// PAGE LOADER (NPROGRESS)
+// =========================================
+
+if (typeof NProgress !== "undefined") {
+
+    NProgress.configure({
+
+        minimum: 0.08,
+        easing: "ease",
+        speed: 600,
+        showSpinner: false,
+        trickleSpeed: 120
+
+    });
+
+    NProgress.start();
+
+}
+
+
+
+// =========================================
+// WINDOW LOAD COMPLETE
+// =========================================
+
+window.addEventListener("load", function () {
+
+    if (typeof NProgress !== "undefined") {
+
+        setTimeout(function () {
+
+            NProgress.done();
+
+        }, 400);
+
+    }
+
+});
+
+
+
+// =========================================
+// SMOOTH SCROLL
+// =========================================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (!target) return;
+
+        e.preventDefault();
+
+        window.scrollTo({
+
+            top: target.offsetTop - 80,
+            behavior: "smooth"
+
+        });
+
+    });
+
+});
+
+
+
+// =========================================
+// BACK TO TOP BUTTON
+// =========================================
+
+const backTop = document.querySelector(".back-to-top");
+
+window.addEventListener("scroll", function () {
+
+    if (!backTop) return;
+
+    if (window.scrollY > 500) {
+
+        backTop.classList.add("show");
+
+    } else {
+
+        backTop.classList.remove("show");
+
+    }
+
+});
+
+if (backTop) {
+
+    backTop.addEventListener("click", function () {
+
+        window.scrollTo({
+
+            top: 0,
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
+
+
+
+// =========================================
+// STATS CARD HOVER EFFECT
+// =========================================
+
+document.querySelectorAll(".stat-card").forEach(function (card) {
+
+    card.addEventListener("mouseenter", function () {
+
+        this.style.transform = "translateY(-10px)";
+        this.style.transition = ".4s";
+
+    });
+
+    card.addEventListener("mouseleave", function () {
+
+        this.style.transform = "translateY(0)";
+
+    });
+
+});
+
+
+
+// =========================================
+// ICON POP ANIMATION
+// =========================================
+
+document.querySelectorAll(".icon-box").forEach(function (icon) {
+
+    icon.addEventListener("mouseenter", function () {
+
+        this.style.transform = "scale(1.15) rotate(8deg)";
+        this.style.transition = ".4s";
+
+    });
+
+    icon.addEventListener("mouseleave", function () {
+
+        this.style.transform = "scale(1) rotate(0deg)";
+
+    });
+
+});
+
+
+
+// =========================================
+// BUTTON RIPPLE EFFECT
+// =========================================
+
+document.querySelectorAll("button").forEach(function (btn) {
+
+    btn.addEventListener("click", function (e) {
+
+        const ripple = document.createElement("span");
+
+        ripple.classList.add("ripple");
+
+        const rect = btn.getBoundingClientRect();
+
+        ripple.style.left = (e.clientX - rect.left) + "px";
+        ripple.style.top = (e.clientY - rect.top) + "px";
+
+        btn.appendChild(ripple);
+
+        setTimeout(() => {
+
+            ripple.remove();
+
+        }, 600);
+
+    });
+
+});
+
+// ===============================
+// CUSTOM PAGE LOADER
+// ===============================
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const bar = document.querySelector(".loader-bar");
+
+    if(!bar) return;
+
+    let width = 0;
+
+    const loading = setInterval(() => {
+
+        width += Math.random() * 8;
+
+        if(width < 90){
+            bar.style.width = width + "%";
+        }
+
+    },80);
+
+    window.addEventListener("load",()=>{
+
+        clearInterval(loading);
+
+        bar.style.width="100%";
+
+        setTimeout(()=>{
+
+            document.getElementById("page-loader").style.opacity="0";
+            document.getElementById("page-loader").style.transition=".4s";
+
+            setTimeout(()=>{
+
+                document.getElementById("page-loader").remove();
+
+            },400);
+
+        },300);
+
+    });
+
+});
+
+// ===============================
+// CUSTOM PAGE LOADER
+// ===============================
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const bar = document.querySelector(".loader-bar");
+
+    if(!bar) return;
+
+    let width = 0;
+
+    const loading = setInterval(() => {
+
+        width += Math.random() * 8;
+
+        if(width < 90){
+            bar.style.width = width + "%";
+        }
+
+    },80);
+
+    window.addEventListener("load",()=>{
+
+        clearInterval(loading);
+
+        bar.style.width="100%";
+
+        setTimeout(()=>{
+
+            document.getElementById("page-loader").style.opacity="0";
+            document.getElementById("page-loader").style.transition=".4s";
+
+            setTimeout(()=>{
+
+                document.getElementById("page-loader").remove();
+
+            },400);
+
+        },300);
+
+    });
+
+});
+
+// ===============================
+// PREMIUM PAGE LOADER
+// ===============================
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const bar = document.querySelector(".loader-bar");
+
+    if (!bar) return;
+
+    bar.style.width = "0%";
+    bar.style.transition = "none";
+
+    setTimeout(() => {
+        bar.style.transition = "width 1.2s cubic-bezier(.22,.61,.36,1)";
+        bar.style.width = "30%";
+    }, 150);
+
+    setTimeout(() => {
+        bar.style.transition = "width 1.4s cubic-bezier(.22,.61,.36,1)";
+        bar.style.width = "55%";
+    }, 1200);
+
+    setTimeout(() => {
+        bar.style.transition = "width 1.6s cubic-bezier(.22,.61,.36,1)";
+        bar.style.width = "75%";
+    }, 2700);
+
+    setTimeout(() => {
+        bar.style.transition = "width 2s cubic-bezier(.22,.61,.36,1)";
+        bar.style.width = "90%";
+    }, 4500);
+
+});
+
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("page-loader");
+    const bar = document.querySelector(".loader-bar");
+
+    if (!loader || !bar) return;
+
+    bar.style.transition = "width .8s ease";
+    bar.style.width = "100%";
+
+    setTimeout(() => {
+
+        loader.style.transition = "opacity .5s ease";
+        loader.style.opacity = "0";
+
+        setTimeout(() => {
+            loader.remove();
+        }, 500);
+
+    }, 600);
+
+});
+
+
+
+// =========================================
+// END OF SCRIPT
+// =========================================

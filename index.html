@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puri Constructions</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <div id="page-loader">
+        <div class="loader-bar"></div>
+    </div>
     <nav class="navbar">
         <a href="index.html" class="logo">
-            <div class="logo-icon">S</div>
-            <span>GON<strong>DAL</strong></span>
+            <img src="./img/WhatsApp Image 2026-06-24 at 18.42.59.jpeg" alt="Gondal Infra Logo" class="logo-img">
         </a>
 
         <ul class="nav-links">
-            <li><a href="#">About Us</a></li>
+            <li><a href="./about.html">About Us</a></li>
             <li class="dropdown">
                 <a href="#">
                     Projects ▼
@@ -32,8 +35,8 @@
                     <li><a href="#">Sai Enclave</a></li>
                 </ul>
             </li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
 
         <div class="social-icons">
@@ -45,7 +48,7 @@
 
         <div class="call-section">
             <i class="fas fa-phone"></i>
-            <span>Call Us</span>
+            <span>96257 75527</span>
         </div>
 
         <a href="#" class="btn-start">Get Started</a>
@@ -66,15 +69,13 @@
 
         <div class="hero-content">
 
-            <span class="top-text">DREAM HOME BY</span>
+            <span class="top-text">The Best Investment on Earth is Earth.</span>
 
-            <h1 style="font-size: 150px; font-weight: bold;">Navbharat Niwas</h1>
+            <h1 style="font-size: 100px; font-weight: bold;">Plots Farm Lands Villas </h1>
 
             <div class="gold-divider"></div>
 
-            <h4>WHERE DREAMS FIND THEIR ADDRESS</h4>
-
-            <span class="scroll-text">SCROLL</span>
+            <h4>End-to-End Consultancy by Bhuinfo.</h4>
 
         </div>
 
@@ -86,7 +87,7 @@
 
     <section class="why-choose-us1">
         <div class="container1">
-            <span class="badges">✦ Why Choose Us</span>
+            <span class="badges" style="font-size: 30px;">✦ Why Choose Us</span>
 
             <h2 class="section-title1">
                 What Sets Us <span>Apart</span>
@@ -147,14 +148,14 @@
         <div class="container">
 
             <div class="section-header">
-                <span class="section-badge">Our Portfolio</span>
+                <span class="section-badge" style="font-size: 30px;">Our Portfolio</span>
 
                 <h2 class="section-title">
-                    Premium <span>Projects</span>
+                    Exclusive<span>Projects</span>
                 </h2>
 
                 <p class="section-subtitle">
-                    Discover our curated collection of premium plots, luxury villas,
+                    Discover our curated collection of exclusive plots, luxury villas,
                     and serene farm retreats
                 </p>
             </div>
@@ -163,21 +164,53 @@
             <div class="filter-bar">
 
                 <div class="filter-left">
-                    Filter by:
+                    <strong>Filter By:</strong>
                 </div>
 
                 <div class="filter-controls">
-                    <select>
-                        <option>All Projects</option>
+
+                    <!-- All Projects -->
+                    <select name="project">
+                        <option value="">All Projects</option>
+                        <option value="gondal-green-valley">Gondal Green Valley</option>
+                        <option value="gondal-farms">Gondal Farms</option>
+                        <option value="gondal-villas">Gondal Villas</option>
+                        <option value="gondal-heights">Gondal Heights</option>
+                        <option value="gondal-plots">Gondal Plots</option>
                     </select>
 
-                    <select>
-                        <option>All Types</option>
+                    <!-- Property Type -->
+                    <select name="type">
+                        <option value="">All Types</option>
+                        <option value="plots">Plots</option>
+                        <option value="villas">Villas</option>
+                        <option value="farms">Farms</option>
                     </select>
+
+                    <!-- Budget -->
+                    <select name="budget">
+                        <option value="">Budget</option>
+                        <option value="0-25">Below ₹25 Lakh</option>
+                        <option value="25-50">₹25 Lakh – ₹50 Lakh</option>
+                        <option value="50-75">₹50 Lakh – ₹75 Lakh</option>
+                        <option value="75-100">₹75 Lakh – ₹1 Crore</option>
+                        <option value="100+">More than ₹1 Crore</option>
+                    </select>
+
+                    <!-- Location -->
+                    <select name="location">
+                        <option value="">Location</option>
+                        <option value="dehradun">Dehradun</option>
+                        <option value="haridwar">Haridwar</option>
+                        <option value="ayodhya">Ayodhya</option>
+                        <option value="vrindavan">Vrindavan</option>
+                        <option value="jim-corbett">Jim Corbett</option>
+                    </select>
+
                 </div>
 
                 <div class="project-count">
-                    <span>9</span> projects found
+                    <span>9</span> Projects Found
                 </div>
 
             </div>
@@ -380,7 +413,6 @@
         </div>
     </section>
 
-
     <section class="stats-section">
         <div class="container">
 
@@ -392,40 +424,51 @@
                 </h2>
 
                 <p class="section-subtitle">
-                    A decade of trust, transparency, and exceptional returns for our valued clients
+                    A decade of trust, transparency, and exceptional returns for our valued clients.
                 </p>
             </div>
 
             <div class="stats-grid">
 
                 <!-- Card 1 -->
-                <div class="stat-card">
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+
                     <div class="icon-box blue">
                         🏢
                     </div>
 
-                    <h3>12+</h3>
+                    <h3 class="counter" data-target="10">0</h3>
+
                     <p>Years of Excellence</p>
+
                 </div>
 
                 <!-- Card 2 -->
-                <div class="stat-card">
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="250">
+
                     <div class="icon-box orange">
                         ⊞
                     </div>
 
-                    <h3>250,000-500k</h3>
-                    <p>Sq. Yards Delivered</p>
+                    <h3 class="counter" data-target="100">0</h3>
+
+                    <p>Sq. Yards Sold</p>
+
                 </div>
 
                 <!-- Card 3 -->
-                <div class="stat-card">
+
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
+
                     <div class="icon-box pink">
                         ♡
                     </div>
 
-                    <h3>98%</h3>
-                    <p>Client Satisfaction</p>
+                    <h3 class="counter" data-target="1000">0</h3>
+
+                    <p>Happy Faces</p>
+
                 </div>
 
             </div>
@@ -438,16 +481,12 @@
 
             <div class="blog-header">
                 <div>
-                    <span class="blog-badge">Knowledge Hub</span>
+                    <span class="blog-badge" style="font-size: 30px;">Knowledge Hub</span>
 
                     <h2 class="blog-title">
                         Our Blogs
                     </h2>
                 </div>
-
-                <a href="#" class="view-all">
-                    View all articles →
-                </a>
             </div>
 
             <div class="blog-grid">
@@ -461,7 +500,7 @@
 
                     <div class="blog-content">
                         <div class="blog-meta">
-                            7 Jul 2025 • 8 Min Read
+                            16/06/2026 • Delhi
                         </div>
 
                         <h3>
@@ -477,31 +516,6 @@
                     </div>
                 </article>
 
-                <!-- Blog Card 2 -->
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="./img/12.png" alt="">
-                        <span class="category">Real Estate</span>
-                    </div>
-
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            15 Jul 2025 • 5 Min Read
-                        </div>
-
-                        <h3>
-                            Plots for Sale in Mussoorie: High Return Investment
-                        </h3>
-
-                        <p>
-                            Discover premium plots for sale in Mussoorie and explore
-                            long-term investment opportunities.
-                        </p>
-
-                        <a href="#">Read Article →</a>
-                    </div>
-                </article>
-
                 <!-- Blog Card 3 -->
                 <article class="blog-card">
                     <div class="blog-image">
@@ -511,7 +525,7 @@
 
                     <div class="blog-content">
                         <div class="blog-meta">
-                            17 Jul 2025 • 6 Min Read
+                            07/06/2026 • Noida, Uttar Pradesh
                         </div>
 
                         <h3>
@@ -536,7 +550,7 @@
 
                     <div class="blog-content">
                         <div class="blog-meta">
-                            21 Jul 2025 • 4 Min Read
+                            25/05/2026 • Jim Corbett National Park, Uttrakhand
                         </div>
 
                         <h3>
@@ -561,7 +575,7 @@
 
                     <div class="blog-content">
                         <div class="blog-meta">
-                            23 Jul 2025 • 7 Min Read
+                            24/05/2026 • Phulera, Rajasthan
                         </div>
 
                         <h3>
@@ -580,22 +594,46 @@
                 <!-- Blog Card 6 -->
                 <article class="blog-card">
                     <div class="blog-image">
-                        <img src="./img/16.png" alt="">
+                        <img src="./img/17.png" alt="">
                         <span class="category">Real Estate</span>
                     </div>
 
                     <div class="blog-content">
                         <div class="blog-meta">
-                            25 Jul 2025 • 5 Min Read
+                            02/04/2026 • Uttar Pradesh, Noida
                         </div>
 
                         <h3>
-                            Buy Residential Plots Near Khatu Shyam Ji Temple
+                            Real Estate Investment in India Guide 2026
                         </h3>
 
                         <p>
-                            Explore residential plots in one of Rajasthan's fastest
-                            growing investment corridors.
+                            Whether you are a first-time buyer or an experienced investor, understanding the right
+                            strategies can help you maximize your returns
+                        </p>
+
+                        <a href="#">Read Article →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="./img/image_1774769938941_zcnlgbglp.png" alt="">
+                        <span class="category">Real Estate</span>
+                    </div>
+
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            29/03/2026 • Mussoorie, Kempty Falls
+                        </div>
+
+                        <h3>
+                            Smart Investment: Affordable Plot in Mussoorie
+                        </h3>
+
+                        <p>
+                            If you are searching for affordable land near Kempty Falls or planning to buy land near
+                            Mussoorie, 2026 is the perfect time to invest.
                         </p>
 
                         <a href="#">Read Article →</a>
@@ -603,65 +641,96 @@
                 </article>
 
             </div>
+            <!-- View All Button -->
+            <div class="blog-btn-wrapper">
+                <a href="blogs.html" class="blog-btn">
+                    View All Articles
+                    <span>→</span>
+                </a>
+            </div>
 
         </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section class="contact-section">
+
+        <!-- Center Heading -->
+        <div class="contact-header">
+
+            <span class="contact-header-badge" style="font-size: 30px;">Get In Touch</span>
+
+            <h2 class="contact-header-title">
+                Let's Find Your
+                <span>Dream Property</span>
+            </h2>
+
+            <p class="contact-header-description">
+                Share your requirements and our expert advisors will help you discover the perfect plots,
+                villas, or farm retreats with complete legal clarity.
+            </p>
+
+        </div>
+
         <div class="container">
 
-            <!-- Left Content -->
+            <!-- Left Side -->
             <div class="contact-content">
-
-                <span class="contact-badge">
-                    Get In Touch
-                </span>
-
-                <h2 class="contact-title">
-                    Let's Find Your
-                    <span>Dream Property</span>
-                </h2>
-
-                <p class="contact-description">
-                    Share your requirements and our expert advisors will help you
-                    discover the perfect plots, villas, or farm retreats with
-                    complete legal clarity.
-                </p>
 
                 <div class="contact-info-grid">
 
+                    <!-- Card 1 -->
                     <div class="info-card">
-                        <div class="info-icon">📞</div>
+                        <div class="info-icon">
+                            📞
+                        </div>
+
                         <div>
                             <span>Call Us</span>
-                            <h4>9971488477</h4>
+                            <h4>96257 75527</h4>
                         </div>
                     </div>
 
+                    <!-- Card 2 -->
                     <div class="info-card">
-                        <div class="info-icon">✉️</div>
+                        <div class="info-icon">
+                            ✉️
+                        </div>
+
                         <div>
                             <span>Email Us</span>
-                            <h4>info@navbharatniwas.in</h4>
+                            <h4>: info@bhuinfo.com</h4>
                         </div>
                     </div>
 
+                    <!-- Card 3 -->
                     <div class="info-card">
-                        <div class="info-icon">📍</div>
+                        <div class="info-icon">
+                            📍
+                        </div>
+
                         <div>
                             <span>Visit Us</span>
+
                             <h4>
-                                B-92, Shyama Building,<br>
-                                Noida Sec-63, U.P.-201301
+                                Unit 1631C, 16th Floor, Part 2,
+                                Tower A, EON Fairfox
+                                Sector 140A,
+                                <br>
+                                Gautam Budha Nagar, Noida - 201304, UP
                             </h4>
                         </div>
                     </div>
 
+                    <!-- Card 4 -->
                     <div class="info-card">
-                        <div class="info-icon">🕒</div>
+                        <div class="info-icon">
+                            🕒
+                        </div>
+
                         <div>
                             <span>Working Hours</span>
-                            <h4>Mon-Sun: 10AM-7PM</h4>
+                            <h4>Monday – Sunday<br>10:00 AM – 7:00 PM</h4>
                         </div>
                     </div>
 
@@ -669,7 +738,7 @@
 
             </div>
 
-            <!-- Right Form -->
+            <!-- Right Side -->
             <div class="contact-form-wrapper">
 
                 <div class="form-badge">
@@ -691,34 +760,43 @@
                     <div class="form-row">
 
                         <div class="form-group">
+
                             <label>Investment Budget</label>
+
                             <select>
-                                <option>Select budget</option>
-                                <option>₹10L - ₹25L</option>
-                                <option>₹25L - ₹50L</option>
-                                <option>₹50L+</option>
+                                <option>Select Budget</option>
+                                <option>₹10 Lakh – ₹25 Lakh</option>
+                                <option>₹25 Lakh – ₹50 Lakh</option>
+                                <option>₹50 Lakh – ₹1 Crore</option>
+                                <option>Above ₹1 Crore</option>
                             </select>
+
                         </div>
 
                         <div class="form-group">
+
                             <label>Preferred Location</label>
+
                             <select>
-                                <option>Choose location</option>
-                                <option>Jaipur</option>
-                                <option>Uttarakhand</option>
-                                <option>Noida</option>
+                                <option>Select Location</option>
+                                <option>Dehradun</option>
+                                <option>Haridwar</option>
+                                <option>Ayodhya</option>
+                                <option>Vrindavan</option>
+                                <option>Jim Corbett</option>
                             </select>
+
                         </div>
 
                     </div>
 
-                    <button type="submit" class="submit-btn">
+                    <button class="submit-btn">
                         Get Free Consultation →
                     </button>
 
                     <p class="privacy-text">
-                        By submitting, you agree to our privacy policy.
-                        We'll never share your data.
+                        By submitting this form you agree to our privacy policy.
+                        We respect your privacy and never share your information.
                     </p>
 
                 </form>
@@ -726,6 +804,7 @@
             </div>
 
         </div>
+
     </section>
 
     <footer class="nbn-footer-section">
@@ -736,34 +815,35 @@
             <div class="nbn-brand-column">
 
                 <div class="nbn-brand-header">
-                    <div class="nbn-brand-icon">N</div>
-                    <h2>Navbharat Niwas</h2>
+                    <img src="./img/WhatsApp Image 2026-06-24 at 18.42.59.jpeg" alt="Navbharat Niwas Logo"
+                        class="nbn-brand-logo">
                 </div>
 
                 <p class="nbn-brand-text">
-                    Premium land, luxury villas, and nature-first living.
-                    Building legacies since 2013.
+                    Your trusted partner for premium plots, farm lands, and villa investments.
+                    Building wealth through smart real estate decisions.
                 </p>
 
                 <div class="nbn-contact-box">
                     <div class="nbn-contact-icon">
                         <i class="fa-solid fa-phone"></i>
                     </div>
-                    <span>9971488477</span>
+                    <span>9625775527</span>
                 </div>
 
                 <div class="nbn-contact-box">
                     <div class="nbn-contact-icon">
                         <i class="fa-regular fa-envelope"></i>
                     </div>
-                    <span>info@navbharatniwas.in</span>
+                    <span>info@bhuinfo.com</span>
                 </div>
 
                 <div class="nbn-contact-box">
                     <div class="nbn-contact-icon">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
-                    <span>B-92, Shyama Building, Noida Sec-63, U.P-201301</span>
+                    <span>Unit 1631C, 16th Floor, Part 2, Tower A, EON Fairfox
+                        Sector 140A, Gautam Budha Nagar, Noida - 201304, UP</span>
                 </div>
 
             </div>
@@ -828,7 +908,7 @@
         <div class="nbn-footer-bottom">
 
             <p>
-                © 2026 Navbharat Niwas Pvt. Ltd. All rights reserved.
+                © 2026 Bhuinfo. All rights reserved.
             </p>
 
             <div class="nbn-social-icons">
@@ -840,7 +920,7 @@
         </div>
 
     </footer>
-    <!-- POPUP 
+    <!-- POPUP  -->
 
     <div class="popup-overlay" id="popup">
 
@@ -848,7 +928,7 @@
 
             <span class="close-btn" onclick="closePopup()">×</span>
 
-            
+
             <img src="./img/logo.jpeg" class="popup-logo">
 
             <h2>Get Free Consultation</h2>
@@ -865,8 +945,10 @@
 
         </div>
 
-    </div> -->
+    </div>
 
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="./script.js"></script>
 </body>
 
