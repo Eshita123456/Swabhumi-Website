@@ -63,7 +63,7 @@ body {
 =========================== */
 
 .navbar{
-     position:fixed;
+    position:fixed;
     top:0;
     left:0;
     width:100%;
@@ -73,7 +73,8 @@ body {
     align-items:center;
     justify-content:space-between;
 
-    padding:16px 40px;
+    padding:0 30px;     /* Top & Bottom padding remove */
+    height:80px;          /* Fixed navbar height */
 
     /* Dark Transparent Background */
     background:rgba(15, 25, 45, 0.88);
@@ -90,20 +91,37 @@ body {
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
+/* ===========================
+   LOGO
+=========================== */
+
 .logo{
     display:flex;
     align-items:center;
-    gap:10px;
+    justify-content:center;
+
     text-decoration:none;
+    margin-left:-100px;
+    margin:0;
+    padding:0;
+
+    height:80px;      /* Navbar height */
 }
 
 .logo-img{
-    width:180px;
-    transition:.3s;
+    height:80px;      /* Navbar jitni height */
+    width:auto;
+    display:block;
+
+    margin:0;
+    padding:0;
+
+    object-fit:cover;
+    transition:.3s ease;
 }
 
-.navbar:hover .logo-img{
-    transform:scale(1.02);
+.logo-img:hover{
+    transform:scale(1.03);
 }
 
 .logo-icon {
@@ -376,10 +394,10 @@ nav ul {
 
 .top-text {
   color: #fff;
-  font-size: 30px;
+  font-size: 40px;
   letter-spacing: 10px;
   text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-family: Arial, sans-serif;
 }
 
