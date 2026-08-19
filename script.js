@@ -493,7 +493,499 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 });
 
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
 
+
+        /* ==========================================
+           ELEMENTS
+        ========================================== */
+
+        const slider =
+            document.getElementById(
+                "projectsGrid"
+            );
+
+        const cards =
+            Array.from(
+                document.querySelectorAll(
+                    ".project-card1"
+                )
+            );
+
+        const prevBtn =
+            document.getElementById(
+                "prevProject"
+            );
+
+        const nextBtn =
+            document.getElementById(
+                "nextProject"
+            );
+
+        const dotsContainer =
+            document.getElementById(
+                "projectSliderDots"
+            );
+
+        const projectCount =
+            document.getElementById(
+                "projectCount"
+            );
+
+
+        let currentIndex = 0;
+
+
+        /* ==========================================
+           GET VISIBLE CARDS
+        ========================================== */
+
+        function getVisibleCards() {
+
+            if (
+                window.innerWidth <= 768
+            ) {
+
+                return 1;
+
+            }
+
+
+            if (
+                window.innerWidth <= 992
+            ) {
+
+                return 2;
+
+            }
+
+
+            return 3;
+
+        }
+
+
+        /* ==========================================
+           GET TOTAL SLIDES
+        ========================================== */
+
+        function getTotalSlides() {
+
+            const visibleCards =
+                getVisibleCards();
+
+            const totalCards =
+                cards.length;
+
+            return Math.max(
+                1,
+                Math.ceil(
+                    totalCards /
+                    visibleCards
+                )
+            );
+
+        }
+
+
+        /* ==========================================
+           CREATE DOTS
+        ========================================== */
+
+        function createDots() {
+
+            dotsContainer.innerHTML = "";
+
+            const totalSlides =
+                getTotalSlides();
+
+
+            for (
+                let i = 0;
+                i < totalSlides;
+                i++
+            ) {
+
+                const dot =
+                    document.createElement(
+                        "button"
+                    );
+
+                dot.type = "button";
+
+                dot.className =
+                    "project-dot";
+
+
+                if (i === 0) {
+
+                    dot.classList.add(
+                        "active"
+                    );
+
+                }
+
+
+                dot.addEventListener(
+                    "click",
+                    function () {
+
+                        currentIndex = i;
+
+                        updateSlider();
+
+                    }
+                );
+
+
+                dotsContainer.appendChild(
+                    dot
+                );
+
+            }
+
+        }
+
+
+        /* ==========================================
+           UPDATE SLIDER
+        ========================================== */
+
+        function updateSlider() {
+
+            const visibleCards =
+                getVisibleCards();
+
+            const totalSlides =
+                getTotalSlides();
+
+
+            /* Keep index valid */
+
+            if (
+                currentIndex >
+                totalSlides - 1
+            ) {
+
+                currentIndex =
+                    totalSlides - 1;
+
+            }
+
+
+            if (
+                currentIndex < 0
+            ) {
+
+                currentIndex = 0;
+
+            }
+
+
+            /* =====================================
+               CALCULATE MOVEMENT
+            ===================================== */
+
+            if (
+                cards.length === 0
+            ) {
+
+                return;
+
+            }
+
+
+            const cardWidth =
+                cards[0].getBoundingClientRect()
+                    .width;
+
+
+            const gap = 24;
+
+
+            const moveAmount =
+                (
+                    cardWidth + gap
+                ) *
+                visibleCards *
+                currentIndex;
+
+
+            slider.style.transform =
+                "translateX(-" +
+                moveAmount +
+                "px)";
+
+
+            /* =====================================
+               BUTTON STATES
+            ===================================== */
+
+            prevBtn.disabled =
+                currentIndex === 0;
+
+
+            nextBtn.disabled =
+                currentIndex >=
+                totalSlides - 1;
+
+
+            /* =====================================
+               UPDATE DOTS
+            ===================================== */
+
+            const dots =
+                dotsContainer.querySelectorAll(
+                    ".project-dot"
+                );
+
+
+            dots.forEach(
+                function (
+                    dot,
+                    index
+                ) {
+
+                    dot.classList.toggle(
+                        "active",
+                        index ===
+                        currentIndex
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* ==========================================
+           NEXT
+        ========================================== */
+
+        nextBtn.addEventListener(
+            "click",
+            function () {
+
+                const totalSlides =
+                    getTotalSlides();
+
+
+                if (
+                    currentIndex <
+                    totalSlides - 1
+                ) {
+
+                    currentIndex++;
+
+                    updateSlider();
+
+                }
+
+            }
+        );
+
+
+        /* ==========================================
+           PREVIOUS
+        ========================================== */
+
+        prevBtn.addEventListener(
+            "click",
+            function () {
+
+                if (
+                    currentIndex > 0
+                ) {
+
+                    currentIndex--;
+
+                    updateSlider();
+
+                }
+
+            }
+        );
+
+
+        /* ==========================================
+           FILTERS
+        ========================================== */
+
+        const projectFilter =
+            document.getElementById(
+                "projectFilter"
+            );
+
+        const typeFilter =
+            document.getElementById(
+                "typeFilter"
+            );
+
+        const budgetFilter =
+            document.getElementById(
+                "budgetFilter"
+            );
+
+        const locationFilter =
+            document.getElementById(
+                "locationFilter"
+            );
+
+
+        function applyFilters() {
+
+            const projectValue =
+                projectFilter.value;
+
+            const typeValue =
+                typeFilter.value;
+
+            const budgetValue =
+                budgetFilter.value;
+
+            const locationValue =
+                locationFilter.value;
+
+
+            let visibleCount = 0;
+
+
+            cards.forEach(
+                function (card) {
+
+                    const project =
+                        card.dataset.project;
+
+                    const type =
+                        card.dataset.type;
+
+                    const budget =
+                        card.dataset.budget;
+
+                    const location =
+                        card.dataset.location;
+
+
+                    const projectMatch =
+                        !projectValue ||
+                        project ===
+                        projectValue;
+
+
+                    const typeMatch =
+                        !typeValue ||
+                        type ===
+                        typeValue;
+
+
+                    const budgetMatch =
+                        !budgetValue ||
+                        budget ===
+                        budgetValue;
+
+
+                    const locationMatch =
+                        !locationValue ||
+                        location ===
+                        locationValue;
+
+
+                    const show =
+                        projectMatch &&
+                        typeMatch &&
+                        budgetMatch &&
+                        locationMatch;
+
+
+                    if (show) {
+
+                        card.style.display =
+                            "block";
+
+                        visibleCount++;
+
+                    }
+
+                    else {
+
+                        card.style.display =
+                            "none";
+
+                    }
+
+                }
+            );
+
+
+            projectCount.textContent =
+                visibleCount;
+
+
+            /*
+             * Recalculate slider after filter
+             */
+
+            currentIndex = 0;
+
+            createDots();
+
+            updateSlider();
+
+        }
+
+
+        projectFilter.addEventListener(
+            "change",
+            applyFilters
+        );
+
+        typeFilter.addEventListener(
+            "change",
+            applyFilters
+        );
+
+        budgetFilter.addEventListener(
+            "change",
+            applyFilters
+        );
+
+        locationFilter.addEventListener(
+            "change",
+            applyFilters
+        );
+
+
+        /* ==========================================
+           RESIZE
+        ========================================== */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                currentIndex = 0;
+
+                createDots();
+
+                updateSlider();
+
+            }
+        );
+
+
+        /* ==========================================
+           INITIALIZE
+        ========================================== */
+
+        createDots();
+
+        updateSlider();
+
+
+    }
+);
 
 // =========================================
 // BACK TO TOP BUTTON

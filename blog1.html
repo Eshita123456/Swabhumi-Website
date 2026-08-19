@@ -1,0 +1,2840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Land Investment vs Apartments</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* =========================================
+           RESET
+        ========================================= */
+
+        body {
+            background: #f7f5ed;
+            color: #202b3b;
+            font-family: "DM Sans", sans-serif;
+        }
+
+        /* Mobile Menu */
+
+        .menu-toggle1 {
+            display: none;
+
+            color: #063478;
+
+            font-size: 22px;
+
+            margin-left: auto;
+        }
+
+        .blog-header1 {
+            width: 100%;
+            min-height: 384px;
+            padding: 34px 20px 0;
+        }
+
+        .blog-container1 {
+            max-width: 938px;
+            margin: 0 auto;
+        }
+
+        /* Back to Blogs */
+        .back-link1 {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #617080;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 29px;
+        }
+
+        .back-arrow1 {
+            width: 18px;
+            height: 18px;
+            stroke: #617080;
+            stroke-width: 1.8;
+            fill: none;
+        }
+
+        /* Category */
+        .category1 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #002d70;
+            color: #ffffff;
+
+            font-size: 15px;
+            font-weight: 600;
+
+            padding: 8px 17px;
+            border-radius: 30px;
+
+            margin-bottom: 18px;
+        }
+
+        /* Main Heading */
+        .blog-title1 {
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 50px;
+            line-height: 1.03;
+            font-weight: 400;
+            letter-spacing: -1.7px;
+
+            color: #202a3a;
+
+            max-width: 930px;
+            margin-bottom: 24px;
+        }
+
+        /* Meta Information */
+        .blog-meta1 {
+            display: flex;
+            align-items: center;
+            gap: 27px;
+
+            color: #718090;
+            font-size: 17px;
+
+            margin-bottom: 27px;
+        }
+
+        .meta-item1 {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .meta-icon1 {
+            width: 19px;
+            height: 19px;
+
+            stroke: #718090;
+            stroke-width: 1.8;
+            fill: none;
+        }
+
+        /* Tags */
+        .blog-tags1 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: #718090;
+            font-size: 16px;
+
+            padding-bottom: 38px;
+            border-bottom: 1px solid #dedbd2;
+        }
+
+        .tag-icon1 {
+            width: 20px;
+            height: 20px;
+
+            stroke: #718090;
+            stroke-width: 1.7;
+            fill: none;
+
+            flex-shrink: 0;
+        }
+
+        .tags-text1 {
+            white-space: nowrap;
+        }
+
+        .hero-image1 {
+            width: 100%;
+            max-width: 932px;
+            margin: 15px auto 0;
+            overflow: hidden;
+            border-radius: 18px 18px 0 0;
+        }
+
+        .hero-image1 img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .article-content1 {
+            width: 100%;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 42px 0 30px;
+            color: #31506f;
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .article-content1 p {
+            margin: 0 0 24px;
+        }
+
+        .article-content1 p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-content1 strong {
+            color: #17283b;
+            font-weight: 700;
+        }
+
+        .article-content1 a {
+            color: #17283b;
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+
+        /* Tablet */
+        @media (max-width: 1000px) {
+            .article-content1 {
+                max-width: 90%;
+                font-size: 17px;
+            }
+        }
+
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .article-content1 {
+                max-width: 100%;
+                padding: 30px 20px;
+                font-size: 16px;
+                line-height: 1.65;
+            }
+
+            .article-content1 p {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1000px) {
+
+            .blog-container1 {
+                max-width: 90%;
+            }
+
+            .blog-title1 {
+                font-size: 46px;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .blog-header1 {
+                padding-top: 25px;
+            }
+
+            .blog-container1 {
+                max-width: 100%;
+            }
+
+            .back-link1 {
+                font-size: 15px;
+                margin-bottom: 24px;
+            }
+
+            .category1 {
+                font-size: 14px;
+                padding: 7px 15px;
+                margin-bottom: 16px;
+            }
+
+            .blog-title1 {
+                font-size: 39px;
+                line-height: 1.08;
+                letter-spacing: -1px;
+                margin-bottom: 22px;
+            }
+
+            .blog-meta1 {
+                flex-wrap: wrap;
+                gap: 15px 25px;
+                font-size: 15px;
+            }
+
+            .blog-tags1 {
+                font-size: 14px;
+                overflow-x: auto;
+                padding-bottom: 28px;
+            }
+
+            .tags-text1 {
+                white-space: normal;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .blog-header {
+                padding: 22px 18px 0;
+            }
+
+            .blog-title1 {
+                font-size: 32px;
+                line-height: 1.08;
+            }
+
+            .blog-meta1 {
+                font-size: 14px;
+                gap: 12px 20px;
+            }
+
+            .meta-icon1 {
+                width: 17px;
+                height: 17px;
+            }
+
+            .blog-tags1 {
+                align-items: flex-start;
+                font-size: 13px;
+            }
+
+            .tag-icon1 {
+                width: 18px;
+                height: 18px;
+                margin-top: 1px;
+            }
+        }
+
+        .investment-section {
+            width: 100%;
+            background: #f7f4ec;
+            padding: 0 20px 12px;
+            box-sizing: border-box;
+        }
+
+        .investment-section h2 {
+            margin: 0 auto 27px;
+            text-align: center;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 35px;
+            line-height: 1.2;
+            font-weight: 500;
+
+            color: #12304d;
+        }
+
+        .investment-image {
+            width: 100%;
+            max-width: 720px;
+            height: 480px;
+            margin: 0 auto;
+
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .investment-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+            object-fit: cover;
+        }
+
+
+        /* Tablet */
+        @media (max-width: 768px) {
+
+            .investment-section {
+                padding: 0 20px 25px;
+            }
+
+            .investment-section h2 {
+                font-size: 26px;
+                margin-bottom: 22px;
+            }
+
+            .investment-image {
+                height: 430px;
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 480px) {
+
+            .investment-section {
+                padding: 0 15px 25px;
+            }
+
+            .investment-section h2 {
+                font-size: 22px;
+                line-height: 1.25;
+                margin-bottom: 18px;
+            }
+
+            .investment-image {
+                height: 300px;
+                border-radius: 8px;
+            }
+        }
+
+        .land-investment-info {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 24px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+        }
+
+        .land-investment-info h2 {
+            margin: 0 0 17px;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 27px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+        .land-investment-info p {
+            margin: 0;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+            font-weight: 400;
+
+            color: #315779;
+        }
+
+
+        /* Tablet */
+        @media (max-width: 900px) {
+
+            .land-investment-info {
+                max-width: 90%;
+            }
+
+            .land-investment-info h2 {
+                font-size: 25px;
+            }
+
+            .land-investment-info p {
+                font-size: 16px;
+            }
+        }
+
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .land-investment-info {
+                max-width: 100%;
+                padding: 0 20px 25px;
+            }
+
+            .land-investment-info h2 {
+                font-size: 23px;
+                margin-bottom: 14px;
+            }
+
+            .land-investment-info p {
+                font-size: 15px;
+                line-height: 1.65;
+            }
+        }
+
+        .apartment-image-section {
+            width: 100%;
+            background: #f7f4ec;
+            padding: 0 20px 18px;
+            box-sizing: border-box;
+        }
+
+        .apartment-image-wrapper {
+            width: 100%;
+            max-width: 800px;
+            height: 534px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 11px;
+        }
+
+        .apartment-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+
+        /* Tablet */
+        @media (max-width: 900px) {
+            .apartment-image-wrapper {
+                height: auto;
+                aspect-ratio: 1.5 / 1;
+            }
+        }
+
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .apartment-image-section {
+                padding: 0 15px 20px;
+            }
+
+            .apartment-image-wrapper {
+                aspect-ratio: 1.45 / 1;
+                border-radius: 8px;
+            }
+        }
+
+        .apartment-investment-info {
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+
+            padding: 0 0 25px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+        }
+
+        .apartment-investment-info h2 {
+            margin: 0 0 17px;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 27px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+        .apartment-investment-info p {
+            margin: 0;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+            font-weight: 400;
+
+            color: #315779;
+        }
+
+
+        /* Tablet */
+        @media (max-width: 900px) {
+
+            .apartment-investment-info {
+                max-width: 90%;
+            }
+
+            .apartment-investment-info h2 {
+                font-size: 25px;
+            }
+
+            .apartment-investment-info p {
+                font-size: 16px;
+            }
+        }
+
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .apartment-investment-info {
+                max-width: 100%;
+                padding: 0 20px 25px;
+            }
+
+            .apartment-investment-info h2 {
+                font-size: 23px;
+                margin-bottom: 14px;
+            }
+
+            .apartment-investment-info p {
+                font-size: 15px;
+                line-height: 1.65;
+            }
+        }
+
+        .appreciation-section {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 20px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Heading */
+
+        .appreciation-section h2 {
+            margin: 0 0 17px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 29px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .appreciation-section p {
+            margin: 0 0 22px;
+        }
+
+
+        /* List */
+
+        .appreciation-section ul {
+            margin: -2px 0 23px;
+            padding-left: 25px;
+        }
+
+        .appreciation-section li {
+            padding-left: 0;
+            margin-bottom: 18px;
+        }
+
+        .appreciation-section li:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .appreciation-section {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .appreciation-section h2 {
+                font-size: 26px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .appreciation-section {
+                max-width: 100%;
+                padding: 0 20px 25px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .appreciation-section h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .appreciation-section p {
+                margin-bottom: 19px;
+            }
+
+            .appreciation-section ul {
+                padding-left: 22px;
+                margin-bottom: 20px;
+            }
+
+            .appreciation-section li {
+                margin-bottom: 14px;
+            }
+        }
+
+        .rental-income-section {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 20px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Heading */
+
+        .rental-income-section h2 {
+            margin: 0 0 17px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 29px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .rental-income-section p {
+            margin: 0 0 22px;
+        }
+
+
+        /* List */
+
+        .rental-income-section ul {
+            margin: -2px 0 0;
+            padding-left: 25px;
+        }
+
+        .rental-income-section li {
+            padding-left: 0;
+            margin-bottom: 18px;
+        }
+
+        .rental-income-section li:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .rental-income-section {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .rental-income-section h2 {
+                font-size: 26px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .rental-income-section {
+                max-width: 100%;
+                padding: 0 20px 25px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .rental-income-section h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .rental-income-section p {
+                margin-bottom: 19px;
+            }
+
+            .rental-income-section ul {
+                padding-left: 22px;
+            }
+
+            .rental-income-section li {
+                margin-bottom: 14px;
+            }
+        }
+
+        .maintenance-section {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 20px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Heading */
+
+        .maintenance-section h2 {
+            margin: 0 0 18px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 29px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .maintenance-section p {
+            margin: 0 0 22px;
+        }
+
+
+        /* Bullet List */
+
+        .maintenance-section ul {
+            margin: -2px 0 23px;
+            padding-left: 25px;
+        }
+
+        .maintenance-section li {
+            padding-left: 0;
+            margin-bottom: 18px;
+        }
+
+        .maintenance-section li:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* Link */
+
+        .maintenance-section a {
+            color: #064f9d;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .maintenance-section {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .maintenance-section h2 {
+                font-size: 26px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .maintenance-section {
+                max-width: 100%;
+                padding: 0 20px 25px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .maintenance-section h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .maintenance-section p {
+                margin-bottom: 19px;
+            }
+
+            .maintenance-section ul {
+                padding-left: 22px;
+                margin-bottom: 20px;
+            }
+
+            .maintenance-section li {
+                margin-bottom: 14px;
+            }
+        }
+
+        .flexibility-section {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 20px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Heading */
+
+        .flexibility-section h2 {
+            margin: 0 0 18px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 29px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .flexibility-section p {
+            margin: 0 0 22px;
+        }
+
+
+        /* List */
+
+        .flexibility-section ul {
+            margin: -2px 0 23px;
+            padding-left: 25px;
+        }
+
+        .flexibility-section li {
+            padding-left: 0;
+            margin-bottom: 18px;
+        }
+
+        .flexibility-section li:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* Link */
+
+        .flexibility-section a {
+            color: #063f86;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .flexibility-section {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .flexibility-section h2 {
+                font-size: 26px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .flexibility-section {
+                max-width: 100%;
+                padding: 0 20px 25px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .flexibility-section h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .flexibility-section p {
+                margin-bottom: 19px;
+            }
+
+            .flexibility-section ul {
+                padding-left: 22px;
+                margin-bottom: 20px;
+            }
+
+            .flexibility-section li {
+                margin-bottom: 14px;
+            }
+        }
+
+        .liquidity-section {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 20px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Heading */
+
+        .liquidity-section h2 {
+            margin: 0 0 18px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 29px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .liquidity-section p {
+            margin: 0 0 22px;
+        }
+
+
+        /* Bullet List */
+
+        .liquidity-section ul {
+            margin: -2px 0 0;
+            padding-left: 25px;
+        }
+
+        .liquidity-section li {
+            padding-left: 0;
+            margin-bottom: 18px;
+        }
+
+        .liquidity-section li:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .liquidity-section {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .liquidity-section h2 {
+                font-size: 26px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .liquidity-section {
+                max-width: 100%;
+                padding: 0 20px 25px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .liquidity-section h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .liquidity-section p {
+                margin-bottom: 19px;
+            }
+
+            .liquidity-section ul {
+                padding-left: 22px;
+            }
+
+            .liquidity-section li {
+                margin-bottom: 14px;
+            }
+        }
+
+        .risk-factors-section {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 25px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Main Heading */
+
+        .risk-factors-section h2 {
+            margin: 0 0 18px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 29px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Sub Headings */
+
+        .risk-factors-section h3 {
+            margin: 31px 0 17px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 26px;
+            line-height: 1.3;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .risk-factors-section p {
+            margin: 0 0 22px;
+        }
+
+
+        /* Lists */
+
+        .risk-factors-section ul {
+            margin: 0 0 23px;
+            padding-left: 25px;
+        }
+
+        .risk-factors-section li {
+            margin-bottom: 18px;
+            padding-left: 0;
+        }
+
+        .risk-factors-section li:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* Links */
+
+        .risk-factors-section a {
+            color: #064f9d;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .risk-factors-section {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .risk-factors-section h2 {
+                font-size: 26px;
+            }
+
+            .risk-factors-section h3 {
+                font-size: 24px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .risk-factors-section {
+                max-width: 100%;
+                padding: 0 20px 25px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .risk-factors-section h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .risk-factors-section h3 {
+                font-size: 21px;
+                line-height: 1.35;
+                margin: 25px 0 14px;
+            }
+
+            .risk-factors-section p {
+                margin-bottom: 19px;
+            }
+
+            .risk-factors-section ul {
+                padding-left: 22px;
+                margin-bottom: 20px;
+            }
+
+            .risk-factors-section li {
+                margin-bottom: 14px;
+            }
+        }
+
+        .wealth-creation-section {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 25px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Heading */
+
+        .wealth-creation-section h2 {
+            margin: 0 0 18px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 29px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .wealth-creation-section p {
+            margin: 0 0 22px;
+        }
+
+
+        /* Bullet List */
+
+        .wealth-creation-section ul {
+            margin: -2px 0 23px;
+            padding-left: 25px;
+        }
+
+        .wealth-creation-section li {
+            padding-left: 0;
+            margin-bottom: 18px;
+        }
+
+        .wealth-creation-section li:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .wealth-creation-section {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .wealth-creation-section h2 {
+                font-size: 26px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .wealth-creation-section {
+                max-width: 100%;
+                padding: 0 20px 25px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .wealth-creation-section h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .wealth-creation-section p {
+                margin-bottom: 19px;
+            }
+
+            .wealth-creation-section ul {
+                padding-left: 22px;
+                margin-bottom: 20px;
+            }
+
+            .wealth-creation-section li {
+                margin-bottom: 14px;
+            }
+        }
+
+        .final-verdict-section {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 0 25px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Main Heading */
+
+        .final-verdict-section h2 {
+            margin: 0 0 18px;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 30px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .final-verdict-section p {
+            margin: 0 0 22px;
+        }
+
+
+        /* Bold Text */
+
+        .final-verdict-section strong {
+            color: #162b42;
+            font-weight: 700;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .final-verdict-section {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .final-verdict-section h2 {
+                font-size: 27px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .final-verdict-section {
+                max-width: 100%;
+                padding: 0 20px 25px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .final-verdict-section h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .final-verdict-section p {
+                margin-bottom: 19px;
+            }
+        }
+
+        .land-wealth-image-section {
+            width: 100%;
+            background: #f7f4ec;
+            padding: 0 20px 18px;
+            box-sizing: border-box;
+        }
+
+        .land-wealth-image {
+            width: 100%;
+            max-width: 800px;
+            height: 534px;
+
+            margin: 0 auto;
+
+            overflow: hidden;
+            border-radius: 11px;
+        }
+
+        .land-wealth-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+            object-fit: cover;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .land-wealth-image {
+                height: auto;
+                aspect-ratio: 1.5 / 1;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .land-wealth-image-section {
+                padding: 0 15px 20px;
+            }
+
+            .land-wealth-image {
+                aspect-ratio: 1.45 / 1;
+                border-radius: 8px;
+            }
+        }
+
+        .navbharat-section {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 25px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Heading */
+
+        .navbharat-section h2 {
+            margin: 0 0 18px;
+
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 30px;
+            line-height: 1.25;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .navbharat-section p {
+            margin: 0 0 22px;
+        }
+
+
+        /* Bold text */
+
+        .navbharat-section strong {
+            color: #162b42;
+            font-weight: 700;
+        }
+
+
+        /* Features */
+
+        .navbharat-features {
+            display: flex;
+            flex-direction: column;
+
+            gap: 17px;
+
+            margin: 0 0 23px;
+        }
+
+        .navbharat-features a,
+        .navbharat-features span {
+            display: block;
+
+            color: #315779;
+
+            font-size: 17px;
+            line-height: 1.5;
+
+            text-decoration: none;
+        }
+
+        .navbharat-features a {
+            color: #064f9d;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+
+        /* Keep check mark blue */
+
+        .navbharat-features a::first-letter,
+        .navbharat-features span::first-letter {
+            color: #064f9d;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .navbharat-section {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .navbharat-section h2 {
+                font-size: 27px;
+            }
+
+            .navbharat-features a,
+            .navbharat-features span {
+                font-size: 16px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .navbharat-section {
+                max-width: 100%;
+                padding: 0 20px 25px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .navbharat-section h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .navbharat-section p {
+                margin-bottom: 19px;
+            }
+
+            .navbharat-features {
+                gap: 14px;
+                margin-bottom: 20px;
+            }
+
+            .navbharat-features a,
+            .navbharat-features span {
+                font-size: 15px;
+                line-height: 1.55;
+            }
+        }
+
+        .investment-cta {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+
+            padding: 0 0 10px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+
+            color: #315779;
+
+            font-family: "DM Sans", Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
+        }
+
+
+        /* Main Heading */
+
+        .investment-cta h2 {
+            margin: 0 0 18px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 28px;
+            line-height: 1.3;
+            font-weight: 600;
+
+            color: #12304d;
+        }
+
+
+        /* Paragraphs */
+
+        .investment-cta p {
+            margin: 0 0 21px;
+        }
+
+
+        /* Bold Text */
+
+        .investment-cta strong {
+            color: #132b45;
+            font-weight: 700;
+        }
+
+
+        /* Website Link */
+
+        .investment-cta a {
+            color: #064f9d;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+
+        /* Commitment */
+
+        .investment-cta .commitment {
+            margin-top: 2px;
+            margin-bottom: 0;
+        }
+
+
+        /* Divider */
+
+        .cta-divider {
+            width: 100%;
+            height: 1px;
+
+            background: #e5e1d7;
+
+            margin: 51px 0 33px;
+        }
+
+
+        /* Tags Heading */
+
+        .tags-section h3 {
+            margin: 0 0 16px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 21px;
+            line-height: 1.3;
+            font-weight: 500;
+
+            color: #12304d;
+        }
+
+
+        /* Tags */
+
+        .tags-list {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px 9px;
+        }
+
+        .tags-list span {
+            display: inline-block;
+
+            padding: 8px 16px;
+
+            border-radius: 22px;
+
+            background: #f1eee5;
+
+            color: #61738a;
+
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+
+        /* Tablet */
+
+        @media (max-width: 900px) {
+
+            .investment-cta {
+                max-width: 90%;
+                font-size: 16px;
+            }
+
+            .investment-cta h2 {
+                font-size: 26px;
+            }
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .investment-cta {
+                max-width: 100%;
+                padding: 0 20px 20px;
+
+                font-size: 15px;
+                line-height: 1.65;
+            }
+
+            .investment-cta h2 {
+                font-size: 23px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+            }
+
+            .investment-cta p {
+                margin-bottom: 18px;
+            }
+
+            .cta-divider {
+                margin: 35px 0 25px;
+            }
+
+            .tags-section h3 {
+                font-size: 20px;
+            }
+
+            .tags-list {
+                gap: 7px;
+            }
+
+            .tags-list span {
+                padding: 7px 12px;
+                font-size: 13px;
+            }
+        }
+
+        .related-articles {
+            width: 100%;
+            max-width: 1110px;
+
+            margin: 0 auto;
+            padding: 48px 0 55px;
+
+            background: #f7f4ec;
+            box-sizing: border-box;
+        }
+
+
+        /* Section Heading */
+
+        .related-articles>h2 {
+            margin: 0 0 28px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 31px;
+            line-height: 1.25;
+            font-weight: 500;
+
+            color: #12304d;
+        }
+
+
+        /* Cards Grid */
+
+        .articles-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 32px;
+        }
+
+
+        /* Card */
+
+        .article-card {
+            background: #ffffff;
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 5px 12px rgba(20, 35, 50, 0.12);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+
+            box-shadow:
+                0 9px 20px rgba(20, 35, 50, 0.16);
+        }
+
+
+        /* Image */
+
+        .article-image {
+            width: 100%;
+            height: 192px;
+
+            overflow: hidden;
+
+            background: #e8e7e2;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+
+        /* Placeholder */
+
+        .article-placeholder {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background:
+                linear-gradient(135deg,
+                    #d8dde5,
+                    #f4f1e8);
+        }
+
+        .article-placeholder span {
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 42px;
+            font-weight: 400;
+
+            color: #a9b5c4;
+        }
+
+
+        /* Card Content */
+
+        .article-content {
+            padding: 25px 24px 22px;
+        }
+
+
+        /* Card Title */
+
+        .article-content h3 {
+            margin: 0 0 10px;
+
+            font-family: "Playfair Display", Georgia, serif;
+
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: 500;
+
+            color: #183550;
+        }
+
+
+        /* Card Description */
+
+        .article-content p {
+            margin: 0;
+
+            font-family: "DM Sans", Arial, sans-serif;
+
+            font-size: 14px;
+            line-height: 1.45;
+
+            color: #6b8197;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+            overflow: hidden;
+        }
+
+
+        /* =========================================
+   TABLET
+========================================= */
+
+        @media (max-width: 1000px) {
+
+            .related-articles {
+                max-width: 92%;
+            }
+
+            .articles-grid {
+                gap: 20px;
+            }
+
+            .article-image {
+                height: 175px;
+            }
+
+            .article-content {
+                padding: 21px 19px;
+            }
+
+            .article-content h3 {
+                font-size: 17px;
+            }
+        }
+
+
+        /* =========================================
+   MOBILE
+========================================= */
+
+        @media (max-width: 700px) {
+
+            .related-articles {
+                max-width: 100%;
+                padding: 35px 20px 40px;
+            }
+
+            .related-articles>h2 {
+                font-size: 27px;
+                margin-bottom: 22px;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .article-image {
+                height: 210px;
+            }
+
+            .article-content {
+                padding: 22px 20px 20px;
+            }
+        }
+
+
+        /* Small Mobile */
+
+        @media (max-width: 480px) {
+
+            .related-articles {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .article-image {
+                height: 190px;
+            }
+
+            .article-content h3 {
+                font-size: 17px;
+            }
+
+            .article-content p {
+                font-size: 13px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <br><br><br><br>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="./img/f03e2391-7ba7-4611-80f8-c01543e87da6.png" alt="Gondal Infra Logo" class="logo-img">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#">
+                    Projects ▼
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="./AVS.html">AVS CITY</a></li>
+                    <li><a href="./Natur.html">Natur City</a></li>
+                    <li><a href="./Sai.html">Sai Enclave</a></li>
+                </ul>
+            </li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+
+        <div class="call-section">
+            <i class="fas fa-phone"></i>
+            <span>96257 75527</span>
+        </div>
+
+        <a href="#" class="btn-start">Get Started</a>
+
+        <div class="menu-toggle1">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header class="blog-header1">
+
+        <div class="blog-container1">
+
+            <!-- Back to Blogs -->
+            <a href="#" class="back-link1">
+
+                <svg class="back-arrow1" viewBox="0 0 24 24">
+                    <path d="M19 12H5"></path>
+                    <path d="M12 19l-7-7 7-7"></path>
+                </svg>
+
+                <span>Back to Blogs</span>
+
+            </a><br>
+
+
+            <!-- Category -->
+            <div class="category1">
+                Real Estate
+            </div>
+
+
+            <!-- Blog Title -->
+            <h1 class="blog-title1">
+                Land Investment vs Apartments: Which<br class="desktop-break1">
+                Offers Better Returns?
+            </h1>
+
+
+            <!-- Meta Information -->
+            <div class="blog-meta1">
+
+                <!-- Date -->
+                <div class="meta-item1">
+
+                    <svg class="meta-icon1" viewBox="0 0 24 24">
+                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+
+                    <span>16 June 2026</span>
+
+                </div>
+
+
+                <!-- Location -->
+                <div class="meta-item1">
+
+                    <svg class="meta-icon1" viewBox="0 0 24 24">
+                        <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0z"></path>
+                        <circle cx="12" cy="10" r="2.5"></circle>
+                    </svg>
+
+                    <span>Delhi</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tags -->
+            <div class="blog-tags1">
+
+                <svg class="tag-icon1" viewBox="0 0 24 24">
+                    <path d="M20.59 13.41L11 3.83V3H4v7h.83l9.58 9.59a2 2 0 0 0 2.83 0l3.35-3.35a2 2 0 0 0 0-2.83z">
+                    </path>
+                    <circle cx="7.5" cy="7.5" r="1"></circle>
+                </svg>
+
+                <span class="tags-text1">
+                    navbharatinwas, LandInvestment, ApartmentInvestment,
+                    ResidentialPlots, PropertyInvestmentIndia
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <section class="hero-image1">
+        <img src="./img/11.png" alt="Land Investment vs Apartments">
+    </section>
+
+    <section class="article-content1" style="background: #f7f4ec;">
+
+        <p>
+            Real estate has always been one of the most trusted investment options in India.
+            However, when it comes to choosing between
+            <strong>land investment</strong> and <strong>apartments</strong>,
+            investors often find themselves confused. Both asset classes have their own
+            advantages, but the real question is:
+            <a href="#">Which offers better returns in the long run?</a>
+        </p>
+
+        <p>
+            Whether you're a first-time investor or looking to diversify your real estate
+            portfolio, understanding the differences between plots and apartments can help
+            you make a smarter financial decision.
+        </p>
+
+        <p>
+            In this guide, we'll compare land and apartment investments based on appreciation,
+            rental income, maintenance costs, liquidity, and long-term wealth creation.
+        </p>
+
+    </section>
+
+    <section class="investment-section">
+
+        <h2>Understanding Land Investment and Apartment Investment</h2>
+
+        <div class="investment-image">
+            <img src="./img/blog_image_1781526369057_0gr0s3l15 (1).png" alt="Land Investment and Apartment Investment">
+        </div>
+
+    </section>
+
+    <section class="land-investment-info">
+
+        <h2>What is Land Investment?</h2>
+
+        <p>
+            Land investment involves purchasing a residential or commercial plot
+            with the intention of benefiting from future price appreciation.
+            Investors may choose to hold the land for several years or develop it
+            later based on market conditions.
+        </p>
+
+    </section>
+
+    <section class="apartment-image-section">
+        <div class="apartment-image-wrapper">
+            <img src="./img/blog_image_1781526616507_97xrwosrr.png" alt="Apartment Investment">
+        </div>
+    </section>
+
+    <section class="apartment-investment-info">
+
+        <h2>What is Apartment Investment?</h2>
+
+        <p>
+            Apartment investment involves purchasing a residential flat either for
+            self-use, rental income, or future resale. Apartments provide immediate
+            usability and often come with amenities such as security, parking, and
+            recreational facilities.
+        </p>
+
+    </section>
+
+    <section class="appreciation-section">
+
+        <h2>1. Appreciation Potential: Land Wins the Race</h2>
+
+        <p>
+            One of the biggest factors investors consider is capital appreciation.
+        </p>
+
+        <p>
+            Land is a finite resource. As urbanization expands and infrastructure
+            develops, the demand for well-located plots increases significantly.
+            Since there is no structure that depreciates over time, land generally
+            experiences stronger appreciation than apartments. Multiple real estate
+            industry analyses have found that plots often outperform flats in
+            long-term capital growth, especially in emerging growth corridors.
+        </p>
+
+        <p>
+            Apartments, on the other hand, consist of two components:
+        </p>
+
+        <ul>
+            <li>Land value</li>
+            <li>Building value</li>
+        </ul>
+
+        <p>
+            While the land component appreciates, the building structure gradually
+            depreciates due to aging, wear and tear, and maintenance requirements.
+            This can limit long-term appreciation potential.
+        </p>
+
+    </section>
+
+    <section class="rental-income-section">
+
+        <h2>2. Rental Income: Apartments Have the Advantage</h2>
+
+        <p>
+            If your goal is generating monthly cash flow, apartments perform better.
+        </p>
+
+        <p>
+            A residential apartment can generate rental income immediately after purchase.
+            Depending on the city and location, rental yields in India typically range
+            between 2% and 4% annually.
+        </p>
+
+        <p>
+            Land, however, does not generate regular income unless it is developed or
+            leased for a specific purpose.
+        </p>
+
+        <p>
+            For investors seeking passive income:
+        </p>
+
+        <ul>
+            <li>Apartments provide consistent monthly returns.</li>
+            <li>Land focuses primarily on capital appreciation.</li>
+        </ul>
+
+    </section>
+
+    <section class="maintenance-section">
+
+        <h2>3. Maintenance Costs: Land Requires Less Upkeep</h2>
+
+        <p>
+            Maintenance is often an overlooked factor when calculating investment returns.
+        </p>
+
+        <p>
+            Apartment owners must pay:
+        </p>
+
+        <ul>
+            <li>Society maintenance charges</li>
+            <li>Repairs and renovations</li>
+            <li>Property management fees</li>
+            <li>Utility-related expenses</li>
+        </ul>
+
+        <p>
+            These recurring costs can reduce overall profitability.
+        </p>
+
+        <p>
+            <a href="#">Land investments</a> typically require minimal maintenance.
+            Apart from property taxes and occasional boundary protection, there are
+            very few ongoing expenses. Industry experts consistently highlight low
+            maintenance costs as one of the major benefits of land ownership.
+        </p>
+
+    </section>
+
+    <section class="flexibility-section">
+
+        <h2>4. Flexibility and Control</h2>
+
+        <p>
+            When you buy a plot, you gain complete ownership and flexibility.
+        </p>
+
+        <p>
+            You can:
+        </p>
+
+        <ul>
+            <li>Build a home whenever you choose</li>
+            <li>Develop a commercial property</li>
+            <li>Construct a farmhouse or villa</li>
+            <li>
+                <a href="#">Hold the asset for future generations</a>
+            </li>
+        </ul>
+
+        <p>
+            With apartments, customization options are limited because the building
+            structure is fixed. Investors must comply with society rules and building
+            regulations.
+        </p>
+
+        <p>
+            For investors who value freedom and future possibilities, land provides
+            significantly more flexibility.
+        </p>
+
+    </section>
+
+    <section class="liquidity-section">
+
+        <h2>5. Liquidity and Ease of Resale</h2>
+
+        <p>
+            Liquidity refers to how quickly you can sell an asset.
+        </p>
+
+        <p>
+            Apartments in well-developed urban areas often attract more buyers because
+            they offer immediate occupancy. As a result, they may sell faster than
+            plots in some markets.
+        </p>
+
+        <p>
+            However, premium plots located near highways, industrial corridors,
+            metro projects, and upcoming townships can also witness strong resale demand.
+        </p>
+
+        <p>
+            The actual liquidity depends largely on:
+        </p>
+
+        <ul>
+            <li>Location</li>
+            <li>Market demand</li>
+            <li>Infrastructure development</li>
+            <li>Property documentation</li>
+        </ul>
+
+    </section>
+
+    <section class="risk-factors-section">
+
+        <h2>6. Risk Factors</h2>
+
+        <p>
+            Every real estate investment comes with risks.
+        </p>
+
+
+        <!-- Land Investment Risks -->
+
+        <h3>Risks in Land Investment</h3>
+
+        <ul>
+            <li>Title disputes</li>
+            <li>Zoning restrictions</li>
+            <li>Encroachment issues</li>
+            <li>Lack of infrastructure development</li>
+        </ul>
+
+        <p>
+            Proper due diligence and
+            <a href="#">legal verification</a>
+            are essential before purchasing land. Experts recommend checking
+            land records, approvals, and zoning regulations carefully.
+        </p>
+
+
+        <!-- Apartment Investment Risks -->
+
+        <h3>Risks in Apartment Investment</h3>
+
+        <ul>
+            <li>Builder delays</li>
+            <li>Structural deterioration</li>
+            <li>High maintenance costs</li>
+            <li>Vacancy risks</li>
+            <li>Tenant management issues</li>
+        </ul>
+
+        <p>
+            Both investments carry risks, but they can be minimized through
+            research and proper planning.
+        </p>
+
+    </section>
+
+    <section class="wealth-creation-section">
+
+        <h2>7. Long-Term Wealth Creation</h2>
+
+        <p>
+            When evaluating investments, it's important to focus on wealth creation
+            rather than short-term gains.
+        </p>
+
+        <p>
+            Real estate experts widely agree that plots generally offer superior
+            long-term appreciation because land remains scarce while demand continues
+            to grow. Apartments provide convenience and rental income but often
+            experience slower appreciation due to the depreciating building component.
+        </p>
+
+        <p>
+            This is especially true in:
+        </p>
+
+        <ul>
+            <li>Developing cities</li>
+            <li>Emerging townships</li>
+            <li>Infrastructure growth corridors</li>
+            <li>Highway-connected regions</li>
+        </ul>
+
+        <p>
+            Investors who purchased plots early in rapidly developing areas have often
+            seen substantial returns over time.
+        </p>
+
+    </section>
+
+    <section class="final-verdict-section">
+
+        <h2>Final Verdict: Which Offers Better Returns?</h2>
+
+        <p>
+            The answer depends on your investment goals.
+        </p>
+
+        <p>
+            If your primary objective is
+            <strong>long-term wealth creation and capital appreciation</strong>,
+            land investment generally offers better returns. The limited supply of
+            land, lower maintenance costs, and stronger appreciation potential make
+            plots a preferred choice for many seasoned investors.
+        </p>
+
+        <p>
+            However, if you're looking for
+            <strong>immediate rental income and faster usability</strong>,
+            apartments remain an attractive option.
+        </p>
+
+        <p>
+            For investors focused on maximizing future returns, strategically located
+            plots in high-growth areas often outperform apartments over the long run.
+            The key is choosing locations with strong infrastructure development,
+            connectivity, and future growth potential.
+        </p>
+
+    </section>
+
+    <section class="land-wealth-image-section">
+        <div class="land-wealth-image">
+            <img src="./img/blog_image_1781526952666_rc6mlop9n.png" alt="Land Investment and Wealth Creation">
+        </div>
+    </section>
+
+    <section class="navbharat-section">
+
+        <h2>Why Choose NavBharat Niwas for Land Investment?</h2>
+
+        <p>
+            Investing in land is not just about purchasing a plot—it's about securing
+            your future with a trusted real estate partner. At
+            <strong>NavBharat Niwas</strong>, we understand that every investment
+            represents years of hard work, savings, and aspirations.
+        </p>
+
+        <p>
+            That's why we focus on offering:
+        </p>
+
+        <div class="navbharat-features">
+
+            <a href="#">✓ Legally verified properties</a>
+
+            <a href="#">✓ Transparent documentation</a>
+
+            <a href="#">✓ Prime locations with high growth potential</a>
+
+            <span>✓ Customer-centric support throughout the buying process</span>
+
+            <a href="#">✓ Investment opportunities designed for long-term wealth creation</a>
+
+        </div>
+
+        <p>
+            Our philosophy is simple:
+            <strong>"Your Trust, Our Commitment."</strong>
+            We believe that successful real estate investments are built on
+            transparency, reliability, and lasting relationships. Whether you're
+            looking for residential plots, investment opportunities, or future-ready
+            land assets, NavBharat Niwas is committed to helping you make informed
+            and profitable decisions.
+        </p>
+
+    </section>
+
+    <section class="investment-cta">
+
+        <h2>Start Your Land Investment Journey Today</h2>
+
+        <p>
+            If you're planning to invest in land and build long-term wealth, let
+            NavBharat Niwas guide you toward the right opportunity. Explore our
+            latest projects and discover why hundreds of investors trust us for
+            their real estate investments.
+        </p>
+
+        <p>
+            <strong>Visit:</strong>
+            <a href="#" target="_blank">
+                www.navbharatniwas.com
+            </a>
+        </p>
+
+        <p>
+            <strong>Call Us:</strong>
+            +91 9971488477
+        </p>
+
+        <p class="commitment">
+            <strong>NavBharat Niwas – Your Trust, Our Commitment.</strong>
+        </p>
+
+
+        <!-- Divider -->
+
+        <div class="cta-divider"></div>
+
+
+        <!-- Tags -->
+
+        <div class="tags-section">
+
+            <h3>Tags</h3>
+
+            <div class="tags-list">
+
+                <span>#navbharatniwas</span>
+                <span>#LandInvestment</span>
+                <span>#ApartmentInvestment</span>
+                <span>#ResidentialPlots</span>
+                <span>#PropertyInvestmentIndia</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="related-articles">
+
+        <h2>Related Articles</h2>
+
+        <div class="articles-grid">
+
+            <!-- Card 1 -->
+            <article class="article-card">
+
+                <div class="article-image">
+                    <img src="images/mussoorie.jpg" alt="Mussoorie Elite by NavBharat Niwas">
+                </div>
+
+                <div class="article-content">
+                    <h3>
+                        Mussoorie Elite by NavBharat Niwas
+                    </h3>
+
+                    <p>
+                        Mussoorie Elite by NavBharat Niwas offers premium
+                        plotted developments in the heart...
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Card 2 -->
+            <article class="article-card">
+
+                <div class="article-image article-placeholder">
+                    <span>J</span>
+                </div>
+
+                <div class="article-content">
+                    <h3>
+                        Jim &amp; Holmes Cottage by NavBharat Niwas | Luxury Living
+                    </h3>
+
+                    <p>
+                        Discover Jim &amp; Holmes Cottage by NavBharat Niwas,
+                        where luxury living meet...
+                    </p>
+                </div>
+
+            </article>
+
+
+            <!-- Card 3 -->
+            <article class="article-card">
+
+                <div class="article-image">
+                    <img src="images/jaipur-phulera.jpg" alt="Plots for Sale in Jaipur Phulera">
+                </div>
+
+                <div class="article-content">
+                    <h3>
+                        Plots for Sale in Jaipur Phulera: Buy Land in a Growing Hub
+                    </h3>
+
+                    <p>
+                        Looking for plots for sale in Jaipur Phulera?
+                        Explore why Phulera is gaining attention for...
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <footer class="nbn-footer-section">
+
+        <div class="nbn-footer-wrapper">
+
+            <!-- Left Column -->
+            <div class="nbn-brand-column">
+
+                <div class="nbn-brand-header">
+                    <img src="./img/WhatsApp Image 2026-06-24 at 18.42.59.jpeg" alt="Navbharat Niwas Logo"
+                        class="nbn-brand-logo">
+                </div>
+
+                <p class="nbn-brand-text">
+                    Your trusted partner for premium plots, farm lands, and villa investments.
+                    Building wealth through smart real estate decisions.
+                </p>
+
+                <div class="nbn-contact-box">
+                    <div class="nbn-contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span>9625775527</span>
+                </div>
+
+                <div class="nbn-contact-box">
+                    <div class="nbn-contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <span>info@bhuinfo.in</span>
+                </div>
+
+                <div class="nbn-contact-box">
+                    <div class="nbn-contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span>Unit 1631C, 16th Floor, Part 2, Tower A, EON Fairfox
+                        Sector 140A, Gautam Budha Nagar, Noida - 201304, UP</span>
+                </div>
+
+            </div>
+
+            <!-- Company -->
+            <div class="nbn-menu-column">
+                <h4>Company</h4>
+
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Raise Grievance</a></li>
+                </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="nbn-menu-column">
+                <h4>Projects</h4>
+
+                <ul>
+                    <li><a href="#">Premium Plots</a></li>
+                    <li><a href="#">Luxury Villas</a></li>
+                    <li><a href="#">Farm Retreats</a></li>
+                    <li><a href="#">Upcoming</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="nbn-menu-column">
+                <h4>Support</h4>
+
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="nbn-newsletter-column">
+
+                <h4>Stay Updated</h4>
+
+                <p>
+                    Get the latest projects and investment insights.
+                </p>
+
+                <form>
+                    <input type="email" placeholder="Your email">
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="nbn-footer-bottom">
+
+            <p>
+                © 2026 Bhuinfo. All rights reserved.
+            </p>
+
+            <div class="nbn-social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- POPUP  -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-box">
+
+            <span class="close-btn" onclick="closePopup()">×</span>
+
+
+            <img src="./img/WhatsApp Image 2026-06-24 at 18.42.59.jpeg" class="popup-logo">
+
+            <h2>Get Free Consultation</h2>
+
+            <form action="sendmail.php" method="POST">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="tel" name="phone" placeholder="Mobile Number" required>
+                <input type="email" name="email" placeholder="Email" required>
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+
+</html>

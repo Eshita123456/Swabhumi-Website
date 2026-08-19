@@ -144,192 +144,528 @@
         </div>
     </section>
 
-    <section class="premium-projects">
-        <div class="container">
+    <!-- =========================================================
+     PREMIUM PROJECTS SECTION
+========================================================= -->
 
-            <div class="section-header">
-                <span class="section-badge" style="font-size: 30px;">Our Portfolio</span>
+<section class="premium-projects">
 
-                <h2 class="section-title">
-                    Exclusive <span>Projects</span>
-                </h2>
+    <div class="container">
 
-                <p class="section-subtitle">
-                    Discover our curated collection of exclusive plots, luxury villas,
-                    and serene farm retreats
-                </p>
+        <!-- =========================
+             SECTION HEADER
+        ========================== -->
+
+        <div class="section-header">
+
+            <span class="section-badge">
+                Our Portfolio
+            </span>
+
+            <h2 class="section-title">
+                Exclusive <span>Projects</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Discover our curated collection of premium plots,
+                luxury villas, and exclusive real estate projects
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             FILTER BAR
+        ========================== -->
+
+        <div class="filter-bar">
+
+            <div class="filter-left">
+                <strong>Filter By:</strong>
             </div>
 
-            <!-- Filter Bar -->
-            <div class="filter-bar">
 
-                <div class="filter-left">
-                    <strong>Filter By:</strong>
-                </div>
+            <div class="filter-controls">
 
-                <div class="filter-controls">
+                <!-- PROJECT FILTER -->
+                <select name="project" id="projectFilter">
 
-                    <!-- All Projects -->
-                    <select name="project">
-                        <option value="">All Projects</option>
-                        <option value="gondal-green-valley">Gondal Green Valley</option>
-                        <option value="gondal-farms">Gondal Farms</option>
-                        <option value="gondal-villas">Gondal Villas</option>
-                        <option value="gondal-heights">Gondal Heights</option>
-                        <option value="gondal-plots">Gondal Plots</option>
-                    </select>
+                    <option value="">
+                        All Projects
+                    </option>
 
-                    <!-- Property Type -->
-                    <select name="type">
-                        <option value="">All Types</option>
-                        <option value="plots">Plots</option>
-                        <option value="villas">Villas</option>
-                        <option value="farms">Farms</option>
-                    </select>
+                    <option value="iconic-addresses">
+                        Iconic Addresses by Hirnot
+                    </option>
 
-                    <!-- Budget -->
-                    <select name="budget">
-                        <option value="">Budget</option>
-                        <option value="0-25">Below ₹25 Lakh</option>
-                        <option value="25-50">₹25 Lakh – ₹50 Lakh</option>
-                        <option value="50-75">₹50 Lakh – ₹75 Lakh</option>
-                        <option value="75-100">₹75 Lakh – ₹1 Crore</option>
-                        <option value="100+">More than ₹1 Crore</option>
-                    </select>
+                    <option value="tattva">
+                        Tattva by Shri Vrinda
+                    </option>
 
-                    <!-- Location -->
-                    <select name="location">
-                        <option value="">Location</option>
-                        <option value="dehradun">Dehradun</option>
-                        <option value="haridwar">Haridwar</option>
-                        <option value="ayodhya">Ayodhya</option>
-                        <option value="vrindavan">Vrindavan</option>
-                        <option value="jim-corbett">Jim Corbett</option>
-                    </select>
+                    <option value="aarambh">
+                        Aarambh by RHQ
+                    </option>
 
-                </div>
+                    <option value="elixir-prana">
+                        Elixir Prana
+                    </option>
 
-                <div class="project-count">
-                    <span>9</span> Projects Found
-                </div>
+                </select>
+
+
+                <!-- TYPE FILTER -->
+                <select name="type" id="typeFilter">
+
+                    <option value="">
+                        All Types
+                    </option>
+
+                    <option value="plots">
+                        Plots
+                    </option>
+
+                    <option value="villas">
+                        Villas
+                    </option>
+
+                </select>
+
+
+                <!-- BUDGET FILTER -->
+                <select name="budget" id="budgetFilter">
+
+                    <option value="">
+                        Budget
+                    </option>
+
+                    <option value="0-25">
+                        Below ₹25 Lakh
+                    </option>
+
+                    <option value="25-50">
+                        ₹25 Lakh – ₹50 Lakh
+                    </option>
+
+                    <option value="50-75">
+                        ₹50 Lakh – ₹75 Lakh
+                    </option>
+
+                    <option value="75-100">
+                        ₹75 Lakh – ₹1 Crore
+                    </option>
+
+                    <option value="100+">
+                        More than ₹1 Crore
+                    </option>
+
+                </select>
+
+
+                <!-- LOCATION FILTER -->
+                <select name="location" id="locationFilter">
+
+                    <option value="">
+                        Location
+                    </option>
+
+                    <option value="new-noida">
+                        New Noida
+                    </option>
+
+                    <option value="vrindavan">
+                        Vrindavan
+                    </option>
+
+                    <option value="ayodhya">
+                        Ayodhya
+                    </option>
+
+                    <option value="dehradun">
+                        Dehradun
+                    </option>
+
+                </select>
 
             </div>
 
-            <!-- Projects Grid -->
-            <div class="projects-grid1">
 
-                <!-- Project Card 1 -->
-                <div class="project-card1">
+            <!-- PROJECT COUNT -->
+            <div class="project-count">
 
-                    <div class="project-image1">
-                        <img src="./img/ChatGPT Image Jun 16, 2026, 03_40_09 PM.png" alt="Krishna Kunj">
+                <span id="projectCount">
+                    4
+                </span>
 
-                        <span class="status-badge">
-                            Ongoing
-                        </span>
-
-                        <span class="type-badge">
-                            Plot
-                        </span>
-                    </div>
-
-                    <div class="project-content1">
-
-                        <h3 class="project-title1">
-                            KRISHNA KUNJ
-                        </h3>
-
-                        <p class="project-location1">
-                            📍 Jaipur Khatu Road, Khatu Shyam Ji
-                        </p>
-
-                        <div class="project-footer1">
-                            <a href="#">View Details</a>
-
-                            <button class="arrow-btn1">
-                                ↗
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="project-card1">
-
-                    <div class="project-image1">
-                        <img src="./img/mussoorie elite.jpg" alt="Mussoorie Elite">
-
-                        <span class="status-badge1">
-                            Upcoming
-                        </span>
-
-                        <span class="type-badge1">
-                            Villa
-                        </span>
-                    </div>
-
-                    <div class="project-content1">
-
-                        <h3 class="project-title1">
-                            Mussoorie Elite - EOI Opened
-                        </h3>
-
-                        <p class="project-location1">
-                            📍 Uttarakhand
-                        </p>
-
-                        <div class="project-footer1">
-                            <a href="#">View Details</a>
-
-                            <button class="arrow-btn1">
-                                ↗
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="project-card1">
-
-                    <div class="project-image1">
-                        <img src="./img/navbharat.jpeg" alt="Navbharat Shivani Residency">
-
-                        <span class="status-badge1">
-                            Ongoing
-                        </span>
-
-                        <span class="type-badge1">
-                            Plot
-                        </span>
-                    </div>
-
-                    <div class="project-content1">
-
-                        <h3 class="project-title1">
-                            Navbharat Shivani Residency
-                        </h3>
-
-                        <p class="project-location1">
-                            📍 Phulera, Jaipur
-                        </p>
-
-                        <div class="project-footer1">
-                            <a href="#">View Details</a>
-
-                            <button class="arrow-btn1">
-                                ↗
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
+                Projects Found
 
             </div>
 
         </div>
-    </section>
+
+
+        <!-- =========================
+             PROJECT SLIDER
+        ========================== -->
+
+        <div class="projects-slider-wrapper">
+
+
+            <!-- PREVIOUS BUTTON -->
+            <button
+                type="button"
+                class="project-nav prev-project"
+                id="prevProject"
+                aria-label="Previous Projects"
+            >
+                &#8249;
+            </button>
+
+
+            <!-- SLIDER VIEWPORT -->
+            <div class="projects-slider-viewport">
+
+                <!-- SLIDER TRACK -->
+                <div
+                    class="projects-grid1"
+                    id="projectsGrid"
+                >
+
+
+                    <!-- =================================
+                         PROJECT 1
+                    ================================== -->
+
+                    <div
+                        class="project-card1"
+                        data-project="iconic-addresses"
+                        data-type="plots"
+                        data-budget="50-75"
+                        data-location="new-noida"
+                    >
+
+                        <div class="project-image1">
+
+                            <img
+                                src="./img/iconic-addresssess-9-1786443947.webp"
+                                alt="Iconic Addresses by Hirnot"
+                            >
+
+                            <span class="status-badge1">
+                                New Launch
+                            </span>
+
+                            <span class="type-badge1">
+                                Plot
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content1">
+
+                            <h3 class="project-title1">
+                                Iconic Addresses by Hirnot
+                            </h3>
+
+                            <p class="project-location1">
+                                📍 Sikandrabad Jewar Airport Road,
+                                Sikandrabad, New Noida
+                            </p>
+
+
+                            <div class="project-info1">
+
+                                <span>
+                                    💰 ₹50–75 Lakh
+                                </span>
+
+                                <span>
+                                    📍 New Noida
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-footer1">
+
+                                <a href="#">
+                                    View Details
+                                </a>
+
+                                <button
+                                    type="button"
+                                    class="arrow-btn1"
+                                >
+                                    ↗
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         PROJECT 2
+                    ================================== -->
+
+                    <div
+                        class="project-card1"
+                        data-project="tattva"
+                        data-type="plots"
+                        data-budget="50-75"
+                        data-location="vrindavan"
+                    >
+
+                        <div class="project-image1">
+
+                            <img
+                                src="./img/image_1774769938941_zcnlgbglp.png"
+                                alt="Tattva by Shri Vrinda"
+                            >
+
+                            <span class="status-badge1">
+                                New Launch
+                            </span>
+
+                            <span class="type-badge1">
+                                Plot
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content1">
+
+                            <h3 class="project-title1">
+                                Tattva by Shri Vrinda
+                            </h3>
+
+                            <p class="project-location1">
+                                📍 Radha Kund Ring Road,
+                                Govardhan, Vrindavan
+                            </p>
+
+
+                            <div class="project-info1">
+
+                                <span>
+                                    💰 ₹50–75 Lakh
+                                </span>
+
+                                <span>
+                                    📍 Vrindavan
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-footer1">
+
+                                <a href="#">
+                                    View Details
+                                </a>
+
+                                <button
+                                    type="button"
+                                    class="arrow-btn1"
+                                >
+                                    ↗
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         PROJECT 3
+                    ================================== -->
+
+                    <div
+                        class="project-card1"
+                        data-project="aarambh"
+                        data-type="villas"
+                        data-budget="50-75"
+                        data-location="ayodhya"
+                    >
+
+                        <div class="project-image1">
+
+                            <img
+                                src="./img/images (19).jfif"
+                                alt="Aarambh by RHQ"
+                            >
+
+                            <span class="status-badge1">
+                                New Launch
+                            </span>
+
+                            <span class="type-badge1">
+                                Villa
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content1">
+
+                            <h3 class="project-title1">
+                                Aarambh by RHQ
+                            </h3>
+
+                            <p class="project-location1">
+                                📍 NH-330, Gandai Rd,
+                                Tajpur, Ayodhya
+                            </p>
+
+
+                            <div class="project-info1">
+
+                                <span>
+                                    💰 ₹50–75 Lakh
+                                </span>
+
+                                <span>
+                                    📍 Ayodhya
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-footer1">
+
+                                <a href="#">
+                                    View Details
+                                </a>
+
+                                <button
+                                    type="button"
+                                    class="arrow-btn1"
+                                >
+                                    ↗
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         PROJECT 4
+                    ================================== -->
+
+                    <div
+                        class="project-card1"
+                        data-project="elixir-prana"
+                        data-type="plots"
+                        data-budget="100+"
+                        data-location="dehradun"
+                    >
+
+                        <div class="project-image1">
+
+                            <img
+                                src="./img/images (20).jfif"
+                                alt="Elixir Prana"
+                            >
+
+                            <span class="status-badge1">
+                                New Launch
+                            </span>
+
+                            <span class="type-badge1">
+                                Plot
+                            </span>
+
+                        </div>
+
+
+                        <div class="project-content1">
+
+                            <h3 class="project-title1">
+                                Elixir Prana
+                            </h3>
+
+                            <p class="project-location1">
+                                📍 Ganeshpur,
+                                Delhi-Dehradun Expressway,
+                                Dehradun
+                            </p>
+
+
+                            <div class="project-info1">
+
+                                <span>
+                                    💰 More than ₹1 Cr
+                                </span>
+
+                                <span>
+                                    📍 Dehradun
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-footer1">
+
+                                <a href="#">
+                                    View Details
+                                </a>
+
+                                <button
+                                    type="button"
+                                    class="arrow-btn1"
+                                >
+                                    ↗
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- NEXT BUTTON -->
+            <button
+                type="button"
+                class="project-nav next-project"
+                id="nextProject"
+                aria-label="Next Projects"
+            >
+                &#8250;
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             SLIDER DOTS
+        ========================== -->
+
+        <div
+            class="project-slider-dots"
+            id="projectSliderDots"
+        ></div>
+
+
+    </div>
+
+</section>
 
     <section class="journey-section" style="background:#f8f7f3;">
         <div class="container">
@@ -512,7 +848,7 @@
                             better returns in today's market.
                         </p>
 
-                        <a href="#">Read Article →</a>
+                        <a href="./blog1.html">Read Article →</a>
                     </div>
                 </article>
 
@@ -537,7 +873,7 @@
                             long-term appreciation.
                         </p>
 
-                        <a href="#">Read Article →</a>
+                        <a href="./blog2.html">Read Article →</a>
                     </div>
                 </article>
 
@@ -562,7 +898,7 @@
                             attractive investment destinations.
                         </p>
 
-                        <a href="#">Read Article →</a>
+                        <a href="./blog3.html">Read Article →</a>
                     </div>
                 </article>
 
@@ -587,7 +923,7 @@
                             value than traditional apartments.
                         </p>
 
-                        <a href="#">Read Article →</a>
+                        <a href="./blog4.html">Read Article →</a>
                     </div>
                 </article>
 
@@ -612,7 +948,7 @@
                             strategies can help you maximize your returns
                         </p>
 
-                        <a href="#">Read Article →</a>
+                        <a href="./blog5.html">Read Article →</a>
                     </div>
                 </article>
 
@@ -636,7 +972,7 @@
                             Mussoorie, 2026 is the perfect time to invest.
                         </p>
 
-                        <a href="#">Read Article →</a>
+                        <a href="./blog5.html">Read Article →</a>
                     </div>
                 </article>
 
@@ -699,7 +1035,7 @@
 
                         <div>
                             <span>Email Us</span>
-                            <h4>: info@bhuinfo.com</h4>
+                            <h4>: info@bhuinfo.in</h4>
                         </div>
                     </div>
 
@@ -721,19 +1057,6 @@
                             </h4>
                         </div>
                     </div>
-
-                    <!-- Card 4 -->
-                    <div class="info-card">
-                        <div class="info-icon">
-                            🕒
-                        </div>
-
-                        <div>
-                            <span>Working Hours</span>
-                            <h4>Monday – Sunday<br>10:00 AM – 7:00 PM</h4>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>
@@ -835,7 +1158,7 @@
                     <div class="nbn-contact-icon">
                         <i class="fa-regular fa-envelope"></i>
                     </div>
-                    <span>info@bhuinfo.com</span>
+                    <span>info@bhuinfo.in</span>
                 </div>
 
                 <div class="nbn-contact-box">

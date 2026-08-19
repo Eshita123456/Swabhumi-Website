@@ -824,303 +824,744 @@ nav ul {
 }
 
 /* ===========================
-   PREMIUM PROJECTS SECTION
+   MAIN SECTION
 =========================== */
 
 .premium-projects {
-  padding: 50px 20px;
-  background: #faf8f4;
+    padding: 50px 20px;
+    background: #faf8f4;
 }
 
 .premium-projects .container {
-  max-width: 1140px;
-  margin: 0 auto;
+    max-width: 1140px;
+    margin: 0 auto;
 }
+
 
 /* ===========================
    SECTION HEADER
 =========================== */
 
 .section-header {
-  text-align: center;
-  margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .section-badge {
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 50px;
-  background: #eef4ff;
-  color: #1d4ed8;
-  font-size: 11px;
-  font-weight: 600;
-  margin-bottom: 8px;
+    display: inline-block;
+
+    padding: 7px 16px;
+
+    border-radius: 50px;
+
+    background: #eef4ff;
+
+    color: #1d4ed8;
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
 }
 
 .section-title {
-  font-size: 60px;
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
-  color: #1e293b;
-  margin-bottom: 5px;
-  line-height: 1.1;
+    font-size: 60px;
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 500;
+
+    color: #1e293b;
+
+    margin: 0 0 8px;
+
+    line-height: 1.1;
 }
 
 .section-title span {
-  color: #1e3a8a;
+    color: #1e3a8a;
 }
 
 .section-subtitle {
-  max-width: 540px;
-  margin: 0 auto 8px;
-  color: #64748b;
-  font-size: 15px;
-  line-height: 1.5;
+    max-width: 540px;
+
+    margin: 0 auto;
+
+    color: #64748b;
+
+    font-size: 15px;
+
+    line-height: 1.5;
 }
+
 
 /* ===========================
    FILTER BAR
 =========================== */
 
 .filter-bar {
-  margin-top: 10px;
-  margin-bottom: 25px;
-  background: #f5f0e8;
-  border: 1px solid #ebe5d8;
-  border-radius: 14px;
-  padding: 12px 18px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    margin-top: 20px;
+
+    margin-bottom: 30px;
+
+    background: #f5f0e8;
+
+    border: 1px solid #ebe5d8;
+
+    border-radius: 14px;
+
+    padding: 12px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .filter-left,
 .project-count {
-  font-size: 13px;
-  color: #64748b;
-  white-space: nowrap;
+    font-size: 13px;
+
+    color: #64748b;
+
+    white-space: nowrap;
+}
+
+.filter-left strong {
+    color: #334155;
 }
 
 .project-count {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 .project-count span {
-  color: #1e40af;
-  font-size: 20px;
-  font-weight: 700;
+    color: #1e40af;
+
+    font-size: 20px;
+
+    font-weight: 700;
 }
 
+
+/* ===========================
+   FILTER CONTROLS
+=========================== */
+
 .filter-controls {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex: 1;
-  flex-wrap: wrap;
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex: 1;
+
+    flex-wrap: wrap;
 }
 
 .filter-controls select {
-  min-width: 170px;
-  height: 42px;
-  padding: 0 14px;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  background: #fff;
-  color: #334155;
-  font-size: 14px;
-  outline: none;
-  cursor: pointer;
-  transition: 0.3s;
+    min-width: 170px;
+
+    height: 42px;
+
+    padding: 0 14px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
 .filter-controls select:hover,
 .filter-controls select:focus {
-  border-color: #1e40af;
+    border-color: #1e40af;
+
+    box-shadow:
+        0 0 0 3px rgba(30, 64, 175, 0.08);
 }
 
-/* ===========================
-   PROJECT GRID
-=========================== */
+
+/* =========================================================
+   SLIDER WRAPPER
+========================================================= */
+
+.projects-slider-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    padding: 0 45px;
+}
+
+
+/* =========================================================
+   SLIDER VIEWPORT
+========================================================= */
+
+.projects-slider-viewport {
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   SLIDER TRACK
+========================================================= */
 
 .projects-grid1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+    display: flex;
+
+    gap: 24px;
+
+    width: 100%;
+
+    transition:
+        transform 0.55s cubic-bezier(
+            0.4,
+            0,
+            0.2,
+            1
+        );
 }
 
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
 .project-card1 {
-  background: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 1px solid #ececec;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-  transition: 0.35s ease;
+    flex: 0 0
+        calc(
+            (100% - 48px) / 3
+        );
+
+    min-width: 0;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid #ececec;
+
+    box-shadow:
+        0 8px 24px rgba(
+            15,
+            23,
+            42,
+            0.08
+        );
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 .project-card1:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.12);
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 14px 35px rgba(
+            15,
+            23,
+            42,
+            0.12
+        );
 }
 
+
+/* =========================================================
+   PROJECT IMAGE
+========================================================= */
+
 .project-image1 {
-  position: relative;
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
+    position: relative;
+
+    width: 100%;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #e5e7eb;
 }
 
 .project-image1 img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: 0.4s;
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
 }
 
-.project-card1:hover .project-image1 img {
-  transform: scale(1.05);
+.project-card1:hover
+.project-image1 img {
+    transform: scale(1.05);
 }
 
-/* ===========================
+
+/* =========================================================
    BADGES
-=========================== */
+========================================================= */
 
 .status-badge1 {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #1e40af;
-  color: #fff;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 30px;
+    position: absolute;
+
+    top: 12px;
+
+    left: 12px;
+
+    z-index: 2;
+
+    background: #1e40af;
+
+    color: #fff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    padding: 6px 12px;
+
+    border-radius: 30px;
 }
 
 .type-badge1 {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: #fff;
-  color: #334155;
-  font-size: 10px;
-  font-weight: 600;
-  padding: 6px 12px;
-  border-radius: 30px;
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    z-index: 2;
+
+    background: #fff;
+
+    color: #334155;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    padding: 6px 12px;
+
+    border-radius: 30px;
 }
 
-/* ===========================
-   CARD CONTENT
-=========================== */
+
+/* =========================================================
+   PROJECT CONTENT
+========================================================= */
 
 .project-content1 {
-  padding: 18px;
+    padding: 18px;
 }
 
 .project-title1 {
-  font-size: 22px;
-  font-family: "Playfair Display", serif;
-  color: #1e293b;
-  margin-bottom: 8px;
+    font-size: 22px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    color: #1e293b;
+
+    margin: 0 0 8px;
+
+    line-height: 1.25;
 }
 
 .project-location1 {
-  font-size: 13px;
-  color: #64748b;
-  margin-bottom: 22px;
+    font-size: 13px;
+
+    color: #64748b;
+
+    margin: 0 0 16px;
+
+    line-height: 1.5;
+
+    min-height: 40px;
 }
 
+
+/* =========================================================
+   PROJECT INFO
+========================================================= */
+
+.project-info1 {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+
+    font-size: 12px;
+
+    color: #475569;
+}
+
+.project-info1 span:first-child {
+    color: #1e40af;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   PROJECT FOOTER
+========================================================= */
+
 .project-footer1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
 }
 
 .project-footer1 a {
-  text-decoration: none;
-  color: #1e40af;
-  font-size: 13px;
-  font-weight: 600;
+    text-decoration: none;
+
+    color: #1e40af;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.project-footer1 a:hover {
+    color: #1e3a8a;
 }
 
 .arrow-btn1 {
-  width: 36px;
-  height: 36px;
-  border: none;
-  border-radius: 10px;
-  background: #f1f5f9;
-  color: #334155;
-  cursor: pointer;
-  transition: 0.3s;
+    width: 36px;
+
+    height: 36px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #f1f5f9;
+
+    color: #334155;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    font-size: 16px;
 }
 
 .arrow-btn1:hover {
-  background: #1e40af;
-  color: #fff;
+    background: #1e40af;
+
+    color: #fff;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+
+/* =========================================================
+   SLIDER NAVIGATION
+========================================================= */
+
+.project-nav {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    width: 40px;
+
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #fff;
+
+    color: #1e40af;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 20px rgba(
+            0,
+            0,
+            0,
+            0.15
+        );
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.project-nav:hover {
+    background: #1e40af;
+
+    color: #fff;
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+}
+
+.project-nav:disabled {
+    opacity: 0.35;
+
+    cursor: not-allowed;
+
+    background: #f1f5f9;
+
+    color: #94a3b8;
+}
+
+.prev-project {
+    left: 0;
+}
+
+.next-project {
+    right: 0;
+}
+
+
+/* =========================================================
+   SLIDER DOTS
+========================================================= */
+
+.project-slider-dots {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 22px;
+}
+
+.project-dot {
+    width: 8px;
+
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #cbd5e1;
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+.project-dot.active {
+    width: 24px;
+
+    border-radius: 10px;
+
+    background: #1e40af;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 992px) {
 
-  .projects-grid1 {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .section-title {
+        font-size: 48px;
+    }
 
-  .section-title {
-    font-size: 48px;
-  }
+    .filter-bar {
+        justify-content: center;
+    }
 
-  .filter-bar {
-    justify-content: center;
-  }
+    .filter-controls {
+        justify-content: center;
+    }
+
+    .project-card1 {
+        flex: 0 0
+            calc(
+                (100% - 24px) / 2
+            );
+    }
+
 }
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
 
-  .premium-projects {
-    padding: 50px 15px;
-  }
+    .premium-projects {
+        padding: 45px 15px;
+    }
 
-  .section-title {
-    font-size: 38px;
-  }
+    .section-badge {
+        font-size: 22px;
+    }
 
-  .section-subtitle {
-    font-size: 14px;
-  }
+    .section-title {
+        font-size: 38px;
+    }
 
-  .filter-bar {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 15px;
-    margin-top: 15px;
-  }
+    .section-subtitle {
+        font-size: 14px;
+    }
 
-  .filter-controls {
-    flex-direction: column;
-    width: 100%;
-  }
 
-  .filter-controls select {
-    width: 100%;
-    min-width: 100%;
-  }
+    .filter-bar {
+        flex-direction: column;
 
-  .project-count {
-    text-align: center;
-  }
+        align-items: stretch;
 
-  .projects-grid1 {
-    grid-template-columns: 1fr;
-  }
+        gap: 15px;
+    }
+
+    .filter-left {
+        text-align: center;
+    }
+
+
+    .filter-controls {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 10px;
+    }
+
+    .filter-controls select {
+        width: 100%;
+
+        min-width: 100%;
+    }
+
+
+    .project-count {
+        text-align: center;
+    }
+
+
+    .projects-slider-wrapper {
+        padding: 0 38px;
+    }
+
+
+    .project-card1 {
+        flex: 0 0 100%;
+    }
+
+
+    .project-image1 {
+        height: 230px;
+    }
+
+
+    .project-nav {
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 24px;
+    }
+
 }
 
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .premium-projects {
+        padding: 35px 12px;
+    }
+
+    .section-badge {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 13px;
+    }
+
+    .projects-slider-wrapper {
+        padding: 0 34px;
+    }
+
+    .project-image1 {
+        height: 210px;
+    }
+
+    .project-content1 {
+        padding: 16px;
+    }
+
+}
 /* ===========================
    STATS SECTION
 =========================== */

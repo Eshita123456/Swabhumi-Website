@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Land Investment vs Apartments</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f8f6ed;
+        color: #002b68;
+    }
+
+    .blog-header4 {
+        width: 100%;
+        min-height: 344px;
+        background: #f8f6ed;
+        padding: 31px 0 30px;
+    }
+
+    .blog-container4 {
+        width: 100%;
+        max-width: 860px;
+        margin: 0 auto;
+    }
+
+    /* Back Link */
+    .back-link4 {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        text-decoration: none;
+        color: #65758b;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 27px;
+        transition: color 0.2s ease;
+    }
+
+    .back-link4:hover {
+        color: #002b68;
+    }
+
+    .back-link4 svg {
+        width: 20px;
+        height: 20px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    /* Category */
+    .category4 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: #00347d;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 9px 18px;
+        border-radius: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* Main Heading */
+    h1 {
+        margin: 0;
+        color: #002b68;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 50px;
+        line-height: 0.98;
+        font-weight: 400;
+        letter-spacing: -1.2px;
+    }
+
+    /* Meta Information */
+    .meta-info4 {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        margin-top: 24px;
+        color: #68798d;
+        font-size: 16px;
+    }
+
+    .meta-item4 {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+    }
+
+    .meta-item4 svg {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.7;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    /* Tags */
+    .tags4 {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin-top: 25px;
+        color: #68798d;
+        font-size: 16px;
+    }
+
+    .tags4 svg {
+        width: 19px;
+        height: 19px;
+        margin-right: 4px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .tags4 span {
+        white-space: nowrap;
+    }
+
+
+    /* ========================================
+   Responsive Design
+======================================== */
+
+    @media (max-width: 950px) {
+        .blog-container4 {
+            max-width: calc(100% - 50px);
+        }
+
+        h1 {
+            font-size: 44px;
+        }
+    }
+
+    @media (max-width: 650px) {
+
+        .blog-header4 {
+            min-height: auto;
+            padding: 25px 0 35px;
+        }
+
+        .blog-container4 {
+            max-width: calc(100% - 36px);
+        }
+
+        .back-link4 {
+            font-size: 15px;
+            margin-bottom: 22px;
+        }
+
+        .category4 {
+            font-size: 13px;
+            padding: 8px 16px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.05;
+            letter-spacing: -0.7px;
+        }
+
+        .desktop-break4 {
+            display: none;
+        }
+
+        .meta-info4 {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 13px;
+            margin-top: 22px;
+        }
+
+        .meta-item4 {
+            font-size: 15px;
+        }
+
+        .tags4 {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+    }
+
+    @media (max-width: 400px) {
+
+        h1 {
+            font-size: 32px;
+        }
+
+        .blog-container4 {
+            max-width: calc(100% - 30px);
+        }
+    }
+
+    /* Main Section */
+    .investment-section {
+        width: 100%;
+        padding: 28px 0 20px;
+        background: #f8f6ed;
+    }
+
+    /* Image Container */
+    .investment-image {
+        width: 848px;
+        height: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 14px;
+    }
+
+    /* Image */
+    .investment-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* ===================================== Responsive ===================================== */
+    @media (max-width: 900px) {
+        .investment-section {
+            padding: 24px 20px;
+        }
+
+        .investment-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 848 / 500;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .investment-section {
+            padding: 20px 15px;
+        }
+
+        .investment-image {
+            border-radius: 10px;
+            aspect-ratio: 848 / 500;
+        }
+    }
+
+    /* Blog Content */
+    .blog-content {
+        width: 100%;
+        background: #f8f6ed;
+        padding: 35px 0 30px;
+    }
+
+    /* Content Container */
+    .content-container {
+        width: 100%;
+        max-width: 860px;
+        margin: 0 auto;
+    }
+
+    /* Paragraph */
+    .content-container p {
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 400;
+        margin-bottom: 20px;
+        color: #050505;
+    }
+
+    /* Bold Text */
+    .content-container strong {
+        font-weight: 700;
+    }
+
+
+    /* ==============================
+   Responsive
+============================== */
+
+    @media (max-width: 950px) {
+
+        .content-container {
+            width: calc(100% - 50px);
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .blog-content {
+            padding: 25px 0;
+        }
+
+        .content-container {
+            width: calc(100% - 36px);
+        }
+
+        .content-container p {
+            font-size: 14px;
+            line-height: 1.75;
+            margin-bottom: 18px;
+        }
+
+    }
+
+    .blog-section {
+        width: 100%;
+        background: #f8f6ed;
+        padding: 12px 0 10px;
+    }
+
+    .blog-container {
+        width: 100%;
+        max-width: 860px;
+        margin: 0 auto;
+    }
+
+    /* Heading */
+    .blog-container h2 {
+        color: #002b68;
+        font-size: 21px;
+        line-height: 1.3;
+        font-weight: 700;
+        margin-bottom: 26px;
+    }
+
+    /* Paragraphs */
+    .blog-container p {
+        color: #050505;
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    /* Sub Heading */
+    .blog-container h3 {
+        color: #002b68;
+        font-size: 17px;
+        line-height: 1.4;
+        font-weight: 700;
+        margin-top: 23px;
+        margin-bottom: 22px;
+    }
+
+    /* List */
+    .blog-container ul {
+        margin: 0 0 23px 24px;
+        padding: 0;
+    }
+
+    .blog-container li {
+        color: #050505;
+        font-size: 15px;
+        line-height: 1.8;
+        padding-left: 1px;
+        margin-bottom: 19px;
+    }
+
+    /* Link */
+    .blog-container a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    /* Last paragraph */
+    .blog-container p:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* ==========================
+   Responsive Design
+========================== */
+
+    @media (max-width: 950px) {
+        .blog-container {
+            width: calc(100% - 50px);
+        }
+    }
+
+    @media (max-width: 600px) {
+
+        .blog-section {
+            padding: 20px 0 25px;
+        }
+
+        .blog-container {
+            width: calc(100% - 36px);
+        }
+
+        .blog-container h2 {
+            font-size: 20px;
+            margin-bottom: 22px;
+        }
+
+        .blog-container h3 {
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 18px;
+        }
+
+        .blog-container p,
+        .blog-container li {
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .blog-container ul {
+            margin-left: 22px;
+        }
+
+        .blog-container li {
+            margin-bottom: 15px;
+        }
+    }
+
+    /* Main Section */
+    .blog-section {
+        width: 100%;
+        background: #f8f6ed;
+        padding: 20px 0 22px;
+    }
+
+    /* Content Container */
+    .blog-container {
+        width: 860px;
+        max-width: calc(100% - 50px);
+        margin: 0 auto;
+    }
+
+    /* Heading */
+    .blog-container h2 {
+        color: #002b68;
+        font-size: 22px;
+        line-height: 1.3;
+        font-weight: 700;
+        margin-bottom: 27px;
+    }
+
+    /* Paragraphs */
+    .blog-container p {
+        color: #050505;
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    /* Bullet List */
+    .blog-container ul {
+        margin: 0 0 22px 24px;
+        padding: 0;
+    }
+
+    .blog-container li {
+        color: #050505;
+        font-size: 15px;
+        line-height: 1.8;
+        padding-left: 1px;
+        margin-bottom: 20px;
+    }
+
+    /* Last Paragraph */
+    .blog-container p:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* ==============================
+   Responsive Design
+============================== */
+
+    @media (max-width: 950px) {
+
+        .blog-container {
+            width: calc(100% - 50px);
+            max-width: none;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .blog-section {
+            padding: 25px 0 30px;
+        }
+
+        .blog-container {
+            width: calc(100% - 36px);
+        }
+
+        .blog-container h2 {
+            font-size: 20px;
+            margin-bottom: 22px;
+        }
+
+        .blog-container p,
+        .blog-container li {
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .blog-container ul {
+            margin-left: 22px;
+        }
+
+        .blog-container li {
+            margin-bottom: 15px;
+        }
+
+    }
+
+    /* Main Section */
+    .blog-footer {
+        width: 100%;
+        background: #f8f6ed;
+        padding: 35px 0 45px;
+    }
+
+    /* Content Container */
+    .blog-container {
+        width: 848px;
+        max-width: calc(100% - 50px);
+        margin: 0 auto;
+    }
+
+    /* =========================
+   Read More
+========================= */
+
+    .read-more {
+        color: #65758b;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .read-more p {
+        margin-bottom: 7px;
+    }
+
+    .read-more p:last-child {
+        margin-top: 19px;
+        margin-bottom: 0;
+    }
+
+    .read-more strong {
+        color: #002b68;
+        font-weight: 700;
+    }
+
+    .read-more a {
+        color: #002b68;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 1px;
+    }
+
+    .read-more a:hover {
+        color: #001d48;
+    }
+
+
+    /* =========================
+   Divider
+========================= */
+
+    .divider {
+        width: 100%;
+        height: 1px;
+        background: #e4e0d5;
+        margin-top: 103px;
+        margin-bottom: 34px;
+    }
+
+
+    /* =========================
+   Tags Heading
+========================= */
+
+    .tags-section h2 {
+        color: #002b68;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 1.3;
+        margin-bottom: 18px;
+    }
+
+
+    /* =========================
+   Tags
+========================= */
+
+    .tags {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 9px;
+    }
+
+    .tags a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 9px 16px;
+
+        background: #f3f1e9;
+        border-radius: 20px;
+
+        color: #52657c;
+        font-size: 14px;
+        line-height: 1;
+        text-decoration: none;
+
+        transition: background 0.2s ease;
+    }
+
+    .tags a:hover {
+        background: #e9e6dc;
+    }
+
+
+    /* =========================
+   Responsive
+========================= */
+
+    @media (max-width: 950px) {
+
+        .blog-container {
+            width: calc(100% - 50px);
+            max-width: none;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .blog-footer {
+            padding: 28px 0 35px;
+        }
+
+        .blog-container {
+            width: calc(100% - 36px);
+        }
+
+        .read-more {
+            font-size: 14px;
+        }
+
+        .divider {
+            margin-top: 70px;
+            margin-bottom: 28px;
+        }
+
+        .tags-section h2 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+
+        .tags {
+            gap: 7px;
+        }
+
+        .tags a {
+            font-size: 13px;
+            padding: 8px 13px;
+        }
+
+    }
+
+    /* =================================
+   Related Articles Section
+================================= */
+
+    .related-section {
+        width: 100%;
+        background: #f8f6ed;
+        padding: 31px 0 40px;
+    }
+
+    .related-container {
+        width: 1115px;
+        max-width: calc(100% - 50px);
+        margin: 0 auto;
+    }
+
+
+    /* =================================
+   Section Heading
+================================= */
+
+    .related-container>h2 {
+        color: #002b68;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 31px;
+        line-height: 1.25;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+
+
+    /* =================================
+   Articles Grid
+================================= */
+
+    .articles-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 31px;
+    }
+
+
+    /* =================================
+   Article Card
+================================= */
+
+    .article-card {
+        background: #ffffff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.10);
+    }
+
+
+    /* =================================
+   Article Image
+================================= */
+
+    .article-image {
+        width: 100%;
+        height: 192px;
+        overflow: hidden;
+        background: #e9e7df;
+    }
+
+    .article-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+
+    /* Placeholder Image */
+    .placeholder-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background:
+            linear-gradient(135deg,
+                #d8dbe0 0%,
+                #efeee8 55%,
+                #f8f2df 100%);
+    }
+
+    .placeholder-image span {
+        color: #a8afbc;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 43px;
+        font-weight: 400;
+    }
+
+
+    /* =================================
+   Card Content
+================================= */
+
+    .article-content {
+        padding: 26px 24px 23px;
+    }
+
+    .article-content h3 {
+        color: #002b68;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 18px;
+        line-height: 1.45;
+        font-weight: 400;
+        margin-bottom: 8px;
+    }
+
+    .article-content p {
+        color: #728196;
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 400;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+
+    /* =================================
+   Hover Effect
+================================= */
+
+    .article-card {
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .article-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 22px rgba(0, 0, 0, 0.13);
+    }
+
+    .article-image img {
+        transition: transform 0.35s ease;
+    }
+
+    .article-card:hover .article-image img {
+        transform: scale(1.04);
+    }
+
+
+    /* =================================
+   Responsive
+================================= */
+
+    @media (max-width: 1100px) {
+
+        .related-container {
+            width: calc(100% - 50px);
+        }
+
+        .articles-grid {
+            gap: 22px;
+        }
+
+    }
+
+    @media (max-width: 800px) {
+
+        .articles-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .article-card {
+            max-width: 500px;
+        }
+
+        .related-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+    }
+
+    @media (max-width: 600px) {
+
+        .related-section {
+            padding: 25px 0 35px;
+        }
+
+        .related-container {
+            width: calc(100% - 36px);
+            max-width: none;
+        }
+
+        .related-container>h2 {
+            font-size: 27px;
+            margin-bottom: 23px;
+        }
+
+        .article-image {
+            height: 190px;
+        }
+
+        .article-content {
+            padding: 22px 20px;
+        }
+
+        .article-content h3 {
+            font-size: 18px;
+        }
+
+        .article-content p {
+            font-size: 14px;
+        }
+
+    }
+</style>
+
+<body>
+    <br><br><br><br>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="./img/f03e2391-7ba7-4611-80f8-c01543e87da6.png" alt="Gondal Infra Logo" class="logo-img">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#">
+                    Projects ▼
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="./AVS.html">AVS CITY</a></li>
+                    <li><a href="./Natur.html">Natur City</a></li>
+                    <li><a href="./Sai.html">Sai Enclave</a></li>
+                </ul>
+            </li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+
+        <div class="call-section">
+            <i class="fas fa-phone"></i>
+            <span>96257 75527</span>
+        </div>
+
+        <a href="#" class="btn-start">Get Started</a>
+
+        <div class="menu-toggle1">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+
+    <section class="blog-header4">
+
+        <div class="blog-container4">
+
+            <!-- Back Button -->
+            <a href="#" class="back-link4">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M19 12H5"></path>
+                    <path d="M12 19l-7-7 7-7"></path>
+                </svg>
+                <span>Back to Blogs</span>
+            </a><br>
+
+            <!-- Category -->
+            <div class="category4">
+                Real Estate
+            </div>
+
+            <!-- Title -->
+            <h1>
+                Why Investing in Plots is Better Than<br class="desktop-break4">
+                Buying Flats
+            </h1>
+
+            <!-- Meta Information -->
+            <div class="meta-info4">
+
+                <div class="meta-item4">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>24 May 2026</span>
+                </div>
+
+                <div class="meta-item4">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"></path>
+                        <circle cx="12" cy="10" r="2.5"></circle>
+                    </svg>
+                    <span>Phulera, Rajasthan</span>
+                </div>
+
+            </div>
+
+            <!-- Tags -->
+            <div class="tags4">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.59 13.41L11 3.83V3H4v7h.83l9.58 9.59a2 2 0 0 0 2.83 0l3.35-3.35a2 2 0 0 0 0-2.83z">
+                    </path>
+                    <circle cx="7.5" cy="7.5" r="1"></circle>
+                </svg>
+
+                <span>navbharatinwas</span>
+                <span>,</span>
+                <span>phulera</span>
+                <span>,</span>
+                <span>smartinvestment</span>
+                <span>,</span>
+                <span>landinvestment</span>
+                <span>,</span>
+                <span>plotsinvestment</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="investment-section">
+        <div class="investment-image"> <img src="./img/image_1779631068652_7g4hyple0.png"
+                alt="Plots versus flats investment comparison">
+        </div>
+    </section>
+
+    <section class="blog-content">
+        <div class="content-container">
+
+            <p>
+                Real estate has always been considered one of the safest and most rewarding
+                investment options. Whether you are a first-time investor or someone looking
+                to diversify your portfolio, property investment offers stability, long-term
+                appreciation, and financial security. However, one common question many
+                investors face is:
+                <strong>Should you invest in plots or flats?</strong>
+            </p>
+
+            <p>
+                While flats are popular in urban areas due to convenience and ready-to-move
+                options, investing in plots has emerged as a smarter and more profitable
+                choice for long-term investors. Over the past few years, land investments
+                have delivered excellent returns, lower maintenance costs, and greater
+                flexibility compared to apartments.
+            </p>
+
+            <p>
+                In this blog, we will explore why investing in plots is better than buying
+                flats and why more investors are choosing land as their preferred real
+                estate asset.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="investment-section">
+        <div class="investment-image"> <img src="./img/blog_image_1779626346264_qjgy3os6u.png"
+                alt="Plots versus flats investment comparison">
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+
+            <h2>1. Higher Appreciation Value</h2>
+
+            <p>
+                One of the biggest advantages of investing in plots is the higher appreciation
+                potential. Land is a limited resource, and its value tends to increase
+                significantly over time, especially in developing areas.
+            </p>
+
+            <p>
+                Flats, on the other hand, depreciate as the building ages. While the land
+                underneath the apartment may appreciate, the structure itself loses value due
+                to wear and tear, maintenance issues, and changing construction standards.
+            </p>
+
+            <h3>Why Plots Appreciate Faster:</h3>
+
+            <ul>
+                <li>Limited availability of land</li>
+                <li>Rapid urban development</li>
+                <li><a href="#">Infrastructure growth</a></li>
+                <li>Increased demand in emerging locations</li>
+                <li>Expansion of highways, airports, and industrial zones</li>
+            </ul>
+
+            <p>
+                For example, plots located near upcoming highways, tourist destinations, or
+                religious hubs often experience massive price growth within a few years.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="investment-section">
+        <div class="investment-image"> <img src="./img/image_1779631068652_7g4hyple0.png"
+                alt="Plots versus flats investment comparison">
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+
+            <h2>2. Zero Depreciation</h2>
+
+            <p>
+                Unlike flats, plots do not suffer from physical depreciation. A flat starts
+                aging the moment it is constructed. Over time, maintenance costs increase,
+                building quality deteriorates, and resale value may reduce.
+            </p>
+
+            <p>
+                Land, however, remains permanent. Its value depends on location and
+                development rather than the condition of a structure.
+            </p>
+
+            <h3>Flats Face Issues Like:</h3>
+
+            <ul>
+                <li>Structural aging</li>
+                <li>Water leakage</li>
+                <li>Maintenance expenses</li>
+                <li>Society charges</li>
+                <li>Renovation costs</li>
+                <li>Reduced resale value over time</li>
+            </ul>
+
+            <p>
+                Plots eliminate these concerns completely, making them a
+                low-risk investment option.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="investment-section">
+        <div class="investment-image"> <img src="./img/blog_image_1779627468046_xly55xdm7.png"
+                alt="Plots versus flats investment comparison">
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+
+            <h2>3. Lower Maintenance Costs</h2>
+
+            <p>
+                Maintenance is one of the hidden expenses of owning a flat. Apartment
+                owners often pay:
+            </p>
+
+            <ul>
+                <li>Monthly maintenance charges</li>
+                <li>Parking fees</li>
+                <li>Repair costs</li>
+                <li>Lift maintenance</li>
+                <li>Security charges</li>
+                <li>Renovation expenses</li>
+            </ul>
+
+            <p>
+                These recurring costs can reduce your overall returns.
+            </p>
+
+            <p>
+                Plots require very little maintenance. Once you purchase land, there are
+                usually minimal ongoing expenses apart from basic property taxes.
+            </p>
+
+            <p>
+                This makes plots ideal for investors looking for passive wealth creation
+                without continuous financial burden.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="investment-section">
+        <div class="investment-image">
+            <img src="./img/blog_image_1779627687125_hacrenivu.png" alt="Plots versus flats investment comparison">
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+
+            <h2>4. Greater Flexibility</h2>
+
+            <p>
+                When you buy a flat, you are restricted to the builder’s design, layout,
+                and structure. There is very little customization possible.
+            </p>
+
+            <p>
+                Plots provide complete freedom and flexibility. You can:
+            </p>
+
+            <ul>
+                <li>Build your dream home</li>
+                <li>Construct a villa</li>
+                <li>Develop commercial property</li>
+                <li>Create rental units</li>
+                <li>Hold the land for future appreciation</li>
+                <li>Sell it whenever market prices rise</li>
+            </ul>
+
+            <p>
+                This flexibility makes land investment more attractive for both personal
+                and commercial purposes.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="investment-section">
+        <div class="investment-image">
+            <img src="./img/blog_image_1779627951045_trsgpzhu1.png" alt="Plots versus flats investment comparison">
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+
+            <h2>5. Better Return on Investment (ROI)</h2>
+
+            <p>
+                Historically, plots have delivered better returns compared to flats in many
+                developing areas.
+            </p>
+
+            <p>
+                Flats may generate rental income, but rental yields in India are generally low,
+                often around 2–4% annually. Additionally, maintenance costs and property taxes
+                reduce actual profits.
+            </p>
+
+            <p>
+                Plots usually provide:
+            </p>
+
+            <ul>
+                <li>Faster capital appreciation</li>
+                <li>Lower investment risk</li>
+                <li>Higher resale margins</li>
+                <li>Strong long-term wealth generation</li>
+            </ul>
+
+            <p>
+                Investors who purchased plots in developing regions a few years ago have often
+                seen their property values double or even triple over time.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="investment-section">
+        <div class="investment-image">
+            <img src="./img/blog_image_1779628752013_u2e2gigce.png" alt="Plots versus flats investment comparison">
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+
+            <h2>6. Growing Demand for Land Investment</h2>
+
+            <p>
+                Today’s investors are becoming more aware of the benefits of land investment.
+                As cities expand and urban areas become crowded, demand for plotted
+                developments is increasing rapidly.
+            </p>
+
+            <p>
+                People now prefer plots because they offer:
+            </p>
+
+            <ul>
+                <li>More privacy</li>
+                <li>Independent living</li>
+                <li>Better future value</li>
+                <li>Freedom to build according to needs</li>
+            </ul>
+
+            <p>
+                Additionally, rising work-from-home culture has encouraged buyers to invest
+                in larger spaces away from congested city centers.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="investment-section">
+        <div class="investment-image">
+            <img src="./img/blog_image_1779629790943_zto8t4nx7.png" alt="Plots versus flats investment comparison">
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+
+            <h2>7. Ideal for Long-Term Wealth Creation</h2>
+
+            <p>
+                Plots are one of the best assets for creating generational wealth.
+                Land ownership has always been associated with financial stability
+                and social status.
+            </p>
+
+            <p>
+                Since land supply is limited and population continues to grow,
+                demand for residential and commercial plots is expected to rise
+                steadily in the future.
+            </p>
+
+            <p>
+                Long-term land investors often benefit from:
+            </p>
+
+            <ul>
+                <li>Massive appreciation</li>
+                <li>Secure investment</li>
+                <li>Better liquidity in developing areas</li>
+                <li>Future development opportunities</li>
+            </ul>
+
+            <p>
+                This makes plots an excellent option for families planning
+                long-term financial security.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="investment-section">
+        <div class="investment-image">
+            <img src="./img/blog_image_1779630098467_qs8rd72q8.png" alt="Plots versus flats investment comparison">
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-container">
+
+            <h2>Final Thoughts</h2>
+
+            <p>
+                Both flats and plots have their own advantages, but when it comes to
+                long-term appreciation, flexibility, low maintenance, and wealth creation,
+                plots clearly stand out as the better investment option.
+            </p>
+
+            <p>
+                Investing in land provides:
+            </p>
+
+            <ul>
+                <li>Higher appreciation potential</li>
+                <li>Lower expenses</li>
+                <li>Greater flexibility</li>
+                <li>Better long-term returns</li>
+                <li>Minimal depreciation</li>
+                <li>Strong future demand</li>
+            </ul>
+
+            <p>
+                As infrastructure and urban development continue to expand across India,
+                strategically located plots are becoming some of the most valuable real
+                estate assets.
+            </p>
+
+        </div>
+    </section>
+
+    <section class="blog-footer">
+        <div class="blog-container">
+
+            <!-- Read More Links -->
+            <div class="read-more">
+
+                <p>
+                    <span>Read More:</span>
+                    <a href="#">Buy Residential Plots Near Khatu Shyam Ji Temple</a>
+                </p>
+
+                <p>
+                    <strong>Real Estate</strong>
+                    <a href="#">Shakumbhari Devi Temple Driving Growth in Phulera</a>
+                </p>
+
+                <p>
+                    <a href="#">Buy Govt Approved Plots Near Khatu Shyam Ji</a>
+                </p>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- Tags -->
+            <div class="tags-section">
+
+                <h2>Tags</h2>
+
+                <div class="tags">
+                    <a href="#">#navbharatniwas</a>
+                    <a href="#">#phulera</a>
+                    <a href="#">#smartinvestment</a>
+                    <a href="#">#landinvestment</a>
+                    <a href="#">#plotsinvestment</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="related-section">
+
+        <div class="related-container">
+
+            <h2>Related Articles</h2>
+
+            <div class="articles-grid">
+
+                <!-- Card 1 -->
+                <article class="article-card">
+
+                    <div class="article-image">
+                        <img src="images/mussoorie.jpg" alt="Mussoorie Elite by NavBharat Niwas">
+                    </div>
+
+                    <div class="article-content">
+                        <h3>
+                            Mussoorie Elite by NavBharat Niwas
+                        </h3>
+
+                        <p>
+                            Mussoorie Elite by NavBharat Niwas offers
+                            premium plotted developments in the heart...
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- Card 2 -->
+                <article class="article-card">
+
+                    <div class="article-image placeholder-image">
+                        <span>J</span>
+                    </div>
+
+                    <div class="article-content">
+                        <h3>
+                            Jim &amp; Holmes Cottage by NavBharat
+                            Niwas | Luxury Living
+                        </h3>
+
+                        <p>
+                            Discover Jim &amp; Holmes Cottage by
+                            NavBharat Niwas, where luxury living meet...
+                        </p>
+                    </div>
+
+                </article>
+
+
+                <!-- Card 3 -->
+                <article class="article-card">
+
+                    <div class="article-image">
+                        <img src="images/navbharat-shivani.jpg" alt="NavBharat Shivani Residency">
+                    </div>
+
+                    <div class="article-content">
+                        <h3>
+                            Plots for Sale in Jaipur Phulera: Buy
+                            Land in a Growing Hub
+                        </h3>
+
+                        <p>
+                            Looking for plots for sale in Jaipur Phulera?
+                            Explore why Phulera is gaining attention for...
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="nbn-footer-section">
+
+        <div class="nbn-footer-wrapper">
+
+            <!-- Left Column -->
+            <div class="nbn-brand-column">
+
+                <div class="nbn-brand-header">
+                    <img src="./img/WhatsApp Image 2026-06-24 at 18.42.59.jpeg" alt="Navbharat Niwas Logo"
+                        class="nbn-brand-logo">
+                </div>
+
+                <p class="nbn-brand-text">
+                    Your trusted partner for premium plots, farm lands, and villa investments.
+                    Building wealth through smart real estate decisions.
+                </p>
+
+                <div class="nbn-contact-box">
+                    <div class="nbn-contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span>9625775527</span>
+                </div>
+
+                <div class="nbn-contact-box">
+                    <div class="nbn-contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <span>info@bhuinfo.in</span>
+                </div>
+
+                <div class="nbn-contact-box">
+                    <div class="nbn-contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span>Unit 1631C, 16th Floor, Part 2, Tower A, EON Fairfox
+                        Sector 140A, Gautam Budha Nagar, Noida - 201304, UP</span>
+                </div>
+
+            </div>
+
+            <!-- Company -->
+            <div class="nbn-menu-column">
+                <h4>Company</h4>
+
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Raise Grievance</a></li>
+                </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="nbn-menu-column">
+                <h4>Projects</h4>
+
+                <ul>
+                    <li><a href="#">Premium Plots</a></li>
+                    <li><a href="#">Luxury Villas</a></li>
+                    <li><a href="#">Farm Retreats</a></li>
+                    <li><a href="#">Upcoming</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="nbn-menu-column">
+                <h4>Support</h4>
+
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="nbn-newsletter-column">
+
+                <h4>Stay Updated</h4>
+
+                <p>
+                    Get the latest projects and investment insights.
+                </p>
+
+                <form>
+                    <input type="email" placeholder="Your email">
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="nbn-footer-bottom">
+
+            <p>
+                © 2026 Bhuinfo. All rights reserved.
+            </p>
+
+            <div class="nbn-social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- POPUP  -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-box">
+
+            <span class="close-btn" onclick="closePopup()">×</span>
+
+
+            <img src="./img/WhatsApp Image 2026-06-24 at 18.42.59.jpeg" class="popup-logo">
+
+            <h2>Get Free Consultation</h2>
+
+            <form action="sendmail.php" method="POST">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="tel" name="phone" placeholder="Mobile Number" required>
+                <input type="email" name="email" placeholder="Email" required>
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+
+</html>

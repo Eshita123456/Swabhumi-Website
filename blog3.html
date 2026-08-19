@@ -1,0 +1,2126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Jim Corbett Real Estate Blog</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    body {
+        background: #f7f5ed;
+        color: #062b5c;
+        font-family: "DM Sans", sans-serif;
+    }
+
+    /* Main Container */
+    .blog-container3 {
+        width: 100%;
+        max-width: 870px;
+        margin: 0 auto;
+        padding: 29px 0 0;
+    }
+
+    /* Back Button */
+    .back-link3 {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+
+        color: #66768b;
+        text-decoration: none;
+
+        font-size: 15px;
+        font-weight: 400;
+
+        margin-bottom: 27px;
+
+        transition: color 0.2s ease;
+    }
+
+    .back-link3:hover {
+        color: #062b5c;
+    }
+
+    .back-link3 i {
+        font-size: 15px;
+    }
+
+    /* Category Badge */
+    .category3 {
+        display: inline-flex;
+        align-items: center;
+
+        background: #062e70;
+        color: #ffffff;
+
+        padding: 8px 17px;
+        border-radius: 20px;
+
+        font-size: 14px;
+        font-weight: 600;
+
+        margin-bottom: 17px;
+    }
+
+    /* Main Heading */
+    h1 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 48px;
+        line-height: 1.02;
+        font-weight: 400;
+        letter-spacing: -1px;
+
+        margin-bottom: 23px;
+    }
+
+    /* Meta Information */
+    .meta-info3 {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+
+        color: #718096;
+
+        font-size: 15px;
+        font-weight: 400;
+
+        margin-bottom: 25px;
+    }
+
+    .meta-item3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .meta-item3 i {
+        color: #7b8794;
+        font-size: 16px;
+    }
+
+    /* Tags */
+    .tags3 {
+        display: flex;
+        align-items: flex-start;
+
+        color: #687a91;
+
+        font-size: 15px;
+        line-height: 1.65;
+
+        margin-bottom: 29px;
+    }
+
+    .tag-icon3 {
+        flex-shrink: 0;
+
+        margin-top: 5px;
+        margin-right: 12px;
+
+        font-size: 15px;
+        color: #7c8794;
+
+        transform: rotate(-20deg);
+    }
+
+    .tag-text3 {
+        max-width: 800px;
+    }
+
+    .tag-text3 span {
+        display: inline;
+    }
+
+    /* Divider */
+    .divider3 {
+        width: 100%;
+        height: 1px;
+        background: #e6e3da;
+    }
+
+
+    /* =========================
+   RESPONSIVE
+========================= */
+
+    @media (max-width: 950px) {
+
+        .blog-container3 {
+            max-width: calc(100% - 50px);
+        }
+
+        h1 {
+            font-size: 42px;
+        }
+    }
+
+
+    @media (max-width: 700px) {
+
+        .blog-container3 {
+            max-width: calc(100% - 36px);
+            padding-top: 25px;
+        }
+
+        .back-link3 {
+            margin-bottom: 23px;
+        }
+
+        .category3 {
+            font-size: 13px;
+            padding: 7px 15px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 36px;
+            line-height: 1.08;
+            letter-spacing: -0.6px;
+        }
+
+        .desktop-break3 {
+            display: none;
+        }
+
+        .meta-info3 {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .tags3 {
+            font-size: 14px;
+        }
+    }
+
+
+    @media (max-width: 480px) {
+
+        .blog-container3 {
+            max-width: calc(100% - 28px);
+        }
+
+        h1 {
+            font-size: 31px;
+        }
+
+        .back-link3 {
+            font-size: 14px;
+        }
+
+        .meta-info3 {
+            font-size: 14px;
+        }
+
+        .tags3 {
+            font-size: 13px;
+        }
+    }
+
+    .image-section {
+        width: 100%;
+        padding: 16px 0 31px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .corbett-image {
+        width: 848px;
+        height: 500px;
+        display: block;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+        .corbett-image {
+            width: calc(100% - 40px);
+            height: auto;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .image-section {
+            padding: 12px 15px 25px;
+        }
+
+        .corbett-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+    }
+
+    /* =========================
+   BLOG CONTENT
+========================= */
+
+    .blog-content {
+        width: 100%;
+        max-width: 870px;
+
+        margin: 0 auto;
+        padding: 25px 0 0;
+    }
+
+    /* Paragraph */
+
+    .blog-content p {
+        color: #31567f;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 1.62;
+
+        margin-bottom: 20px;
+    }
+
+    /* Remove extra bottom spacing */
+
+    .blog-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Link */
+
+    .blog-content a {
+        color: #003c86;
+        text-decoration: underline;
+
+        font-weight: 500;
+    }
+
+    .blog-content a:hover {
+        color: #062e70;
+    }
+
+
+    /* =========================
+   RESPONSIVE
+========================= */
+
+    @media (max-width: 950px) {
+
+        .blog-content {
+            width: calc(100% - 50px);
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .blog-content {
+            width: calc(100% - 32px);
+            padding-top: 20px;
+        }
+
+        .blog-content p {
+            font-size: 15px;
+            line-height: 1.65;
+            margin-bottom: 18px;
+        }
+
+    }
+
+    /* =========================
+   BLOG CONTENT
+========================= */
+
+    .blog-content {
+        width: 870px;
+        max-width: calc(100% - 40px);
+
+        margin: 0 auto;
+
+        padding-top: 0;
+        padding-bottom: 40px;
+    }
+
+
+    /* =========================
+   HEADING
+========================= */
+
+    .blog-content h2 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.2;
+
+        letter-spacing: -0.5px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   PARAGRAPHS
+========================= */
+
+    .blog-content p {
+        color: #31567f;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 1.62;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   BULLET LIST
+========================= */
+
+    .blog-content ul {
+        margin: 2px 0 21px 24px;
+        padding-left: 0;
+    }
+
+    .blog-content li {
+        color: #31567f;
+
+        font-size: 16px;
+        line-height: 1.5;
+
+        padding-left: 0;
+
+        margin-bottom: 21px;
+    }
+
+    .blog-content li::marker {
+        color: #31567f;
+        font-size: 11px;
+    }
+
+
+    /* Last paragraph */
+
+    .blog-content p:last-child {
+        margin-bottom: 0;
+    }
+
+
+    /* =========================
+   RESPONSIVE
+========================= */
+
+    @media (max-width: 950px) {
+
+        .blog-content {
+            width: calc(100% - 50px);
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .blog-content {
+            width: calc(100% - 32px);
+        }
+
+        .blog-content h2 {
+            font-size: 26px;
+            line-height: 1.25;
+        }
+
+        .blog-content p,
+        .blog-content li {
+            font-size: 15px;
+        }
+
+        .blog-content ul {
+            margin-left: 20px;
+        }
+
+    }
+
+    /* =========================
+   BLOG CONTAINER
+========================= */
+
+    .blog-content {
+        width: 870px;
+        max-width: calc(100% - 40px);
+
+        margin: 0 auto;
+
+        padding-top: 38px;
+        padding-bottom: 45px;
+    }
+
+
+    /* =========================
+   MAIN HEADING
+========================= */
+
+    .blog-content h2 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.2;
+
+        letter-spacing: -0.5px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   BODY TEXT
+========================= */
+
+    .blog-content p {
+        color: #31567f;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 1.62;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   NUMBERED SECTIONS
+========================= */
+
+    .numbered-point {
+        margin-top: 32px;
+    }
+
+
+    /* Numbered Heading */
+
+    .numbered-point h3 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 25px;
+        font-weight: 500;
+
+        line-height: 1.25;
+
+        letter-spacing: -0.3px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* Point Paragraph */
+
+    .numbered-point p {
+        margin-bottom: 0;
+    }
+
+
+    /* =========================
+   CONCLUSION
+========================= */
+
+    .conclusion {
+        margin-top: 27px;
+        margin-bottom: 0;
+    }
+
+
+    /* =========================
+   RESPONSIVE
+========================= */
+
+    @media (max-width: 950px) {
+
+        .blog-content {
+            width: calc(100% - 50px);
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .blog-content {
+            width: calc(100% - 32px);
+
+            padding-top: 25px;
+        }
+
+        .blog-content h2 {
+            font-size: 26px;
+        }
+
+        .numbered-point h3 {
+            font-size: 22px;
+        }
+
+        .blog-content p {
+            font-size: 15px;
+            line-height: 1.65;
+        }
+
+        .numbered-point {
+            margin-top: 28px;
+        }
+
+    }
+
+    /* =========================
+   BLOG CONTENT
+========================= */
+
+    .blog-content {
+        width: 870px;
+        max-width: calc(100% - 40px);
+
+        margin: 0 auto;
+
+        padding-top: 5px;
+        padding-bottom: 40px;
+    }
+
+
+    /* =========================
+   HEADING
+========================= */
+
+    .blog-content h2 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.2;
+
+        letter-spacing: -0.5px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   PARAGRAPHS
+========================= */
+
+    .blog-content p {
+        color: #31567f;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 1.62;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   BULLET LIST
+========================= */
+
+    .blog-content ul {
+        margin: 2px 0 21px 25px;
+        padding: 0;
+    }
+
+    .blog-content li {
+        color: #31567f;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 1.5;
+
+        margin-bottom: 21px;
+        padding-left: 0;
+    }
+
+    .blog-content li::marker {
+        color: #31567f;
+        font-size: 10px;
+    }
+
+
+    /* =========================
+   RESPONSIVE
+========================= */
+
+    @media (max-width: 950px) {
+
+        .blog-content {
+            width: calc(100% - 50px);
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .blog-content {
+            width: calc(100% - 32px);
+            padding-top: 20px;
+        }
+
+        .blog-content h2 {
+            font-size: 26px;
+        }
+
+        .blog-content p,
+        .blog-content li {
+            font-size: 15px;
+        }
+
+        .blog-content ul {
+            margin-left: 21px;
+        }
+
+    }
+
+    /* =========================
+   BLOG CONTENT
+========================= */
+
+    .blog-content {
+        width: 870px;
+        max-width: calc(100% - 40px);
+
+        margin: 0 auto;
+
+        padding-top: 5px;
+        padding-bottom: 40px;
+    }
+
+
+    /* =========================
+   HEADING
+========================= */
+
+    .blog-content h2 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 30px;
+        font-weight: 500;
+
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* Heading Link */
+
+    .blog-content h2 a {
+        color: #052b5c;
+        text-decoration: underline;
+    }
+
+
+    /* =========================
+   PARAGRAPHS
+========================= */
+
+    .blog-content p {
+        color: #31567f;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 1.62;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   BODY LINKS
+========================= */
+
+    .blog-content p a {
+        color: #003f8f;
+
+        text-decoration: underline;
+
+        font-weight: 500;
+    }
+
+
+    /* =========================
+   BULLET LIST
+========================= */
+
+    .blog-content ul {
+        margin: 2px 0 21px 25px;
+        padding: 0;
+    }
+
+    .blog-content li {
+        color: #31567f;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 1.5;
+
+        margin-bottom: 21px;
+        padding-left: 0;
+    }
+
+    .blog-content li::marker {
+        color: #31567f;
+        font-size: 10px;
+    }
+
+
+    /* =========================
+   RESPONSIVE
+========================= */
+
+    @media (max-width: 950px) {
+
+        .blog-content {
+            width: calc(100% - 50px);
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .blog-content {
+            width: calc(100% - 32px);
+            padding-top: 20px;
+        }
+
+        .blog-content h2 {
+            font-size: 26px;
+        }
+
+        .blog-content p,
+        .blog-content li {
+            font-size: 15px;
+        }
+
+        .blog-content ul {
+            margin-left: 21px;
+        }
+
+    }
+
+    /* =========================
+   BLOG CONTENT
+========================= */
+
+    .blog-content {
+        width: 870px;
+        max-width: calc(100% - 40px);
+
+        margin: 0 auto;
+
+        padding-top: 27px;
+        padding-bottom: 40px;
+    }
+
+
+    /* =========================
+   HEADING
+========================= */
+
+    .blog-content h2 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 30px;
+        font-weight: 500;
+
+        line-height: 1.2;
+        letter-spacing: -0.5px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   PARAGRAPHS
+========================= */
+
+    .blog-content p {
+        color: #31567f;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 1.62;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* =========================
+   BULLET LIST
+========================= */
+
+    .blog-content ul {
+        margin: 2px 0 21px 25px;
+        padding: 0;
+    }
+
+    .blog-content li {
+        color: #31567f;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        line-height: 1.5;
+
+        margin-bottom: 21px;
+        padding-left: 0;
+    }
+
+    .blog-content li::marker {
+        color: #31567f;
+        font-size: 10px;
+    }
+
+
+    /* =========================
+   RESPONSIVE
+========================= */
+
+    @media (max-width: 950px) {
+
+        .blog-content {
+            width: calc(100% - 50px);
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .blog-content {
+            width: calc(100% - 32px);
+            padding-top: 20px;
+        }
+
+        .blog-content h2 {
+            font-size: 26px;
+        }
+
+        .blog-content p,
+        .blog-content li {
+            font-size: 15px;
+        }
+
+        .blog-content ul {
+            margin-left: 21px;
+        }
+
+    }
+
+    /* =========================
+   TAGS SECTION
+========================= */
+
+    .tags-section {
+        width: 100%;
+        padding: 23px 0 35px;
+    }
+
+    .tags-container {
+        width: 848px;
+        max-width: calc(100% - 40px);
+
+        margin: 0 auto;
+
+        border-top: 1px solid #e7e4dc;
+
+        padding-top: 31px;
+    }
+
+
+    /* =========================
+   TAG HEADING
+========================= */
+
+    .tags-container h2 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 20px;
+        font-weight: 400;
+
+        line-height: 1.2;
+
+        margin-bottom: 18px;
+    }
+
+
+    /* =========================
+   TAG LIST
+========================= */
+
+    .tags-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 9px 9px;
+    }
+
+
+    /* =========================
+   INDIVIDUAL TAG
+========================= */
+
+    .tag {
+        display: inline-flex;
+        align-items: center;
+
+        min-height: 35px;
+
+        padding: 7px 15px;
+
+        background: #f2f0e8;
+
+        border-radius: 20px;
+
+        color: #506b8a;
+
+        font-size: 14px;
+        font-weight: 400;
+
+        line-height: 1.2;
+
+        text-decoration: none;
+
+        white-space: nowrap;
+
+        transition:
+            background 0.2s ease,
+            color 0.2s ease;
+    }
+
+    .tag:hover {
+        background: #e9e6dc;
+        color: #052b5c;
+    }
+
+
+    /* =========================
+   RESPONSIVE
+========================= */
+
+    @media (max-width: 900px) {
+
+        .tags-container {
+            width: calc(100% - 50px);
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .tags-section {
+            padding: 20px 0 30px;
+        }
+
+        .tags-container {
+            width: calc(100% - 32px);
+            padding-top: 25px;
+        }
+
+        .tags-container h2 {
+            font-size: 19px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            font-size: 13px;
+            padding: 7px 13px;
+        }
+
+    }
+
+    /* =========================
+   RELATED SECTION
+========================= */
+
+    .related-section {
+        width: 100%;
+        padding: 17px 0 34px;
+    }
+
+    .related-container {
+        width: 1110px;
+        max-width: calc(100% - 40px);
+
+        margin: 0 auto;
+    }
+
+
+    /* =========================
+   SECTION HEADING
+========================= */
+
+    .related-container>h2 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 29px;
+        font-weight: 400;
+
+        line-height: 1.2;
+
+        margin-bottom: 32px;
+    }
+
+
+    /* =========================
+   ARTICLES GRID
+========================= */
+
+    .articles-grid {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 32px;
+    }
+
+
+    /* =========================
+   ARTICLE CARD
+========================= */
+
+    .article-card {
+        background: #ffffff;
+
+        border-radius: 15px;
+
+        overflow: hidden;
+
+        box-shadow:
+            0 7px 14px rgba(35, 42, 48, 0.13);
+
+        min-width: 0;
+    }
+
+
+    /* =========================
+   ARTICLE IMAGE
+========================= */
+
+    .article-image {
+        width: 100%;
+        height: 192px;
+
+        overflow: hidden;
+
+        background: #e8e6de;
+    }
+
+    .article-image img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+
+    /* Placeholder Image */
+
+    .article-placeholder {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        background:
+            linear-gradient(135deg,
+                #d7dce4 0%,
+                #eeeae0 100%);
+    }
+
+    .article-placeholder span {
+        color: #a6b0c0;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 42px;
+        font-weight: 400;
+    }
+
+
+    /* =========================
+   ARTICLE CONTENT
+========================= */
+
+    .article-content {
+        padding: 25px 24px 22px;
+    }
+
+
+    /* Article Title */
+
+    .article-content h3 {
+        color: #052b5c;
+
+        font-family: "Playfair Display", Georgia, serif;
+
+        font-size: 18px;
+        font-weight: 400;
+
+        line-height: 1.5;
+
+        margin-bottom: 8px;
+    }
+
+
+    /* Article Description */
+
+    .article-content p {
+        color: #69809b;
+
+        font-size: 14px;
+        font-weight: 400;
+
+        line-height: 1.45;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+
+        overflow: hidden;
+    }
+
+
+    /* =========================
+   RESPONSIVE
+========================= */
+
+    @media (max-width: 1000px) {
+
+        .related-container {
+            width: calc(100% - 40px);
+        }
+
+        .articles-grid {
+            gap: 20px;
+        }
+
+        .article-content {
+            padding: 20px;
+        }
+
+    }
+
+
+    @media (max-width: 750px) {
+
+        .articles-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .article-image {
+            height: 220px;
+        }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+        .related-section {
+            padding: 20px 0 30px;
+        }
+
+        .related-container {
+            width: calc(100% - 30px);
+        }
+
+        .related-container>h2 {
+            font-size: 26px;
+            margin-bottom: 22px;
+        }
+
+        .article-image {
+            height: 190px;
+        }
+
+        .article-content h3 {
+            font-size: 18px;
+        }
+
+    }
+</style>
+
+<body>
+    <br><br><br><br>
+
+
+    <!-- =========================================
+         NAVBAR
+    ========================================= -->
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="./img/f03e2391-7ba7-4611-80f8-c01543e87da6.png" alt="Gondal Infra Logo" class="logo-img">
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="./about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="#">
+                    Projects ▼
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li><a href="./AVS.html">AVS CITY</a></li>
+                    <li><a href="./Natur.html">Natur City</a></li>
+                    <li><a href="./Sai.html">Sai Enclave</a></li>
+                </ul>
+            </li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+
+        <div class="call-section">
+            <i class="fas fa-phone"></i>
+            <span>96257 75527</span>
+        </div>
+
+        <a href="#" class="btn-start">Get Started</a>
+
+        <div class="menu-toggle1">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="blog-container3">
+
+        <!-- Back -->
+        <a href="#" class="back-link3">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Back to Blogs</span>
+        </a><br>
+
+        <!-- Category -->
+        <div class="category3">
+            Real Estate
+        </div>
+
+        <!-- Blog Title -->
+        <h1>
+            Why Investing in Jim Corbett Real<br class="desktop-break3">
+            Estate is a Smart Choice
+        </h1>
+
+        <!-- Meta Information -->
+        <div class="meta-info3">
+
+            <div class="meta-item3">
+                <i class="fa-regular fa-calendar"></i>
+                <span>25 May 2026</span>
+            </div>
+
+            <div class="meta-item3">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Jim Corbett National Park, Uttarakhand</span>
+            </div>
+
+        </div>
+
+        <!-- Tags -->
+        <div class="tags3">
+
+            <i class="fa-solid fa-tag tag-icon"></i>
+
+            <div class="tag-text3">
+                <span>Navbharat Niwas</span>,
+                <span>Jim Corbett</span>,
+                <span>Property investment</span>,
+                <span>Jim Corbett National Park</span>,
+                <span>Luxury villas in Jim Corbett</span>,
+                <span>Plots in Mussoorie</span>
+            </div>
+
+        </div>
+
+        <!-- Divider -->
+        <div class="divider3"></div>
+
+    </main>
+
+    <section class="image-section">
+        <img src="./img/image_1779715134898_g93bge4dr (1).png" alt="Jim Corbett National Park" class="corbett-image">
+    </section>
+
+    <section class="blog-content">
+
+        <p>
+            The Indian real estate market is evolving rapidly, and one destination
+            that is gaining massive attention from investors, travelers, and nature
+            lovers is Jim Corbett. Known for its breathtaking landscapes, peaceful
+            environment, and growing tourism industry, Jim Corbett has become one of
+            the most attractive real estate investment destinations in North India.
+        </p>
+
+        <p>
+            From luxury villas and holiday homes to resort plots and eco-friendly
+            cottages, property investment opportunities in this region are expanding
+            quickly. In 2026, investors are increasingly shifting their focus from
+            crowded metro cities to nature-driven destinations that offer both
+            lifestyle and financial growth. This is where trusted real estate
+            companies like
+            <a href="#">Navbharat Niwas</a>
+            are helping buyers discover premium investment opportunities in emerging
+            locations.
+        </p>
+
+        <p>
+            In this blog, we will explore why investing in Jim Corbett real estate
+            is a smart decision in 2026 and how it can provide long-term value,
+            rental income, and lifestyle benefits.
+        </p>
+
+    </section>
+
+    <section class="image-section">
+        <img src="./img/image_1779715134898_g93bge4dr (1).png" alt="Jim Corbett National Park" class="corbett-image">
+    </section>
+
+    <main class="blog-content">
+
+        <h2>
+            Growing Popularity of Jim Corbett National Park
+        </h2>
+
+        <p>
+            One of the biggest reasons behind the rise of real estate demand in Jim
+            Corbett is the increasing popularity of Jim Corbett National Park. As
+            India’s oldest national park, it attracts lakhs of domestic and
+            international tourists every year.
+        </p>
+
+        <p>
+            Travel enthusiasts, wildlife photographers, families, and luxury
+            travelers regularly visit the region to enjoy safari experiences,
+            riverside stays, jungle resorts, and peaceful surroundings. This growing
+            tourism industry is creating strong demand for:
+        </p>
+
+        <ul>
+            <li>Holiday homes</li>
+            <li>Luxury cottages</li>
+            <li>Resort developments</li>
+            <li>Rental villas</li>
+            <li>Farmhouses</li>
+            <li>Commercial hospitality projects</li>
+        </ul>
+
+        <p>
+            As tourism continues to grow in 2026, property prices around Jim Corbett
+            are expected to appreciate steadily.
+        </p>
+
+    </main>
+
+    <section class="image-section">
+        <img src="./img/blog_image_1779712131162_nyvqs1hcl.png" alt="Jim Corbett National Park" class="corbett-image">
+    </section>
+
+    <main class="blog-content">
+
+        <h2>
+            A Perfect Destination for Travel and Weekend Living
+        </h2>
+
+        <p>
+            Modern buyers are no longer looking at real estate only as a financial
+            asset. Today, people want properties that offer a better lifestyle,
+            relaxation, and escape from urban stress.
+        </p>
+
+        <p>
+            Jim Corbett is becoming a preferred destination for people from Delhi
+            NCR, Noida, Gurugram, Ghaziabad, and nearby cities because it offers:
+        </p>
+
+        <ul>
+            <li>Fresh air and natural beauty</li>
+            <li>Peaceful environment</li>
+            <li>Excellent road connectivity</li>
+            <li>Weekend getaway opportunities</li>
+            <li>Luxury travel experiences</li>
+            <li>Adventure tourism</li>
+        </ul>
+
+        <p>
+            The rise in travel culture after the pandemic has significantly increased
+            the demand for second homes and vacation properties. Many investors are
+            now purchasing land and villas not just for investment but also for
+            personal use.
+        </p>
+
+    </main>
+
+    <main class="blog-content">
+
+        <!-- Main Section -->
+
+        <h2>High Appreciation Potential in 2026</h2>
+
+        <p>
+            Real estate investors always look for locations with strong future
+            growth, and Jim Corbett is emerging as one of the top-performing
+            regions in Uttarakhand.
+        </p>
+
+        <p>
+            Several factors are contributing to the appreciation of property prices:
+        </p>
+
+
+        <!-- Point 1 -->
+
+        <section class="numbered-point">
+
+            <h3>1. Expanding Tourism Infrastructure</h3>
+
+            <p>
+                New resorts, luxury stays, restaurants, and tourism-related
+                businesses are developing rapidly in the area.
+            </p>
+
+        </section>
+
+
+        <!-- Point 2 -->
+
+        <section class="numbered-point">
+
+            <h3>2. Better Road Connectivity</h3>
+
+            <p>
+                Improved highways and connectivity from Delhi NCR are making travel
+                more convenient for tourists and property buyers.
+            </p>
+
+        </section>
+
+
+        <!-- Point 3 -->
+
+        <section class="numbered-point">
+
+            <h3>3. Rising Demand for Nature-Based Living</h3>
+
+            <p>
+                People are increasingly preferring destinations surrounded by
+                forests, rivers, and mountains over crowded urban cities.
+            </p>
+
+        </section>
+
+
+        <!-- Point 4 -->
+
+        <section class="numbered-point">
+
+            <h3>4. Limited Land Availability</h3>
+
+            <p>
+                Prime land near tourist attractions and forest-facing locations is
+                limited, which naturally increases demand and property value.
+            </p>
+
+        </section>
+
+
+        <!-- Conclusion -->
+
+        <p class="conclusion">
+            Because of these reasons, buying property in Jim Corbett today can
+            generate strong long-term returns in the future.
+        </p>
+
+    </main>
+
+    <section class="image-section">
+        <img src="./img/blog_image_1779712631346_rjxxyxk9w.png" alt="Jim Corbett National Park" class="corbett-image">
+    </section>
+
+    <main class="blog-content">
+
+        <h2>
+            Excellent Opportunity for Rental Income
+        </h2>
+
+        <p>
+            One of the biggest advantages of investing in Jim Corbett real estate
+            is the opportunity to earn passive rental income.
+        </p>
+
+        <p>
+            Tourists visiting the region often prefer private villas, cottages,
+            and luxury homestays over hotels. This has created a booming vacation
+            rental market.
+        </p>
+
+        <p>
+            Investors can generate income through:
+        </p>
+
+        <ul>
+            <li>Airbnb rentals</li>
+            <li>Holiday villas</li>
+            <li>Jungle cottages</li>
+            <li>Riverside resorts</li>
+            <li>Luxury homestays</li>
+        </ul>
+
+        <p>
+            Properties located near tourist hotspots and safari zones can provide
+            excellent occupancy rates during travel seasons.
+        </p>
+
+    </main>
+
+    <main class="blog-content">
+
+        <h2>
+            Why Investors Trust
+            <a href="#">Navbharat Niwas</a>
+        </h2>
+
+        <p>
+            Choosing the right real estate company is one of the most important
+            factors while investing in emerging markets.
+        </p>
+
+        <p>
+            <a href="#">Navbharat Niwas</a> has become a trusted name for buyers
+            looking for premium investment opportunities in Uttarakhand and nearby
+            regions. The company focuses on offering strategically located
+            properties with long-term growth potential.
+        </p>
+
+        <p>
+            Their projects are designed for:
+        </p>
+
+        <ul>
+            <li>Investment growth</li>
+            <li>Vacation living</li>
+            <li>Rental income opportunities</li>
+            <li>Secure property ownership</li>
+        </ul>
+
+        <p>
+            With professional guidance and transparent processes, Navbharat Niwas
+            helps investors make informed property decisions.
+        </p>
+
+    </main>
+
+    <section class="image-section">
+        <img src="./img/blog_image_1779712974395_o8d5zhcso.png" alt="Jim Corbett National Park" class="corbett-image">
+    </section>
+
+    <main class="blog-content">
+
+        <h2>
+            Increasing Demand for Plots in Hill and Nature Destinations
+        </h2>
+
+        <p>
+            The demand for land investment is growing rapidly across India,
+            especially in tourism-driven destinations.
+        </p>
+
+        <p>
+            Along with Jim Corbett, buyers are also actively searching for
+            <a href="#">plots in Mussoorie</a> because hill stations and eco-tourism
+            locations are becoming highly valuable investment markets.
+        </p>
+
+        <p>
+            People prefer investing in plots because:
+        </p>
+
+        <ul>
+            <li>Land appreciates over time</li>
+            <li>Maintenance costs are low</li>
+            <li>Flexibility for future construction</li>
+            <li>Ideal for villas and resorts</li>
+            <li>Better long-term returns</li>
+        </ul>
+
+        <p>
+            As travel and tourism continue to expand in Uttarakhand, destinations
+            like Jim Corbett and Mussoorie are expected to witness even stronger
+            real estate growth in the coming years.
+        </p>
+
+    </main>
+
+    <section class="image-section">
+        <img src="./img/blog_image_1779713173129_6a0lfdks5.png" alt="Jim Corbett National Park" class="corbett-image">
+    </section>
+
+    <main class="blog-content">
+
+        <h2>
+            Ideal for Retirement and Luxury Living
+        </h2>
+
+        <p>
+            Jim Corbett is not just an investment destination—it is also becoming
+            a dream location for retirement and peaceful living.
+        </p>
+
+        <p>
+            Retired professionals, entrepreneurs, and high-net-worth individuals
+            are increasingly choosing nature-based destinations for a healthier
+            lifestyle.
+        </p>
+
+        <p>
+            Benefits include:
+        </p>
+
+        <ul>
+            <li>Calm and pollution-free environment</li>
+            <li>Scenic mountain and forest views</li>
+            <li>Spacious properties</li>
+            <li>Luxury lifestyle options</li>
+            <li>Wellness-focused living</li>
+        </ul>
+
+        <p>
+            Owning a property in Jim Corbett allows buyers to enjoy a balanced
+            lifestyle while also securing a valuable long-term asset.
+        </p>
+
+    </main>
+
+    <section class="image-section">
+        <img src="./img/blog_image_1779713463953_dwpo2zp44.png" alt="Jim Corbett National Park" class="corbett-image">
+    </section>
+
+    <main class="blog-content">
+
+        <h2>
+            Eco-Tourism is Driving Real Estate Growth
+        </h2>
+
+        <p>
+            Eco-tourism is one of the fastest-growing travel segments in India,
+            and Jim Corbett is at the center of this trend.
+        </p>
+
+        <p>
+            Travelers are now actively looking for:
+        </p>
+
+        <ul>
+            <li>Sustainable resorts</li>
+            <li>Eco-friendly villas</li>
+            <li>Nature retreats</li>
+            <li>Organic farm stays</li>
+            <li>Forest-view properties</li>
+        </ul>
+
+        <p>
+            This shift is creating new opportunities for real estate developers
+            and investors.
+        </p>
+
+        <p>
+            Properties designed around eco-tourism concepts are attracting premium
+            buyers and travelers, which further increases the value of the region’s
+            real estate market.
+        </p>
+
+    </main>
+
+    <section class="image-section">
+        <img src="./img/blog_image_1779713818811_1ukov1ukj.png" alt="Jim Corbett National Park" class="corbett-image">
+    </section>
+
+    <main class="blog-content">
+
+        <h2>
+            Better Returns Compared to Traditional Investments
+        </h2>
+
+        <p>
+            Many investors are now moving away from traditional investment options
+            like fixed deposits and low-growth assets.
+        </p>
+
+        <p>
+            Real estate in tourism-driven destinations offers:
+        </p>
+
+        <ul>
+            <li>Capital appreciation</li>
+            <li>Rental income</li>
+            <li>Lifestyle benefits</li>
+            <li>Inflation protection</li>
+            <li>Tangible ownership</li>
+        </ul>
+
+        <p>
+            Unlike volatile investment markets, land and property investments in
+            growing tourist locations often provide stable long-term growth.
+        </p>
+
+        <p>
+            This makes Jim Corbett an attractive option for investors looking to
+            diversify their portfolio in 2026.
+        </p>
+
+    </main>
+
+    <section class="image-section">
+        <img src="./img/blog_image_1779713463953_dwpo2zp44.png" alt="Jim Corbett National Park" class="corbett-image">
+    </section>
+
+    <main class="blog-content">
+
+        <h2>Final Thoughts</h2>
+
+        <p>
+            Investing in Jim Corbett real estate in 2026 is more than just buying a
+            property—it is an opportunity to secure financial growth, lifestyle
+            benefits, and future stability.
+        </p>
+
+        <p>
+            The rising popularity of Jim Corbett National Park, growing travel
+            trends, expanding tourism infrastructure, and increasing demand for
+            vacation homes are all contributing to the region’s rapid real estate
+            growth.
+        </p>
+
+        <p>
+            Whether you are looking for:
+        </p>
+
+        <ul>
+            <li>A profitable investment</li>
+            <li>A peaceful second home</li>
+            <li>Rental income opportunities</li>
+            <li>Resort development potential</li>
+            <li>Long-term land appreciation</li>
+        </ul>
+
+        <p>
+            Jim Corbett offers everything modern investors are searching for.
+        </p>
+
+    </main>
+
+    <section class="tags-section">
+
+        <div class="tags-container">
+
+            <h2>Tags</h2>
+
+            <div class="tags-list">
+
+                <a href="#" class="tag">#Navbharat Niwas</a>
+
+                <a href="#" class="tag">#Jim Corbett</a>
+
+                <a href="#" class="tag">#Property investment</a>
+
+                <a href="#" class="tag">#Jim Corbett National Park</a>
+
+                <a href="#" class="tag">#Luxury villas in Jim Corbett</a>
+
+                <a href="#" class="tag">#Plots in Mussoorie</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="related-section">
+
+        <div class="related-container">
+
+            <h2>Related Articles</h2>
+
+            <div class="articles-grid">
+
+                <!-- Article 1 -->
+                <article class="article-card">
+
+                    <div class="article-image">
+                        <img src="mussoorie-elite.jpg" alt="Mussoorie Elite by NavBharat Niwas">
+                    </div>
+
+                    <div class="article-content">
+
+                        <h3>
+                            Mussoorie Elite by NavBharat Niwas
+                        </h3>
+
+                        <p>
+                            Mussoorie Elite by NavBharat Niwas offers premium plotted
+                            developments in the heart...
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Article 2 -->
+                <article class="article-card">
+
+                    <div class="article-image article-placeholder">
+                        <span>J</span>
+                    </div>
+
+                    <div class="article-content">
+
+                        <h3>
+                            Jim &amp; Holmes Cottage by NavBharat Niwas | Luxury Living
+                        </h3>
+
+                        <p>
+                            Discover Jim &amp; Holmes Cottage by NavBharat Niwas, where
+                            luxury living meet...
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Article 3 -->
+                <article class="article-card">
+
+                    <div class="article-image">
+                        <img src="jaipur-phulera.jpg" alt="Plots for Sale in Jaipur Phulera">
+                    </div>
+
+                    <div class="article-content">
+
+                        <h3>
+                            Plots for Sale in Jaipur Phulera: Buy Land in a Growing Hub
+                        </h3>
+
+                        <p>
+                            Looking for plots for sale in Jaipur Phulera? Explore why
+                            Phulera is gaining attention for...
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="nbn-footer-section">
+
+        <div class="nbn-footer-wrapper">
+
+            <!-- Left Column -->
+            <div class="nbn-brand-column">
+
+                <div class="nbn-brand-header">
+                    <img src="./img/WhatsApp Image 2026-06-24 at 18.42.59.jpeg" alt="Navbharat Niwas Logo"
+                        class="nbn-brand-logo">
+                </div>
+
+                <p class="nbn-brand-text">
+                    Your trusted partner for premium plots, farm lands, and villa investments.
+                    Building wealth through smart real estate decisions.
+                </p>
+
+                <div class="nbn-contact-box">
+                    <div class="nbn-contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <span>9625775527</span>
+                </div>
+
+                <div class="nbn-contact-box">
+                    <div class="nbn-contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </div>
+                    <span>info@bhuinfo.in</span>
+                </div>
+
+                <div class="nbn-contact-box">
+                    <div class="nbn-contact-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span>Unit 1631C, 16th Floor, Part 2, Tower A, EON Fairfox
+                        Sector 140A, Gautam Budha Nagar, Noida - 201304, UP</span>
+                </div>
+
+            </div>
+
+            <!-- Company -->
+            <div class="nbn-menu-column">
+                <h4>Company</h4>
+
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Raise Grievance</a></li>
+                </ul>
+            </div>
+
+            <!-- Projects -->
+            <div class="nbn-menu-column">
+                <h4>Projects</h4>
+
+                <ul>
+                    <li><a href="#">Premium Plots</a></li>
+                    <li><a href="#">Luxury Villas</a></li>
+                    <li><a href="#">Farm Retreats</a></li>
+                    <li><a href="#">Upcoming</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="nbn-menu-column">
+                <h4>Support</h4>
+
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="nbn-newsletter-column">
+
+                <h4>Stay Updated</h4>
+
+                <p>
+                    Get the latest projects and investment insights.
+                </p>
+
+                <form>
+                    <input type="email" placeholder="Your email">
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="nbn-footer-bottom">
+
+            <p>
+                © 2026 Bhuinfo. All rights reserved.
+            </p>
+
+            <div class="nbn-social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- POPUP  -->
+
+    <div class="popup-overlay" id="popup">
+
+        <div class="popup-box">
+
+            <span class="close-btn" onclick="closePopup()">×</span>
+
+
+            <img src="./img/WhatsApp Image 2026-06-24 at 18.42.59.jpeg" class="popup-logo">
+
+            <h2>Get Free Consultation</h2>
+
+            <form action="sendmail.php" method="POST">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="tel" name="phone" placeholder="Mobile Number" required>
+                <input type="email" name="email" placeholder="Email" required>
+
+                <button type="submit">Submit</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
