@@ -1,56 +1,44 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-require 'PHPMailer-master/src/PHPMailer.php';
-require 'PHPMailer-master/src/SMTP.php';
-require 'PHPMailer-master/src/Exception.php';
+    $name  = htmlspecialchars($_POST['name'] ?? '');
+    $phone = htmlspecialchars($_POST['phone'] ?? '');
+    $email = htmlspecialchars($_POST['email'] ?? '');
 
-$mail = new PHPMailer(true);
+    // Enquiry will be sent to this email
+    $to = "eshitasrivastava394@gmail.com";
 
-try {
+    $subject = "New Free Consultation Enquiry";
 
-    $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;
+    $message = "
+    <html>
+    <body>
+        <h2>New Free Consultation Enquiry</h2>
 
-    $mail->Username   = 'yourgmail@gmail.com';   // 👈 YOUR EMAIL
-    $mail->Password   = 'your_app_password';     // 👈 APP PASSWORD
+        <p><strong>Name:</strong> $name</p>
+        <p><strong>Mobile Number:</strong> $phone</p>
+        <p><strong>Email:</strong> $email</p>
 
-    $mail->SMTPSecure = 'tls';
-    $mail->Port       = 587;
-
-    // FROM
-    $mail->setFrom('yourgmail@gmail.com', 'Website Lead');
-
-    // TO (CLIENT EMAIL)
-    $mail->addAddress('clientemail@gmail.com');
-
-    // FORM DATA
-    $name  = $_POST['name'];
-    $phone = $_POST['phone'];
-    $email = $_POST['email'];
-
-    // EMAIL CONTENT
-    $mail->isHTML(true);
-    $mail->Subject = '🔥 New Lead from Website';
-
-    $mail->Body = "
-        <h2>New Enquiry</h2>
-        <p><b>Name:</b> $name</p>
-        <p><b>Phone:</b> $phone</p>
-        <p><b>Email:</b> $email</p>
+    </body>
+    </html>
     ";
 
-    $mail->addReplyTo($email, $name);
+    $headers  = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8\r\n";
+    $headers .= "From: Website Enquiry <eshitasrivastava394@gmail.com>\r\n";
+    $headers .= "Reply-To: $email\r\n";
 
-    $mail->send();
-
-    // Redirect after submit
-    header("Location: thankyou.html");
-
-} catch (Exception $e) {
-    echo "Error: {$mail->ErrorInfo}";
+    if (mail($to, $subject, $message, $headers)) {
+        echo "<script>
+                alert('Thank you! Your enquiry has been submitted successfully.');
+                window.location.href='index.html';
+              </script>";
+    } else {
+        echo "<script>
+                alert('Sorry, something went wrong. Please try again.');
+                window.history.back();
+              </script>";
+    }
 }
 ?>
