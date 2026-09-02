@@ -1,44 +1,106 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    $name  = htmlspecialchars($_POST['name'] ?? '');
-    $phone = htmlspecialchars($_POST['phone'] ?? '');
-    $email = htmlspecialchars($_POST['email'] ?? '');
+require __DIR__ . '/PHPMailer-master/src/Exception.php';
+require __DIR__ . '/PHPMailer-master/src/PHPMailer.php';
+require __DIR__ . '/PHPMailer-master/src/SMTP.php';
 
-    // Enquiry will be sent to this email
-    $to = "eshitasrivastava394@gmail.com";
-
-    $subject = "New Free Consultation Enquiry";
-
-    $message = "
-    <html>
-    <body>
-        <h2>New Free Consultation Enquiry</h2>
-
-        <p><strong>Name:</strong> $name</p>
-        <p><strong>Mobile Number:</strong> $phone</p>
-        <p><strong>Email:</strong> $email</p>
-
-    </body>
-    </html>
-    ";
-
-    $headers  = "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type:text/html;charset=UTF-8\r\n";
-    $headers .= "From: Website Enquiry <eshitasrivastava394@gmail.com>\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    if (mail($to, $subject, $message, $headers)) {
-        echo "<script>
-                alert('Thank you! Your enquiry has been submitted successfully.');
-                window.location.href='index.html';
-              </script>";
-    } else {
-        echo "<script>
-                alert('Sorry, something went wrong. Please try again.');
-                window.history.back();
-              </script>";
-    }
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    exit('Invalid request.');
 }
-?>
+
+$name     = trim($_POST['name'] ?? '');
+$phone    = trim($_POST['phone'] ?? '');
+$email    = trim($_POST['email'] ?? '');
+$budget   = trim($_POST['budget'] ?? '');
+$location = trim($_POST['location'] ?? '');
+$formType = trim($_POST['form_type'] ?? 'Free Consultation');
+
+if ($name === '' || $phone === '') {
+    exit('Please fill in all required fields.');
+}
+
+if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    exit('Invalid email address.');
+}
+
+$mail = new PHPMailer(true);
+
+try {
+
+    // SMTP SETTINGS
+    $mail->isSMTP();
+    $mail->Host       = 'smtp.gmail.com';
+    $mail->SMTPAuth   = true;
+
+    $mail->Username   = 'bhuinfradevelopers@gmail.com';
+
+    // IMPORTANT:
+    // Yahan Gmail ka 16-digit APP PASSWORD daalna hai.
+    // Normal Gmail password nahi.
+    $mail->Password   = 'YOUR_16_DIGIT_APP_PASSWORD';
+
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = 587;
+
+    $mail->CharSet = 'UTF-8';
+
+    // Sender
+    $mail->setFrom(
+        'bhuinfradevelopers@gmail.com',
+        'BHU Infra Developers Website'
+    );
+
+    // Enquiries will arrive here
+    $mail->addAddress('bhuinfradevelopers@gmail.com');
+
+    // Visitor's email
+    if ($email !== '') {
+        $mail->addReplyTo(
+            $email,
+            $name ?: 'Website Visitor'
+        );
+    }
+
+    // Email content
+    $mail->isHTML(true);
+
+    $mail->Subject = 'New Free Consultation Enquiry';
+
+    $mail->Body = '
+        <h2>New Website Enquiry</h2>
+
+        <p><strong>Form:</strong> ' . htmlspecialchars($formType) . '</p>
+
+        <p><strong>Name:</strong> ' . htmlspecialchars($name) . '</p>
+
+        <p><strong>Phone:</strong> ' . htmlspecialchars($phone) . '</p>
+
+        <p><strong>Email:</strong> ' . htmlspecialchars($email) . '</p>
+
+        <p><strong>Budget:</strong> ' . htmlspecialchars($budget) . '</p>
+
+        <p><strong>Location:</strong> ' . htmlspecialchars($location) . '</p>
+    ';
+
+    $mail->AltBody =
+        "New Website Enquiry\n\n" .
+        "Form: $formType\n" .
+        "Name: $name\n" .
+        "Phone: $phone\n" .
+        "Email: $email\n" .
+        "Budget: $budget\n" .
+        "Location: $location\n";
+
+    $mail->send();
+
+    echo 'success';
+
+} catch (Exception $e) {
+
+    http_response_code(500);
+
+    echo 'Mailer Error: ' . $mail->ErrorInfo;
+}

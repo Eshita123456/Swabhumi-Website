@@ -298,7 +298,7 @@ function sendWhatsApp() {
     }
 
     const message =
-`Hello, I'm interested in your project.
+        `Hello, I'm interested in your project.
 
 Name : ${name}
 
@@ -764,27 +764,22 @@ document.addEventListener(
            NEXT
         ========================================== */
 
-        nextBtn.addEventListener(
-            "click",
-            function () {
+        if (nextBtn) {
+            nextBtn.addEventListener(
+                "click",
+                function () {
 
-                const totalSlides =
-                    getTotalSlides();
+                    const totalSlides = getTotalSlides();
 
-
-                if (
-                    currentIndex <
-                    totalSlides - 1
-                ) {
-
-                    currentIndex++;
-
-                    updateSlider();
+                    if (currentIndex < totalSlides - 1) {
+                        currentIndex++;
+                        updateSlider();
+                    }
 
                 }
+            );
 
-            }
-        );
+        }
 
 
         /* ==========================================
@@ -1109,7 +1104,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const bar = document.querySelector(".loader-bar");
 
-    if(!bar) return;
+    if (!bar) return;
 
     let width = 0;
 
@@ -1117,30 +1112,30 @@ window.addEventListener("DOMContentLoaded", () => {
 
         width += Math.random() * 8;
 
-        if(width < 90){
+        if (width < 90) {
             bar.style.width = width + "%";
         }
 
-    },80);
+    }, 80);
 
-    window.addEventListener("load",()=>{
+    window.addEventListener("load", () => {
 
         clearInterval(loading);
 
-        bar.style.width="100%";
+        bar.style.width = "100%";
 
-        setTimeout(()=>{
+        setTimeout(() => {
 
-            document.getElementById("page-loader").style.opacity="0";
-            document.getElementById("page-loader").style.transition=".4s";
+            document.getElementById("page-loader").style.opacity = "0";
+            document.getElementById("page-loader").style.transition = ".4s";
 
-            setTimeout(()=>{
+            setTimeout(() => {
 
                 document.getElementById("page-loader").remove();
 
-            },400);
+            }, 400);
 
-        },300);
+        }, 300);
 
     });
 
@@ -1154,7 +1149,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     const bar = document.querySelector(".loader-bar");
 
-    if(!bar) return;
+    if (!bar) return;
 
     let width = 0;
 
@@ -1162,44 +1157,45 @@ window.addEventListener("DOMContentLoaded", () => {
 
         width += Math.random() * 8;
 
-        if(width < 90){
+        if (width < 90) {
             bar.style.width = width + "%";
         }
 
-    },80);
+    }, 80);
 
-    window.addEventListener("load",()=>{
+    window.addEventListener("load", () => {
 
         clearInterval(loading);
 
-        bar.style.width="100%";
+        bar.style.width = "100%";
 
-        setTimeout(()=>{
+        setTimeout(() => {
 
-            document.getElementById("page-loader").style.opacity="0";
-            document.getElementById("page-loader").style.transition=".4s";
+            document.getElementById("page-loader").style.opacity = "0";
+            document.getElementById("page-loader").style.transition = ".4s";
 
-            setTimeout(()=>{
+            setTimeout(() => {
 
                 document.getElementById("page-loader").remove();
 
-            },400);
+            }, 400);
 
-        },300);
+        }, 300);
 
     });
 
 });
 
-// ===============================
+/// ===============================
 // PREMIUM PAGE LOADER
 // ===============================
 
 window.addEventListener("DOMContentLoaded", () => {
 
+    const loader = document.getElementById("page-loader");
     const bar = document.querySelector(".loader-bar");
 
-    if (!bar) return;
+    if (!loader || !bar) return;
 
     bar.style.width = "0%";
     bar.style.transition = "none";
@@ -1226,6 +1222,11 @@ window.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+// ===============================
+// REMOVE PAGE LOADER
+// ===============================
+
 window.addEventListener("load", () => {
 
     const loader = document.getElementById("page-loader");
@@ -1238,17 +1239,27 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        loader.style.transition = "opacity .5s ease";
-        loader.style.opacity = "0";
+        // Check again because loader may already have been removed
+        const currentLoader = document.getElementById("page-loader");
+
+        if (!currentLoader) return;
+
+        currentLoader.style.transition = "opacity .5s ease";
+        currentLoader.style.opacity = "0";
 
         setTimeout(() => {
-            loader.remove();
+
+            const loaderToRemove = document.getElementById("page-loader");
+
+            if (loaderToRemove) {
+                loaderToRemove.remove();
+            }
+
         }, 500);
 
     }, 600);
 
 });
-
 
 
 // =========================================
