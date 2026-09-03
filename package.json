@@ -1,0 +1,15 @@
+{
+  "name": "swabhumi-website",
+  "version": "1.0.0",
+  "description": "Swabhumi Website with enquiry form",
+  "main": "index.html",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.0.0"
+  }
+}
