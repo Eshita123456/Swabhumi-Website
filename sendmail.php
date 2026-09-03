@@ -46,7 +46,7 @@ if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 // -------------------------------------------------------
 // SET YOUR CLIENT'S EMAIL ADDRESS HERE
 // -------------------------------------------------------
-$to      = 'rahulsanskar07@example.com';   // <-- replace with client's email
+$to      = 'rahulsanskar07@gmail.com';
 $subject = "New Enquiry - {$formType} from {$name}";
 // -------------------------------------------------------
 
