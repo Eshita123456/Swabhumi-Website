@@ -1176,7 +1176,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
             setTimeout(() => {
 
-                document.getElementById("page-loader").remove();
+                const loaderEl = document.getElementById("page-loader");
+                if (loaderEl) loaderEl.remove();
 
             }, 400);
 
