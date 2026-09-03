@@ -1260,8 +1260,56 @@ window.addEventListener("load", () => {
     }, 600);
 
 });
-
-
-// =========================================
+// FORM HANDLER
+document.addEventListener("DOMContentLoaded", function () {
+    const forms = document.querySelectorAll('form[action="sendmail.php"]');
+    forms.forEach(function (form) {
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const data = {
+                name: formData.get("name") || "",
+                phone: formData.get("phone") || "",
+                email: formData.get("email") || "",
+                budget: formData.get("budget") || "",
+                location: formData.get("location") || "",
+                formType: formData.get("form_type") || "Free Consultation"
+            };
+            if (!data.name || !data.phone) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : "";
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Sending...";
+            }
+            try {
+                const response = await fetch("/api/sendmail", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                if (response.ok && result.success) {
+                    window.location.href = "thankyou.html";
+                } else {
+                    alert(result.error || "Something went wrong. Please try again.");
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                    }
+                }
+            } catch (error) {
+                console.error("Form submission error:", error);
+                alert("Network error. Please try again.");
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            }
+        });
+    });
+});
 // END OF SCRIPT
-// =========================================
