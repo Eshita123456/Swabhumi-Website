@@ -4,12 +4,20 @@
     {
       "src": "api/sendmail.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "**/*.{html,css,js,png,jpg,jpeg,webp,PNG,jfif,mp4,svg,gif,ico}",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/sendmail",
       "dest": "api/sendmail.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
