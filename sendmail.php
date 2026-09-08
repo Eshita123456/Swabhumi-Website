@@ -1,106 +1,80 @@
 <?php
+header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require __DIR__ . '/PHPMailer-master/src/Exception.php';
-require __DIR__ . '/PHPMailer-master/src/PHPMailer.php';
-require __DIR__ . '/PHPMailer-master/src/SMTP.php';
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    exit('Invalid request.');
+    http_response_code(405);
+    echo json_encode(['error' => 'Method not allowed']);
+    exit();
 }
 
-$name     = trim($_POST['name'] ?? '');
-$phone    = trim($_POST['phone'] ?? '');
-$email    = trim($_POST['email'] ?? '');
-$budget   = trim($_POST['budget'] ?? '');
-$location = trim($_POST['location'] ?? '');
-$formType = trim($_POST['form_type'] ?? 'Free Consultation');
+// Read JSON body (sent from fetch) or fallback to POST form data
+$input = file_get_contents('php://input');
+$data  = json_decode($input, true);
 
-if ($name === '' || $phone === '') {
-    exit('Please fill in all required fields.');
+if (!$data) {
+    $data = $_POST;
 }
 
-if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    exit('Invalid email address.');
+$name     = trim($data['name']     ?? '');
+$phone    = trim($data['phone']    ?? '');
+$email    = trim($data['email']    ?? '');
+$budget   = trim($data['budget']   ?? '');
+$location = trim($data['location'] ?? '');
+$formType = trim($data['formType'] ?? 'Free Consultation');
+
+// Basic validation
+if (empty($name) || empty($phone)) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Please fill in all required fields.']);
+    exit();
 }
 
-$mail = new PHPMailer(true);
+if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Invalid email address.']);
+    exit();
+}
 
-try {
+// -------------------------------------------------------
+// SET YOUR CLIENT'S EMAIL ADDRESS HERE
+// -------------------------------------------------------
+$to      = 'info@bhuinfo.in';
+$subject = "New Enquiry - {$formType} from {$name}";
+// -------------------------------------------------------
 
-    // SMTP SETTINGS
-    $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';
-    $mail->SMTPAuth   = true;
+$emailBody = "
+New Enquiry Received
+====================
 
-    $mail->Username   = 'bhuinfradevelopers@gmail.com';
+Form Type : {$formType}
+Name      : {$name}
+Phone     : {$phone}
+Email     : " . ($email ?: 'Not provided') . "
+Budget    : " . ($budget ?: 'Not specified') . "
+Location  : " . ($location ?: 'Not specified') . "
 
-    // IMPORTANT:
-    // Yahan Gmail ka 16-digit APP PASSWORD daalna hai.
-    // Normal Gmail password nahi.
-    $mail->Password   = 'YOUR_16_DIGIT_APP_PASSWORD';
+--
+This email was sent from the Swabhumi website contact form.
+";
 
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = 587;
+$headers  = "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$headers .= "From: Swabhumi Website <noreply@" . ($_SERVER['HTTP_HOST'] ?? 'swabhumi.com') . ">\r\n";
+$headers .= "Reply-To: {$email}\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion();
 
-    $mail->CharSet = 'UTF-8';
-
-    // Sender
-    $mail->setFrom(
-        'bhuinfradevelopers@gmail.com',
-        'BHU Infra Developers Website'
-    );
-
-    // Enquiries will arrive here
-    $mail->addAddress('bhuinfradevelopers@gmail.com');
-
-    // Visitor's email
-    if ($email !== '') {
-        $mail->addReplyTo(
-            $email,
-            $name ?: 'Website Visitor'
-        );
-    }
-
-    // Email content
-    $mail->isHTML(true);
-
-    $mail->Subject = 'New Free Consultation Enquiry';
-
-    $mail->Body = '
-        <h2>New Website Enquiry</h2>
-
-        <p><strong>Form:</strong> ' . htmlspecialchars($formType) . '</p>
-
-        <p><strong>Name:</strong> ' . htmlspecialchars($name) . '</p>
-
-        <p><strong>Phone:</strong> ' . htmlspecialchars($phone) . '</p>
-
-        <p><strong>Email:</strong> ' . htmlspecialchars($email) . '</p>
-
-        <p><strong>Budget:</strong> ' . htmlspecialchars($budget) . '</p>
-
-        <p><strong>Location:</strong> ' . htmlspecialchars($location) . '</p>
-    ';
-
-    $mail->AltBody =
-        "New Website Enquiry\n\n" .
-        "Form: $formType\n" .
-        "Name: $name\n" .
-        "Phone: $phone\n" .
-        "Email: $email\n" .
-        "Budget: $budget\n" .
-        "Location: $location\n";
-
-    $mail->send();
-
-    echo 'success';
-
-} catch (Exception $e) {
-
+if (mail($to, $subject, $emailBody, $headers)) {
+    echo json_encode(['success' => true, 'message' => 'success']);
+} else {
     http_response_code(500);
-
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    echo json_encode(['error' => 'Failed to send email. Please try again.']);
 }
+?>
